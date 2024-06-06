@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-};
+const nextConfig = {images: {
+  domains: ['links.papareact.com', 'www.jsonkeeper.com']
+}};
 
 export default nextConfig;
