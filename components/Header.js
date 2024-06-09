@@ -53,6 +53,7 @@ function Header({placeholder}) {
     <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md px-5 lg:px-10">
       <div onClick={() => router.push("/")} className="relative flex items-center h-8 cursor-pointer my-auto">
         <Image
+         alt="image-header"
           src="https://links.papareact.com/qd3"
           layout="fill"
           objectFit="contain"
