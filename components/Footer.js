@@ -1,42 +1,71 @@
 import React from "react";
 
+
+const links1 = [
+  "About Us",
+  "Contact",
+  "Community",
+  "Programs",
+  "Legal",
+];
+
+const links2 = [
+  "Accessability",
+  "Referrals",
+  "Offers & Discounts",
+  "Hosting",
+  "Information",
+];
+
+const links3 = [
+  "Information & Help",
+  "Contact Center",
+  "Become A Host",
+  "Terms & Conditions",
+  "Requirements",
+];
+
+const links4 = [
+  "Trust & Safety",
+  "Contact Center",
+  "Useful Links",
+  "Need To Know",
+  "Help Centre",
+];
+
+
 function Footer() {
   return (
     <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-y-10 text-gray-600 px-20 py-14 bg-gray-100">
-       <div className="space-y-4 text-xs text-gray-800">
-        <h5 className="font-bold">About</h5>
-        <p>About us</p>
-        <p>Contact</p>
-        <p>Community work</p>
-        <p>Papa rich clan</p>
+       <div className="space-y-4 text-xs text-gray-800 ">
+        <h5 className="font-bold">ABOUT</h5>
+        {links1.map(item => (
+           <p className="cursor-pointer hover:text-red-400">{item}</p>
+        ))}
       </div>
 
-      <div className="space-y-4 text-xs text-gray-800">
+      <div className="space-y-4 text-xs text-gray-800 ">
         <h5 className="font-bold">COMMUNITY</h5>
-        <p>Accessability</p>
-        <p>Real site</p>
-        <p>Pretty clone</p>
-        <p>Referrals accepted</p>
-        <p>Papafam</p>
+        {links2.map(item => (
+           <p className="cursor-pointer hover:text-red-400">{item}</p>
+        ))}
       </div>
 
-      <div className="space-y-4 text-xs text-gray-800">
-        <h5 className="font-bold">HOST</h5>
-        <p>Papa React</p>
-        <p>Zero to hero</p>
-        <p>Awesome site</p>
-        <p>For the win</p>
-        <p>Join Now</p>
+      <div className="space-y-4 text-xs text-gray-800 ">
+        <h5 className="font-bold">OFFERS</h5>
+        {links3.map(item => (
+           <p className="cursor-pointer hover:text-red-400">{item}</p>
+        ))}
       </div>
 
-      <div className="space-y-4 text-xs text-gray-800">
-        <h5 className="font-bold">SUPPORT</h5>
-        <p>Help Centre</p>
-        <p>Trust & Safety</p>
-        <p>Say Hi</p>
-        <p>aster Eggs</p>
-        <p>Papafam</p>
+      <div className="space-y-4 text-xs text-gray-800 ">
+        <h5 className="font-bold">TERMS</h5>
+        {links4.map(item => (
+           <p className="cursor-pointer hover:text-red-400">{item}</p>
+        ))}
       </div>
+
+    
     </div>
   );
 }

@@ -5,12 +5,16 @@ import MapBox from "@/components/MapBox";
 import { ArrowLeftCircleIcon } from "@heroicons/react/24/solid";
 import { format } from "date-fns";
 import { useRouter } from "next/router";
+import getCenter from "geolib/es/getCenter";
 
 import React, { useState } from "react";
+import SearchMap from "@/components/SearchMap";
 
 function Search({ searchResults }) {
   console.log(searchResults);
   const [selectedLocation, setSelectedLocation] = useState({});
+
+
 
   const router = useRouter();
   const { location, startDate, endDate, numberOfGuests } = router?.query;
@@ -66,16 +70,34 @@ function Search({ searchResults }) {
   // Sort filteredResults if "Pet Friendly" is active
   if (activeFilters.includes("Pet Friendly")) {
     filteredResults = filteredResults.filter(
-      (item) => item.petsAllowed == "Yes"
+      (item) => item.petsAllowed == "yes"
     );
   }
 
   // Sort filteredResults if "Free Cancelation" is active
   if (activeFilters.includes("Free Cancelation")) {
     filteredResults = filteredResults.filter(
-      (item) => item.freeCancelation == "Yes"
+      (item) => item.freeCancelation == "yes"
     );
   }
+
+      //Get all the search coordinate points
+      const coordinates = filteredResults.map((result) => ({
+        longitude: result.long,
+        latitude: result.lat,
+      }));
+    
+      //Get the center of coordinate points
+      const center = getCenter(coordinates);
+  
+    const [viewport, setViewport] = useState({
+      width: "100%",
+      height: "100%",
+      latitude: center.latitude,
+      longitude: center.longitude,
+      zoom: 11,
+    });
+  
 
   return (
     <div>
@@ -123,7 +145,8 @@ function Search({ searchResults }) {
           <div className="flex flex-col">
             {filteredResults?.map((item) => (
               <InfoCard
-                key={item.img}
+              city={location}
+                key={item.star}
                 img={item.img}
                 location={item.location}
                 title={item.title}
@@ -143,11 +166,21 @@ function Search({ searchResults }) {
         </section>
 
         <section className="hidden lg:inline-flex min-w-[600px]">
-          <MapBox
+          {/* <MapBox
+          setViewport={setViewport}
+          viewport={viewport}
+          coordinates={coordinates}
+          center={center}
             searchResults={searchResults}
             selectedLocation={selectedLocation}
             setSelectedLocation={setSelectedLocation}
-          />
+            filteredResults={filteredResults}
+      
+          /> */}
+          <SearchMap  searchResults={searchResults}
+            selectedLocation={selectedLocation}
+            setSelectedLocation={setSelectedLocation}
+            filteredResults={filteredResults}/>
         </section>
       </main>
       <Footer />
@@ -158,9 +191,8 @@ function Search({ searchResults }) {
 export default Search;
 
 export async function getServerSideProps() {
-  // const searchResults = await fetch("https://links.papareact.com/isz").then(res = res?.json());
 
-  const searchResults = await fetch("https://www.jsonkeeper.com/b/5NPS").then(
+  const searchResults = await fetch("https://www.jsonkeeper.com/b/F9BZ").then(
     (res) => res.json()
   );
 

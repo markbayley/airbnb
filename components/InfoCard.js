@@ -17,7 +17,8 @@ function InfoCard({
   item,
   favorited,
   setFavorited,
-  handleFavorites
+  handleFavorites,
+  city
 }) {
 
 
@@ -42,7 +43,9 @@ function InfoCard({
 
       <div className="flex flex-col flex-grow pl-5">
         <div className="flex justify-between">
-          <p>{location}</p>
+        <p className="font-semibold">
+  {location} <a className="bg-red-200 px-1 rounded">{city || 'town'}</a>
+</p>
           <button
           key={item}
             className="p-2 bg-white hover:bg-red-500 rounded-full transition duration-200 ease-out shandow-lg"
@@ -82,8 +85,8 @@ function InfoCard({
           </p>
 
           <div>
-            <p className="text-lg lg:text-2xl font-semibold pb-2">{price}</p>
-            <p className="text-right font-extralight">{total}</p>
+            <p className="text-lg lg:text-2xl font-semibold pb-2">{'$' + price + " p/n"}</p>
+            <p className="text-right font-extralight">{'$' + total + " total"}</p>
           </div>
         </div>
       </div>

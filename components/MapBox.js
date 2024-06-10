@@ -5,11 +5,13 @@ import Image from "next/image";
 
 import "mapbox-gl/dist/mapbox-gl.css";
 
-function MapBox({ searchResults, selectedLocation, setSelectedLocation }) {
+const MAPBOX_TOKEN = 'pk.eyJ1IjoiaW5ibG9jayIsImEiOiJjbHg4b3VoM3cxNDA4Mm1wem1wbDhlYmppIn0.YWSASiW3GzEdOTA8lXoEFw'
+
+function MapBox({ searchResults, selectedLocation, setSelectedLocation, filteredResults }) {
   const [showPopup, setShowPopup] = useState(false);
 
   //Get all the search coordinate points
-  const coordinates = searchResults.map((result) => ({
+  const coordinates = filteredResults.map((result) => ({
     longitude: result.long,
     latitude: result.lat,
   }));
@@ -32,14 +34,15 @@ function MapBox({ searchResults, selectedLocation, setSelectedLocation }) {
       initialViewState={{
         ...viewport,
       }}
-       style={{width: 800, height: '100vh'}}
+       style={{ height: '100vh'}}
       mapStyle="mapbox://styles/inblock/clx5v536g01iw01rb29t6ezfq"
-      mapboxAccessToken={process.env.mapbox_key}
+      //mapboxAccessToken={process.env.mapbox_key}
+      mapboxApiAccessToken={MAPBOX_TOKEN}
       className="z-10"
     >
       {/* <Marker longitude={-122.4} latitude={37.8} color="red" /> */}
 
-      {searchResults?.map((result) => (
+      {filteredResults?.map((result) => (
         <div key={result.long}>
           <Marker
             longitude={result.long}
@@ -51,8 +54,8 @@ function MapBox({ searchResults, selectedLocation, setSelectedLocation }) {
           >
        
             <div className="relative w-16 h-16">
-            <div className="z-50 absolute w-20 bg-red-400 rounded-full shadow-xl ml-4 -mt-2 text-white font-semibold px-2 py-1">
-              {result.price}
+            <div className="z-50 absolute w-10 text-auto bg-red-400 rounded-full shadow-xl ml-6 -mt-2 text-white font-semibold px-2 py-1">
+              {'$' + result.price}
             </div>
               <Image
                 alt="image-marker"
@@ -68,19 +71,6 @@ function MapBox({ searchResults, selectedLocation, setSelectedLocation }) {
             </div>
           
           </Marker>
-
-          {/* {selectedLocation.long === result.long && (
-            <Popup
-           
-              longitude={result.long}
-              latitude={result.lat}
-              anchor="bottom"
-            
-             onClose={() => setShowPopup(false)}
-            >
-              {result.price}
-            </Popup>
-          )} */}
         </div>
       ))}
     </Map>
