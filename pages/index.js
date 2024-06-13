@@ -16,13 +16,13 @@ export default function Home({ exploreData, cardsData }) {
   const [destinationData, setDestinationData] = useState([]);
 
   const topDestinations = [
-    ["Rome", "1750km away"],
+    ["San Francisco", "1750km away"],
     ["Paris", "from $1,688"],
-    ["Athens", "from $1,899"],
+    ["Sydney", "from $499"],
     ["London", "from $1,743"],
     ["Barcelona", "from $1,979"],
     ["Singapore", "from $879"],
-    ["Los Angeles", "from $2,167"],
+    ["Vancouver", "from $2,167"],
     ["New York", "from 2,437"]
   ];
   
@@ -92,7 +92,7 @@ console.log(destinationData, "data")
           ) )}
     </div>
 
-    <SearchMap />
+    {/* <SearchMap /> */}
 
     {/* <div>
       <LargeCard img={imageUrls[7]} title="The Great Outdoors" description="Get started today" buttonText="Get inspired"/>

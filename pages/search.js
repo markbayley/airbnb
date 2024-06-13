@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import getCenter from "geolib/es/getCenter";
 import React, { useState } from "react";
 import SearchMap from "@/components/SearchMap";
+import SelectedCard from "@/components/SelectedCard";
 
 function Search({ searchResults }) {
   const [selectedLocation, setSelectedLocation] = useState({});
@@ -33,9 +34,34 @@ function Search({ searchResults }) {
     );
   };
 
-  let filteredResults = activeFilters.includes("My Favorites")
-    ? searchResults.filter((item) => favorited.includes(item))
-    : searchResults;
+  let filteredResults;
+
+  if (selectedLocation && selectedLocation.id !== undefined) {
+    // Filter out the selectedLocation from searchResults
+    const filteredOutSelected = searchResults.filter((item) => item.id === selectedLocation.id);
+    
+    // Filter other items based on location if needed
+    const otherItems = searchResults.filter((item) => item.location === location && item.id !== selectedLocation.id);
+    
+    // Concatenate filteredOutSelected and otherItems
+    filteredResults = [...filteredOutSelected, ...otherItems];
+  } else if (location) {
+    // Filter items based on location if selectedLocation is not defined
+    filteredResults = searchResults.filter((item) => item.location === location);
+  } else {
+    // Default case: return all searchResults
+    filteredResults = searchResults;
+  }
+  
+  console.log('Filtered Results:', filteredResults);
+  
+
+  
+
+   if (activeFilters.includes("My Favorites")) {
+ filteredResults = searchResults.filter((item) => favorited.includes(item))
+   }
+ 
 
   if (activeFilters.includes("Highly Rated")) {
     filteredResults = filteredResults.slice().sort((a, b) => b.star - a.star);
@@ -59,6 +85,10 @@ function Search({ searchResults }) {
   }));
 
   const center = getCenter(coordinates);
+
+
+
+  console.log("selectedLocationID", selectedLocation.id, "location", location, "searchRsults", searchResults, "filteredResults", filteredResults)
 
   return (
     <div>
@@ -91,11 +121,12 @@ function Search({ searchResults }) {
               </p>
             ))}
           </div>
+       {/* { selectedLocation.id &&   <SelectedCard selectedLocation={selectedLocation}  favorited={favorited} handleFavorites={handleFavorites}/> } */}
           <div className="flex flex-col">
             {filteredResults?.map((item) => (
               <InfoCard
                 city={location}
-                key={item.star}
+                key={item.id}
                 img={item.img}
                 location={item.location}
                 title={item.title}
@@ -132,7 +163,7 @@ function Search({ searchResults }) {
 export default Search;
 
 export async function getServerSideProps() {
-  const searchResults = await fetch("https://www.jsonkeeper.com/b/F9BZ").then((res) => res.json());
+  const searchResults = await fetch("https://gist.githubusercontent.com/markbayley/a998d77811cfdd839bd4ce78250cc2c6/raw/0ff87e6952ccb68684d568084ab9e6fea564e603/marker.json").then((res) => res.json());
 
   return {
     props: {

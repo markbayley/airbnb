@@ -13,9 +13,9 @@ const SearchMap = ({ searchResults, selectedLocation, setSelectedLocation, filte
   const [viewport, setViewport] = useState({
     width: "100%",
     height: "100%",
-    latitude: 37.7577,
-    longitude: -122.4376,
-    zoom: 11,
+    latitude: 10,
+    longitude: 0,
+    zoom: 1,
   });
 
   const mapRef = useRef();
@@ -53,7 +53,7 @@ const SearchMap = ({ searchResults, selectedLocation, setSelectedLocation, filte
   }, [searchLocation]);
 
   return (
-    <div style={{ height: "70vh", width: "88vw" }} className="border-8 my-4">
+    <div style={{ height: "85vh", width: "88vw" }} className="border-8 my-4">
       <MapGL
         ref={mapRef}
         {...viewport}
@@ -65,7 +65,7 @@ const SearchMap = ({ searchResults, selectedLocation, setSelectedLocation, filte
         className="bg-gray-300"
       >
         {filteredResults?.map((result) => (
-          <div key={result.long} onClick={() => setSelectedLocation(result)}>
+          <div key={result.id} onClick={() => { selectedLocation.id === undefined ? setSelectedLocation(result) : setSelectedLocation({}), setViewport({ longitude: result.long,  latitude:result.lat, zoom: 14}) }}>
             <Marker
               longitude={result.long}
               latitude={result.lat}
@@ -74,7 +74,7 @@ const SearchMap = ({ searchResults, selectedLocation, setSelectedLocation, filte
               
             >
               <div className="relative w-16 h-16">
-                <div className="z-50 absolute w-10 text-auto bg-red-400 rounded-full shadow-xl ml-6 -mt-2 text-white font-semibold px-2 py-1">
+                <div className="z-50 absolute w-12 flex justify-center items-center text-auto bg-red-400 rounded  ml-6 -mt-2 text-white font-semibold ">
                   {"$" + result.price}
                 </div>
                 <Image
