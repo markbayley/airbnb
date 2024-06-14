@@ -9,7 +9,7 @@ import axios from 'axios';
 
 const MAPBOX_TOKEN = "pk.eyJ1IjoiaW5ibG9jayIsImEiOiJjbHg4b3VoM3cxNDA4Mm1wem1wbDhlYmppIn0.YWSASiW3GzEdOTA8lXoEFw";
 
-const SearchMap = ({ selectedLocation, setSelectedLocation, filteredResults, searchLocation, setViewport, viewport }) => {
+const SearchMap = ({ selectedAddress, setSelectedAddress, filteredResults, selectedCity, setViewport, viewport, setSelectedCity }) => {
 
 
   const mapRef = useRef();
@@ -23,10 +23,10 @@ const SearchMap = ({ selectedLocation, setSelectedLocation, filteredResults, sea
 
   // Function to update the viewport based on the search location
   useEffect(() => {
-    if (searchLocation) {
+    if (selectedCity) {
       const fetchCoordinates = async () => {
         try {
-          const response = await axios.get('https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(searchLocation) + '.json', {
+          const response = await axios.get('https://api.mapbox.com/geocoding/v5/mapbox.places/' + encodeURIComponent(selectedCity) + '.json', {
             params: {
               access_token: MAPBOX_TOKEN,
             },
@@ -44,10 +44,10 @@ const SearchMap = ({ selectedLocation, setSelectedLocation, filteredResults, sea
       };
       fetchCoordinates();
     }
-  }, [searchLocation]);
+  }, [selectedCity]);
 
   return (
-    <div style={{ height: "85vh", width: "88vw" }} className="border-8 my-4">
+    <div style={{ height: "88vh", width: "88vw" }} className="border-8 border-white  sticky top-20 ">
       <MapGL
         ref={mapRef}
         {...viewport}
@@ -59,7 +59,7 @@ const SearchMap = ({ selectedLocation, setSelectedLocation, filteredResults, sea
         className="bg-gray-300"
       >
         {filteredResults?.map((result) => (
-          <div key={result.id} onClick={() => { setSelectedLocation(result) , setViewport({ longitude: result.long,  latitude:result.lat, zoom: 14,  transitionDuration: 200,}) }}>
+          <div key={result.id} onClick={() => { setSelectedAddress(result) , setSelectedCity(result.location), setViewport({ longitude: result.long,  latitude:result.lat, zoom: 14,  transitionDuration: 500,}) }}>
             <Marker
               longitude={result.long}
               latitude={result.lat}
@@ -77,7 +77,7 @@ const SearchMap = ({ selectedLocation, setSelectedLocation, filteredResults, sea
                   layout="fill"
                   objectFit="cover"
                   className={
-                    selectedLocation.long === result.long
+                    selectedAddress.long === result.long
                       ? "rounded-full border-4 border-red-400 hover:border-red-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out"
                       : "rounded-full border-4 border-white hover:border-red-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out"
                   }

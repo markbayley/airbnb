@@ -10,12 +10,15 @@ import { useRouter } from "next/router";
 import getCenter from "geolib/es/getCenter";
 import React, { useState } from "react";
 import SearchMap from "@/components/SearchMap";
-import SelectedCard from "@/components/SelectedCard";
+import { HeartIcon, StarIcon } from "@heroicons/react/24/solid";
+import { HeartIcon as HeartIconInactive } from "@heroicons/react/24/outline";
 
 function Search({ searchResults }) {
-  const [selectedLocation, setSelectedLocation] = useState({});
+  const [selectedAddress, setSelectedAddress] = useState({});
   const router = useRouter();
-  const { location, startDate, endDate, numberOfGuests } = router?.query;
+  const { city, startDate, endDate, numberOfGuests, numberOfDays } = router?.query;
+
+  const [selectedCity, setSelectedCity] = useState(city);
 
   const formattedStartDate =
     startDate && format(new Date(startDate), "dd MMMM yy");
@@ -24,11 +27,12 @@ function Search({ searchResults }) {
 
   const [activeFilters, setActiveFilters] = useState([]);
   const filterButtons = [
-    "Free Cancelation",
-    "Pet Friendly",
+    "Free Cancellation",
+    "Pets Allowed",
     "Highly Rated",
     "Budget Friendly",
-    "My Favorites",
+    "Free Breakfast",
+    "Wi-Fi",
   ];
 
   const handleFilter = (item) => {
@@ -50,54 +54,76 @@ function Search({ searchResults }) {
 
   let filteredResults;
 
-  if (selectedLocation && selectedLocation.id !== undefined) {
-    // Filter out the selectedLocation from searchResults
-    const filteredOutSelected = searchResults.filter(
-      (item) => item.id === selectedLocation.id
-    );
+// Filter based on selectedAddress and selectedCity
+if (selectedAddress && selectedAddress.id !== undefined) {
+  // Filter out the selectedAddress from searchResults
+  const filteredOutSelected = searchResults.filter(
+    (item) => item.id === selectedAddress.id
+  );
 
-    // Filter other items based on location if needed
-    const otherItems = searchResults.filter(
-      (item) => item.location === location && item.id !== selectedLocation.id
-    );
+  // Filter other items based on location if needed
+  const otherItems = searchResults.filter(
+    (item) => item.location === selectedCity && item.id !== selectedAddress.id
+  );
 
-    // Concatenate filteredOutSelected and otherItems
-    filteredResults = [...filteredOutSelected, ...otherItems];
-  } else if (location) {
-    // Filter items based on location if selectedLocation is not defined
-    filteredResults = searchResults.filter(
-      (item) => item.location === location
-    );
-  } else {
-    // Default case: return all searchResults
-    filteredResults = searchResults;
-  }
+  // Concatenate filteredOutSelected and otherItems
+  filteredResults = [...filteredOutSelected, ...otherItems];
+} else if (selectedCity) {
+  // Filter items based on location if selectedAddress is not defined
+  filteredResults = searchResults.filter(
+    (item) => item.location.toLowerCase() === selectedCity.toLowerCase()
+  );
+} else {
+  // Default case: return all searchResults
+  filteredResults = searchResults;
+}
 
-  console.log("Filtered Results:", filteredResults);
+// Apply active filters
+if (activeFilters.includes("Favorites")) {
+  filteredResults = filteredResults.filter((item) => favorited.includes(item));
+}
 
-  if (activeFilters.includes("My Favorites")) {
-    filteredResults = searchResults.filter((item) => favorited.includes(item));
-  }
+if (activeFilters.includes("Highly Rated")) {
+  filteredResults = filteredResults.slice().sort((a, b) => b.star - a.star);
+}
 
-  if (activeFilters.includes("Highly Rated")) {
-    filteredResults = filteredResults.slice().sort((a, b) => b.star - a.star);
-  }
+if (activeFilters.includes("Budget Friendly")) {
+  filteredResults = filteredResults.slice().sort((a, b) => a.price - b.price);
+}
 
-  if (activeFilters.includes("Budget Friendly")) {
-    filteredResults = filteredResults.slice().sort((a, b) => a.price - b.price);
-  }
+if (activeFilters.includes("Pets Allowed")) {
+  filteredResults = filteredResults.filter(
+    (item) => item.petsAllowed === "yes"
+  );
+}
 
-  if (activeFilters.includes("Pet Friendly")) {
-    filteredResults = filteredResults.filter(
-      (item) => item.petsAllowed == "yes"
-    );
-  }
+if (activeFilters.includes("Free Breakfast")) {
+  filteredResults = filteredResults.filter((item) =>
+    item.description.includes("Kitchen")
+  );
+}
 
-  if (activeFilters.includes("Free Cancelation")) {
-    filteredResults = filteredResults.filter(
-      (item) => item.freeCancelation == "yes"
-    );
-  }
+if (activeFilters.includes("Wi-Fi")) {
+  filteredResults = filteredResults.filter((item) =>
+    item.description.includes("Wi-Fi")
+  );
+}
+
+if (activeFilters.includes("Free Cancellation")) {
+  filteredResults = filteredResults.filter(
+    (item) => item.freeCancelation === "yes"
+  );
+}
+
+// Filter based on number of guests
+if (numberOfGuests !== undefined) {
+  const guestsString = `${numberOfGuests} guests`;
+  filteredResults = filteredResults.filter((item) =>
+    item.description.includes(guestsString)
+  );
+}
+
+console.log("Filtered Results:", filteredResults);
 
   const coordinates = filteredResults.map((result) => ({
     longitude: result.long,
@@ -107,10 +133,10 @@ function Search({ searchResults }) {
   const center = getCenter(coordinates);
 
   console.log(
-    "selectedLocationID",
-    selectedLocation.id,
+    "selectedAddressID",
+    selectedAddress.id,
     "location",
-    location,
+    selectedCity,
     "searchRsults",
     searchResults,
     "filteredResults",
@@ -129,42 +155,70 @@ function Search({ searchResults }) {
     <div>
       <Header
         placeholder={
-          location ? `${location} | ${range} | ${numberOfGuests} guests` : ""
+          selectedCity ? `${selectedCity} | ${range} | ${numberOfGuests} guests` : ""
         }
       />
       <main className="flex">
-        <section className="flex-grow px-2 md:px-6   ">
+        <section className=" px-2  max-w-[750px] ">
           <div className="flex w-full justify-between mt-4">
-            <h1 className="text-xl md:text-3xl font-semibold mb-2  capitalize">
-              {location ? location : "Explore Locations"}{" "}
+            <h1 className="text-xl md:text-3xl font-semibold mb-2 pl-2 capitalize">
+              {selectedCity ? selectedCity : "Explore Locations"}{" "}
               <p className="text-xs pl-1">
-            {numberOfGuests != undefined
-              ? "300+ Stays" + range + " for " + numberOfGuests + "guests"
-              : "No dates have been selected yet"}
-          </p>
+                {numberOfGuests != undefined
+                  ? filteredResults.length +
+                    " Stays | " +
+                    range +
+                    " | " +
+                    numberOfGuests +
+                    " guests "
+                  : "No dates have been selected yet "}
+                  {activeFilters.includes("Favorites") && <span className="text-red-400">| Favorites selected </span>}
+                  {selectedAddress.id && <span className="text-red-400">| Address selected </span>}
+              </p>
             </h1>
 
-            {selectedLocation.id ? (
-              <h3
-                onClick={() => setSelectedLocation({})}
-                className="h-12 px-2 bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
-              >
-                <ArrowUturnLeftIcon className="h-5 w-5 font-bold text-white" />
-                <p className="py-2 px-2 text-white">Unselect</p>
-              </h3>
-            ) : (
+            <div className="flex">
+              {" "}
+              <div className="mx-4">
               <button
-                onClick={() => router.push("/")}
-                className="h-12 px-2  bg-gray-100 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
+                key={"Favorites"}
+                onClick={() => handleFilter("Favorites")}
+                className={
+                  activeFilters.includes("Favorites")
+                    ? "p-2 ring-2 ring-red-400 bg-white hover:bg-red-500 rounded-full transition duration-200 ease-out shadow-lg "
+                    : "p-2 ring-2 ring-red-400 bg-white hover:bg-red-500 rounded-full transition duration-200 ease-out shadow-lg "
+                }
               >
-                <ArrowLeftCircleIcon className="h-8 w-8 text-red-400" />
-                <p className="py-1 px-2">Back</p>
+              
+                {activeFilters.includes("Favorites") ? (
+                  <HeartIcon className="h-6 cursor-pointer text-red-400" />
+                ) : (
+                  <HeartIconInactive className=" h-6 cursor-pointer text-red-400" />
+                )}
               </button>
-            )}
+              </div>
+              {selectedAddress.id ? (
+                <button
+                  onClick={() => setSelectedAddress({})}
+                  className="h-11 px-2  bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
+                >
+                  <ArrowUturnLeftIcon className="h-5 w-5 font-semibold text-white" />
+                  <p className="py-2 px-1 text-white">Undo</p>
+                </button>
+              ) : (
+                <button
+                  onClick={() => router.push("/")}
+                  className="h-10 px-2 ring-2 ring-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
+                >
+                  <ArrowLeftCircleIcon className="h-8 w-8 text-red-400" />
+                  <p className="py-1 px-1 text-red-400">Back</p>
+                </button>
+              )}
+            </div>
           </div>
-    
-          {/* { !selectedLocation.id && */}
-          <div className="hidden lg:inline-flex text-xs md:text-[15px] mb-3 mt-3 space-x-3 text-gray-800 whitespace-nowrap">
+
+          {/* { !selectedAddress.id && */}
+          <div className="hidden lg:inline-flex text-xs md:text-[15px] mb-3 mt-3 space-x-1 text-gray-800 whitespace-nowrap">
             {filterButtons.map((item) => (
               <p
                 key={item}
@@ -180,21 +234,20 @@ function Search({ searchResults }) {
             ))}
           </div>
           {/* } */}
-          {/* { selectedLocation.id &&   <SelectedCard selectedLocation={selectedLocation}  favorited={favorited} handleFavorites={handleFavorites}/> } */}
+          {/* { selectedAddress.id &&   <SelectedCard selectedAddress={selectedAddress}  favorited={favorited} handleFavorites={handleFavorites}/> } */}
           <div className="flex flex-col gap-y-2">
             {filteredResults?.map((item) => (
               <InfoCard
-                city={location}
+                selectedCity={selectedCity}
                 key={item.id}
                 img={item.img}
-                location={item.location}
                 title={item.title}
                 star={item.star}
                 price={item.price}
                 description={item.description}
                 total={item.total}
-                selectedLocation={selectedLocation}
-                setSelectedLocation={setSelectedLocation}
+                selectedAddress={selectedAddress}
+                setSelectedAddress={setSelectedAddress}
                 item={item}
                 favorited={favorited}
                 setFavorited={setFavorited}
@@ -205,15 +258,17 @@ function Search({ searchResults }) {
           </div>
         </section>
 
-        <section className="hidden lg:inline-flex min-w-[600px]">
+        <section className="hidden lg:flex min-w-[700px]">
           <SearchMap
             searchResults={searchResults}
-            selectedLocation={selectedLocation}
-            setSelectedLocation={setSelectedLocation}
+            selectedAddress={selectedAddress}
+            setSelectedAddress={setSelectedAddress}
             filteredResults={filteredResults}
-            searchLocation={location} // Pass the searched location to the SearchMap component
+           // Pass the searched location to the SearchMap component
+            selectedCity={selectedCity}
             setViewport={setViewport}
             viewport={viewport}
+            setSelectedCity={setSelectedCity}
           />
         </section>
       </main>

@@ -19,6 +19,7 @@
     "react": "^18",
     "react-date-range": "^2.0.1",
     "react-dom": "^18",
+    "react-icons": "^5.2.1",
     "react-map-gl": "^6.0.2",
     "react-map-gl-geocoder": "^2.2.0",
     "tailwind-scrollbar-hide": "^1.1.7"

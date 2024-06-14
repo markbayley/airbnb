@@ -11,6 +11,7 @@ import "react-date-range/dist/styles.css"; // main style file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRangePicker } from "react-date-range";
 import { useRouter } from "next/router";
+import { differenceInDays } from 'date-fns'
 
 
 
@@ -18,6 +19,9 @@ function Header({placeholder}) {
   const [searchInput, setSearchInput] = useState("");
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
+  const numberOfDays = differenceInDays( endDate, startDate);
+
+  console.log("numberOfDays", numberOfDays)
   const [numberOfGuests, setNumberOfGuests] = useState(1);
 
   const router = useRouter()
@@ -41,12 +45,14 @@ function Header({placeholder}) {
     router.push({
       pathname: "/search",
       query: {
-        location: searchInput,
+        city: searchInput,
         startDate: startDate.toISOString(),
         endDate: endDate.toISOString(),
-        numberOfGuests
+        numberOfGuests,
+        numberOfDays
       } 
     })
+    
   }
 
   return (
