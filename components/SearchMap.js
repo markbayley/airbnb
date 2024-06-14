@@ -9,14 +9,8 @@ import axios from 'axios';
 
 const MAPBOX_TOKEN = "pk.eyJ1IjoiaW5ibG9jayIsImEiOiJjbHg4b3VoM3cxNDA4Mm1wem1wbDhlYmppIn0.YWSASiW3GzEdOTA8lXoEFw";
 
-const SearchMap = ({ searchResults, selectedLocation, setSelectedLocation, filteredResults, searchLocation }) => {
-  const [viewport, setViewport] = useState({
-    width: "100%",
-    height: "100%",
-    latitude: 10,
-    longitude: 0,
-    zoom: 1,
-  });
+const SearchMap = ({ selectedLocation, setSelectedLocation, filteredResults, searchLocation, setViewport, viewport }) => {
+
 
   const mapRef = useRef();
 
@@ -65,7 +59,7 @@ const SearchMap = ({ searchResults, selectedLocation, setSelectedLocation, filte
         className="bg-gray-300"
       >
         {filteredResults?.map((result) => (
-          <div key={result.id} onClick={() => { selectedLocation.id === undefined ? setSelectedLocation(result) : setSelectedLocation({}), setViewport({ longitude: result.long,  latitude:result.lat, zoom: 14}) }}>
+          <div key={result.id} onClick={() => { setSelectedLocation(result) , setViewport({ longitude: result.long,  latitude:result.lat, zoom: 14,  transitionDuration: 200,}) }}>
             <Marker
               longitude={result.long}
               latitude={result.lat}
@@ -97,7 +91,7 @@ const SearchMap = ({ searchResults, selectedLocation, setSelectedLocation, filte
           mapRef={mapRef}
           onViewportChange={handleGeocoderViewportChange}
           mapboxApiAccessToken={MAPBOX_TOKEN}
-          position="top-left"
+          position="top-right"
         />
       </MapGL>
     </div>
