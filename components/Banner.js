@@ -7,7 +7,7 @@ function Banner({img}) {
   const router = useRouter()
 
   return (
-    <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[400px]">
+    <div className="relative h-[400px]">
 
       <Image
        alt="image-banner"

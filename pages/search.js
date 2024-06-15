@@ -163,7 +163,7 @@ if (numberOfGuests !== undefined) {
     <div className="flex flex-col h-screen">
       <Header
         placeholder={
-          selectedCity ? `${selectedCity} | ${range} | ${numberOfGuests} guests` : ""
+          selectedCity ? selectedCity : ""
         }
         handleFilter={handleFilter} activeFilters={activeFilters}
       />
@@ -189,7 +189,7 @@ if (numberOfGuests !== undefined) {
               onClick={() => { setSelectedAddress({}); setActiveFilters([]); }}
               className="h-9 px-2 bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
             >
-              <FunnelIcon className="h-5 w-5 text-white" />
+              <FunnelIcon className="h-5 w-5 text-white hover:scale-125 transition duration-200 ease-out" />
             </button>
             <span className="text-xs text-gray-500">Remove Filters</span>
             <p className="text-xs pl-1">
@@ -203,7 +203,7 @@ if (numberOfGuests !== undefined) {
               onClick={() => { setSelectedCity(null); resetQueryParams(); }}
               className="h-9 px-2 bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
             >
-              <ArrowUturnLeftIcon className="h-5 w-5 text-white" />
+              <ArrowUturnLeftIcon className="h-5 w-5 text-white hover:scale-125 transition duration-200 ease-out" />
             </button>
             <span className="text-xs text-gray-500">Clear Search</span>
           </div>
@@ -213,7 +213,7 @@ if (numberOfGuests !== undefined) {
               onClick={() => router.push("/")}
               className="h-9 px-2 bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
             >
-              <HomeIcon className="h-5 w-5 text-white" />
+              <HomeIcon className="h-5 w-5 text-white hover:scale-125 transition duration-200 ease-out" />
             </button>
             <span className="text-xs text-gray-500">Return Home</span>
           </div>

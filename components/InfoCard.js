@@ -89,13 +89,13 @@ function InfoCard({
             <div className="">
               <button
                 key={item.id}
-                className="p-2 bg-white hover:bg-red-500 rounded-full transition duration-200 ease-out shadow-lg absolute top-3 right-3"
+                className="p-2 bg-white  rounded-full shadow-lg absolute top-3 right-3"
                 onClick={() => handleFavorites(item)}
               >
                 {favorited.includes(item) ? (
-                  <HeartIcon className="h-7 cursor-pointer text-red-400" />
+                  <HeartIcon className="h-5 cursor-pointer text-red-400 hover:scale-110 transition duration-200 ease-out" />
                 ) : (
-                  <HeartIconInactive className=" h-7 cursor-pointer text-red-400" />
+                  <HeartIconInactive className=" h-5 cursor-pointer text-red-400 hover:scale-110 transition duration-200 ease-out" />
                 )}
               </button>
             </div>
