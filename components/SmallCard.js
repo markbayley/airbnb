@@ -10,7 +10,7 @@ function SmallCard({ data }) {
     router.push({
       pathname: "/search",
       query: {
-        location: data.city[0],
+        city: data.city[0],
       } 
     })
   }

@@ -4,6 +4,8 @@ import InfoCard from "@/components/InfoCard";
 import {
   ArrowLeftCircleIcon,
   ArrowUturnLeftIcon,
+  FunnelIcon,
+  HomeIcon,
 } from "@heroicons/react/24/solid";
 import { format } from "date-fns";
 import { useRouter } from "next/router";
@@ -18,6 +20,20 @@ function Search({ searchResults }) {
   const router = useRouter();
   const { city, startDate, endDate, numberOfGuests, numberOfDays } = router?.query;
 
+
+  const resetQueryParams = () => {
+    router.replace({
+      pathname: router.pathname,
+      query: {
+        city: null,
+        startDate: null,
+        endDate: null,
+        numberOfGuests: null,
+        numberOfDays: null
+      }
+    }, undefined, { shallow: true });
+  };
+
   const [selectedCity, setSelectedCity] = useState(city);
 
   const formattedStartDate =
@@ -31,7 +47,7 @@ function Search({ searchResults }) {
     "Pets Allowed",
     "Highly Rated",
     "Budget Friendly",
-    "Free Breakfast",
+    "Breakfast",
     "Wi-Fi",
   ];
 
@@ -97,7 +113,7 @@ if (activeFilters.includes("Pets Allowed")) {
   );
 }
 
-if (activeFilters.includes("Free Breakfast")) {
+if (activeFilters.includes("Breakfast")) {
   filteredResults = filteredResults.filter((item) =>
     item.description.includes("Kitchen")
   );
@@ -123,14 +139,6 @@ if (numberOfGuests !== undefined) {
   );
 }
 
-console.log("Filtered Results:", filteredResults);
-
-  const coordinates = filteredResults.map((result) => ({
-    longitude: result.long,
-    latitude: result.lat,
-  }));
-
-  const center = getCenter(coordinates);
 
   console.log(
     "selectedAddressID",
@@ -157,21 +165,22 @@ console.log("Filtered Results:", filteredResults);
         placeholder={
           selectedCity ? `${selectedCity} | ${range} | ${numberOfGuests} guests` : ""
         }
+        handleFilter={handleFilter} activeFilters={activeFilters}
       />
       <main className="flex">
-        <section className=" px-2  max-w-[750px] ">
+        <section className="px-1 md:px-6 max-w-[750px] ">
           <div className="flex w-full justify-between mt-4">
-            <h1 className="text-xl md:text-3xl font-semibold mb-2 pl-2 capitalize">
-              {selectedCity ? selectedCity : "Explore Locations"}{" "}
+            <h1 className="text-xl md:text-3xl font-semibold mb-2 capitalize">
+              {selectedCity ? selectedCity : "Explore The World"}{" "}
               <p className="text-xs pl-1">
-                {numberOfGuests != undefined
-                  ? filteredResults.length +
-                    " Stays | " +
-                    range +
+                { filteredResults.length +
+                    " Stays | " }
+                  {startDate !== undefined ? 
+                   range +
                     " | " +
                     numberOfGuests +
                     " guests "
-                  : "No dates have been selected yet "}
+                  : "No dates or guest numbers selected yet " }
                   {activeFilters.includes("Favorites") && <span className="text-red-400">| Favorites selected </span>}
                   {selectedAddress.id && <span className="text-red-400">| Address selected </span>}
               </p>
@@ -179,46 +188,44 @@ console.log("Filtered Results:", filteredResults);
 
             <div className="flex">
               {" "}
-              <div className="mx-4">
+         
+              {selectedAddress.id || activeFilters.length > 0 ? (
+                <div className="flex flex-col items-end">
+                <button
+                  onClick={() => {setSelectedAddress({}), setActiveFilters([])}}
+                  className="h-9 px-2  bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
+                >
+                  <FunnelIcon className="h-5 w-5  text-white" />
+                  {/* <p className="py-1 px-1 text-white">Reset</p> */}
+                </button>
+                <span className="text-xs text-gray-500">Remove Filters</span>
+                </div>
+              ) : selectedCity ? (
+                <div className="flex flex-col items-end">
+                <button
+                  onClick={ () => { setSelectedCity(null), resetQueryParams}}
+                  className="h-9 px-2 bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
+                >
+                  <ArrowUturnLeftIcon className="h-5 w-5  text-white" />
+                  {/* <p className="py-1 px-1 text-red-400">Back</p> */}
+                </button>
+                  <span className="text-xs text-gray-500">Clear Search</span>
+                  </div>
+              ) :   <div className="flex flex-col items-end">
               <button
-                key={"Favorites"}
-                onClick={() => handleFilter("Favorites")}
-                className={
-                  activeFilters.includes("Favorites")
-                    ? "p-2 ring-2 ring-red-400 bg-white hover:bg-red-500 rounded-full transition duration-200 ease-out shadow-lg "
-                    : "p-2 ring-2 ring-red-400 bg-white hover:bg-red-500 rounded-full transition duration-200 ease-out shadow-lg "
-                }
+               onClick={() => router.push("/")} 
+                className="h-9 px-2 bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
               >
-              
-                {activeFilters.includes("Favorites") ? (
-                  <HeartIcon className="h-6 cursor-pointer text-red-400" />
-                ) : (
-                  <HeartIconInactive className=" h-6 cursor-pointer text-red-400" />
-                )}
+                <HomeIcon className="h-5 w-5  text-white" />
+                {/* <p className="py-1 px-1 text-red-400">Back</p> */}
               </button>
-              </div>
-              {selectedAddress.id ? (
-                <button
-                  onClick={() => setSelectedAddress({})}
-                  className="h-11 px-2  bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
-                >
-                  <ArrowUturnLeftIcon className="h-5 w-5 font-semibold text-white" />
-                  <p className="py-2 px-1 text-white">Undo</p>
-                </button>
-              ) : (
-                <button
-                  onClick={() => router.push("/")}
-                  className="h-10 px-2 ring-2 ring-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
-                >
-                  <ArrowLeftCircleIcon className="h-8 w-8 text-red-400" />
-                  <p className="py-1 px-1 text-red-400">Back</p>
-                </button>
-              )}
+                <span className="text-xs text-gray-500">Return Home</span>
+                </div>}
             </div>
           </div>
 
           {/* { !selectedAddress.id && */}
-          <div className="hidden lg:inline-flex text-xs md:text-[15px] mb-3 mt-3 space-x-1 text-gray-800 whitespace-nowrap">
+          <div className="hidden lg:inline-flex text-xs md:text-[15px] mb-3 mt-1 space-x-1 text-gray-800 whitespace-nowrap">
             {filterButtons.map((item) => (
               <p
                 key={item}
@@ -239,13 +246,6 @@ console.log("Filtered Results:", filteredResults);
             {filteredResults?.map((item) => (
               <InfoCard
                 selectedCity={selectedCity}
-                key={item.id}
-                img={item.img}
-                title={item.title}
-                star={item.star}
-                price={item.price}
-                description={item.description}
-                total={item.total}
                 selectedAddress={selectedAddress}
                 setSelectedAddress={setSelectedAddress}
                 item={item}
@@ -255,6 +255,7 @@ console.log("Filtered Results:", filteredResults);
                 setViewport={setViewport}
               />
             ))}
+            {filteredResults.length === 0 && <span className="flex border w-full h-96 justify-center items-center">Sorry, no stays available for {numberOfGuests} guests on selected dates in {selectedCity} with those filters.</span>}
           </div>
         </section>
 

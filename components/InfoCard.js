@@ -13,17 +13,10 @@ import Image from "next/image";
 import React, { useState } from "react";
 
 function InfoCard({
-  img,
-  description,
-  title,
-  star,
-  price,
-  total,
   selectedAddress,
   setSelectedAddress,
   item,
   favorited,
-  setFavorited,
   handleFavorites,
   selectedCity,
   setViewport,
@@ -49,7 +42,7 @@ function InfoCard({
         <div className="relative h-56 w-full md:h-80 md:w-full flex-shrink-0">
           <Image
             alt="image-info"
-            src={img}
+            src={item.img}
             layout="fill"
             objectFit="cover"
             className="rounded-md"
@@ -64,7 +57,7 @@ function InfoCard({
                     : "h-5 text-red-400"
                 }
               />
-              {star}
+              {item.star}
             </p>
           </div>
         </div>
@@ -74,7 +67,7 @@ function InfoCard({
             <div className="relative h-12 w-20 md:h-24 md:w-40 flex-shrink-0 ">
               <Image
                 alt="image-info"
-                src={img}
+                src={item.img}
                 layout="fill"
                 objectFit="cover"
                 className="rounded cursor-pointer hover:opacity-80"
@@ -83,7 +76,7 @@ function InfoCard({
             <div className="relative h-12 w-20 md:h-24 md:w-40 flex-shrink-0">
               <Image
                 alt="image-info"
-                src={img}
+                src={item.img}
                 layout="fill"
                 objectFit="cover"
                 className="rounded cursor-pointer hover:opacity-80"
@@ -92,7 +85,7 @@ function InfoCard({
             <div className="relative h-12 w-20 md:h-24 md:w-40 flex-shrink-0">
               <Image
                 alt="image-info"
-                src={img}
+                src={item.img}
                 layout="fill"
                 objectFit="cover"
                 className="rounded cursor-pointer hover:opacity-80"
@@ -101,7 +94,7 @@ function InfoCard({
             <div className="relative h-12 w-20 md:h-24 md:w-40 flex-shrink-0">
               <Image
                 alt="image-info"
-                src={img}
+                src={item.img}
                 layout="fill"
                 objectFit="cover"
                 className="rounded cursor-pointer hover:opacity-80"
@@ -119,8 +112,8 @@ function InfoCard({
             </p>
             <div className="">
               <button
-                key={item}
-                className="p-2 bg-white hover:bg-red-500 rounded-full transition duration-200 ease-out shandow-lg absolute top-3 right-3"
+                key={item.id}
+                className="p-2 bg-white hover:bg-red-500 rounded-full transition duration-200 ease-out shadow-lg absolute top-3 right-3"
                 onClick={() => handleFavorites(item)}
               >
                 {favorited.includes(item) ? (
@@ -133,9 +126,9 @@ function InfoCard({
           </div>
 
           <h4 className="flex w-full flex-wrap justify-between text-md md:text-xl">
-            <span className="pt-1">{title}</span>
+            <span className="pt-1">{item.title}</span>
             <span className="text-[18px]  font-semibold bg-red-400 rounded py-1 px-2 text-white">
-              {"$" + price + "/n"}
+              {"$" + item.price + "/n"}
             </span>
           </h4>
 
@@ -146,26 +139,26 @@ function InfoCard({
               " flex items-center text-sm text-gray-700 flex-grow overflow-hidden nowrap mt-3"
             }
           >
-            {description.includes("1 guest") && (
+            {item.description.includes("1 guest") && (
               <>
                 {" "}
                 Guests <MdPerson className="mx-1 h-4 w-4" />
               </>
             )}{" "}
-            {description.includes("2 guests") && (
+            {item.description.includes("2 guests") && (
               <>
                 Guests <MdPerson className=" h-4 w-4" />
                 <MdPerson className=" h-5 w-4" />
               </>
             )}{" "}
-            {description.includes("3 guests") && (
+            {item.description.includes("3 guests") && (
               <>
                 Guests <MdPerson className=" h-4 w-4" />{" "}
                 <MdPerson className=" h-4 w-4" />
                 <MdPerson className=" h-5 w-4" />
               </>
             )}
-            {description.includes("4 guests") && (
+            {item.description.includes("4 guests") && (
               <>
                 Guests <MdPerson className=" h-4 w-4" />{" "}
                 <MdPerson className=" h-4 w-4" />{" "}
@@ -173,19 +166,19 @@ function InfoCard({
                 <MdPerson className=" h-5 w-4" />
               </>
             )}
-            {description.includes("1 bed") && (
+            {item.description.includes("1 bed") && (
               <>
                 | Beds <FaBed className="mx-1 h-4 w-4" />
               </>
             )}{" "}
-            {description.includes("2 beds") && (
+            {item.description.includes("2 beds") && (
               <>
                 | Beds
                 <FaBed className="mx-1 h-4 w-4" />
                 <FaBed className="mx-1 h-5 w-4" />
               </>
             )}
-            {description.includes("3 beds") && (
+            {item.description.includes("3 beds") && (
               <>
                 | Beds
                 <FaBed className="mx-1 h-4 w-4" />
@@ -193,7 +186,7 @@ function InfoCard({
                 <FaBed className="mx-1 h-5 w-4" />
               </>
             )}
-            {description.includes("4 beds") && (
+            {item.description.includes("4 beds") && (
               <>
                 | Beds
                 <FaBed className="mx-1 h-4 w-4" />
@@ -202,19 +195,19 @@ function InfoCard({
                 <FaBed className="mx-1 h-5 w-4" />
               </>
             )}
-            {description.includes("1 bath") && (
+            {item.description.includes("1 bath") && (
               <>
                 | Baths <FaBath className="mx-1 " />
               </>
             )}{" "}
-            {description.includes("2 baths") && (
+            {item.description.includes("2 baths") && (
               <>
                 | Baths
                 <FaBath className="mx-1" />
                 <FaBath className="mx-1" />
               </>
             )}
-            {description.includes("3 baths") && (
+            {item.description.includes("3 baths") && (
               <>
                 | Baths
                 <FaBath className="mx-1" />
@@ -222,7 +215,7 @@ function InfoCard({
                 <FaBath className="mx-1" />
               </>
             )}
-            {description.includes("4 baths") && (
+            {item.description.includes("4 baths") && (
               <>
                 | Baths
                 <FaBath className="mx-1" />
@@ -232,34 +225,34 @@ function InfoCard({
               </>
             )}
             {/* {item.star > 4  && (<> | Highly Rated <StarIcon className="mx-1 h-4 w-4"/></>)} */}
-            {description.includes("Wi-Fi") && (
+            {item.description.includes("Wi-Fi") && (
               <>
                 | Wi-Fi <FaWifi className="mx-1 " />
               </>
             )}
             <span className="hidden md:inline-flex items-center">
-              {description.includes("Kitchen") && (
+              {item.description.includes("Kitchen") && (
                 <>
                   | Breakfast <MdFreeBreakfast className="mx-1 h-4 w-4" />
                 </>
               )}
-              {item.petsAllowed && (
+              {item.petsAllowed === "yes" && (
                 <>
                   {" "}
-                  | Pets Ok <MdOutlinePets className="mx-1" />
+                  | Pets <MdOutlinePets className="mx-1" />
                 </>
               )}
             </span>
             <span className="hidden md:inline-flex items-center justify-end text-sm text-gray-700 flex-grow overflow-hidden nowrap ">
-            {item.freeCancelation && (
+            {item.freeCancelation === "yes" && (
                 <>
                   {" "}
-                  Free Cancellation <MdFreeCancellation className="mx-1" />
+                 Cancel Free <MdFreeCancellation className="mx-1" />
                 </>
               )}
               {item.price < 150 && (
                 <>
-                Budget <BsPiggyBankFill className="mx-1 h-4 w-4" />
+                Budget Friendly <BsPiggyBankFill className="mx-1 h-4 w-4" />
                 </>
               )}
             </span>

@@ -17,3 +17,7 @@
   font-weight: 500;
   font-style: normal;
 }
+
+.rdrDefinedRangesWrapper {
+  display:  'none' ;
+}

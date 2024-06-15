@@ -10,7 +10,6 @@ import axios from "axios";
 import SearchMap from "@/components/SearchMap";
 
 export default function Home({ exploreData, cardsData }) {
-
   const [imageUrls, setImageUrls] = useState([]);
 
   const [destinationData, setDestinationData] = useState([]);
@@ -23,9 +22,8 @@ export default function Home({ exploreData, cardsData }) {
     ["Barcelona", "from $1,979"],
     ["Singapore", "from $879"],
     ["Vancouver", "from $2,167"],
-    ["New York", "from 2,437"]
+    ["New York", "from 2,437"],
   ];
-  
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -44,15 +42,13 @@ export default function Home({ exploreData, cardsData }) {
         const imageUrls = images.map((image) => image.webformatURL);
         setImageUrls(imageUrls);
 
-       
         // Merge imageUrls with topDestinations
         const mergedData = topDestinations.map((city, index) => ({
           city,
-          imageUrl: imageUrls[index] || '',
+          imageUrl: imageUrls[index] || "",
         }));
 
         setDestinationData(mergedData);
-
       } catch (error) {
         console.error("Error fetching images:", error);
       }
@@ -61,10 +57,7 @@ export default function Home({ exploreData, cardsData }) {
     fetchImages();
   }, []);
 
-
-
-
-console.log(destinationData, "data")
+  console.log(destinationData, "data");
 
   return (
     <div className="bg-white">
@@ -73,31 +66,34 @@ console.log(destinationData, "data")
         <link rel="icon" href="/favicon.ico"></link>
       </Head>
       <Header />
-      <Banner img={imageUrls[4]}/>
+      <Banner img={imageUrls[4]} />
 
       <main className="max-w-7xl mx-auto px-2 sm:mx-16 ">
         <section className="pt-6">
-          <h2 className="text-3xl font-semibold pb-5 text-gray-500 ">Top Destinations</h2>
-          
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-2"> 
-        {destinationData?.map((data, index) => (
-          <SmallCard key={index} data={data} />
-        ) )}
-        </div>
-    {/* </div> */}
-    <h2 className="text-3xl font-semibold py-8 text-gray-500">Live Anywhere</h2>
-    <div className="flex space-x-3 overflow-scroll scrollbar-hide ">
-          {imageUrls?.map((url) => (
-          <MediumCard key={url} url={url} />
-          ) )}
-    </div>
+          <h2 className="text-3xl font-semibold pb-5 text-gray-500 ">
+            Top Destinations
+          </h2>
 
-    {/* <SearchMap /> */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-2">
+            {destinationData?.map((data, index) => (
+              <SmallCard key={index} data={data} />
+            ))}
+          </div>
+          {/* </div> */}
+          <h2 className="text-3xl font-semibold py-8 text-gray-500">
+            Live Anywhere
+          </h2>
+          <div className="flex space-x-3 overflow-scroll scrollbar-hide ">
+            {imageUrls?.map((url) => (
+              <MediumCard key={url} url={url} />
+            ))}
+          </div>
 
-    {/* <div>
+          {/* <SearchMap /> */}
+
+          {/* <div>
       <LargeCard img={imageUrls[7]} title="The Great Outdoors" description="Get started today" buttonText="Get inspired"/>
     </div> */}
-
         </section>
       </main>
       <Footer />
@@ -105,22 +101,19 @@ console.log(destinationData, "data")
   );
 }
 
-
 export async function getStaticProps() {
-  const exploreData = await fetch("https://www.jsonkeeper.com/b/4G1G").
-      then(
-        (res) => res.json()
-      );
+  const exploreData = await fetch("https://www.jsonkeeper.com/b/4G1G").then(
+    (res) => res.json()
+  );
 
-  const cardsData = await fetch("https://www.jsonkeeper.com/b/4G1G").
-     then(
-      (res) => res.json()
-     );
+  const cardsData = await fetch("https://www.jsonkeeper.com/b/4G1G").then(
+    (res) => res.json()
+  );
 
-      return {
-          props: {
-            exploreData,
-            cardsData
-          }
-        }
+  return {
+    props: {
+      exploreData,
+      cardsData,
+    },
+  };
 }

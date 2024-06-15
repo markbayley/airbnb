@@ -36,7 +36,7 @@ const links4 = [
 
 function Footer() {
   return (
-    <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-y-10 text-gray-600 px-20 py-14 bg-gray-100">
+    <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-y-10 text-gray-600 px-20 py-14 bg-gray-100 mt-16">
        <div className="space-y-4 text-xs text-gray-800 ">
         <h5 className="font-bold">ABOUT</h5>
         {links1.map(item => (
