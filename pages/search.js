@@ -160,119 +160,119 @@ if (numberOfGuests !== undefined) {
   });
 
   return (
-    <div>
+    <div className="flex flex-col h-screen">
       <Header
         placeholder={
           selectedCity ? `${selectedCity} | ${range} | ${numberOfGuests} guests` : ""
         }
         handleFilter={handleFilter} activeFilters={activeFilters}
       />
-      <main className="flex">
-        <section className="px-1 md:px-6 max-w-[750px] ">
-          <div className="flex w-full justify-between mt-4">
-            <h1 className="text-xl md:text-3xl font-semibold mb-2 capitalize">
-              {selectedCity ? selectedCity : "Explore The World"}{" "}
-              <p className="text-xs pl-1">
-                { filteredResults.length +
-                    " Stays | " }
-                  {startDate !== undefined ? 
-                   range +
-                    " | " +
-                    numberOfGuests +
-                    " guests "
-                  : "No dates or guest numbers selected yet " }
-                  {activeFilters.includes("Favorites") && <span className="text-red-400">| Favorites selected </span>}
-                  {selectedAddress.id && <span className="text-red-400">| Address selected </span>}
-              </p>
-            </h1>
+   <main className="flex flex-col lg:flex-row  flex-grow">
+  <section className="flex-1 px-1 md:px-6 max-w-full lg:max-w-[750px]">
+    <div className="flex w-full justify-between my-2">
+      <div className="mt-2">
+        <h1 className="text-xl md:text-3xl font-semibold pl-1 capitalize">
+          {selectedCity ? selectedCity : "Explore The World"}{" "}
+        </h1>
+        <p className="text-xs pl-1">
+          {filteredResults.length + " Stays | "}
+          {startDate !== undefined ? 
+            range + " | " + numberOfGuests + " guests "
+          : "No dates or guest numbers "}
+        </p>
+      </div>
 
-            <div className="flex">
-              {" "}
-         
-              {selectedAddress.id || activeFilters.length > 0 ? (
-                <div className="flex flex-col items-end">
-                <button
-                  onClick={() => {setSelectedAddress({}), setActiveFilters([])}}
-                  className="h-9 px-2  bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
-                >
-                  <FunnelIcon className="h-5 w-5  text-white" />
-                  {/* <p className="py-1 px-1 text-white">Reset</p> */}
-                </button>
-                <span className="text-xs text-gray-500">Remove Filters</span>
-                </div>
-              ) : selectedCity ? (
-                <div className="flex flex-col items-end">
-                <button
-                  onClick={ () => { setSelectedCity(null), resetQueryParams}}
-                  className="h-9 px-2 bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
-                >
-                  <ArrowUturnLeftIcon className="h-5 w-5  text-white" />
-                  {/* <p className="py-1 px-1 text-red-400">Back</p> */}
-                </button>
-                  <span className="text-xs text-gray-500">Clear Search</span>
-                  </div>
-              ) :   <div className="flex flex-col items-end">
-              <button
-               onClick={() => router.push("/")} 
-                className="h-9 px-2 bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
-              >
-                <HomeIcon className="h-5 w-5  text-white" />
-                {/* <p className="py-1 px-1 text-red-400">Back</p> */}
-              </button>
-                <span className="text-xs text-gray-500">Return Home</span>
-                </div>}
-            </div>
+      <div className="flex">
+        {selectedAddress.id || activeFilters.length > 0 ? (
+          <div className="flex flex-col items-end">
+            <button
+              onClick={() => { setSelectedAddress({}); setActiveFilters([]); }}
+              className="h-9 px-2 bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
+            >
+              <FunnelIcon className="h-5 w-5 text-white" />
+            </button>
+            <span className="text-xs text-gray-500">Remove Filters</span>
+            <p className="text-xs pl-1">
+              {activeFilters.includes("Favorites") && <span className="text-red-400"> Favorites </span>}
+              {selectedAddress.id && <span className="text-red-400">| Address </span>}
+            </p>
           </div>
+        ) : selectedCity ? (
+          <div className="flex flex-col items-end">
+            <button
+              onClick={() => { setSelectedCity(null); resetQueryParams(); }}
+              className="h-9 px-2 bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
+            >
+              <ArrowUturnLeftIcon className="h-5 w-5 text-white" />
+            </button>
+            <span className="text-xs text-gray-500">Clear Search</span>
+          </div>
+        ) : (
+          <div className="flex flex-col items-end">
+            <button
+              onClick={() => router.push("/")}
+              className="h-9 px-2 bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
+            >
+              <HomeIcon className="h-5 w-5 text-white" />
+            </button>
+            <span className="text-xs text-gray-500">Return Home</span>
+          </div>
+        )}
+      </div>
+    </div>
 
-          {/* { !selectedAddress.id && */}
-          <div className="hidden lg:inline-flex text-xs md:text-[15px] mb-3 mt-1 space-x-1 text-gray-800 whitespace-nowrap">
-            {filterButtons.map((item) => (
-              <p
-                key={item}
-                onClick={() => handleFilter(item)}
-                className={
-                  activeFilters.includes(item)
-                    ? "button bg-red-400 text-white"
-                    : "button"
-                }
-              >
-                {item}
-              </p>
-            ))}
-          </div>
-          {/* } */}
-          {/* { selectedAddress.id &&   <SelectedCard selectedAddress={selectedAddress}  favorited={favorited} handleFavorites={handleFavorites}/> } */}
-          <div className="flex flex-col gap-y-2">
-            {filteredResults?.map((item) => (
-              <InfoCard
-                selectedCity={selectedCity}
-                selectedAddress={selectedAddress}
-                setSelectedAddress={setSelectedAddress}
-                item={item}
-                favorited={favorited}
-                setFavorited={setFavorited}
-                handleFavorites={handleFavorites}
-                setViewport={setViewport}
-              />
-            ))}
-            {filteredResults.length === 0 && <span className="flex border w-full h-96 justify-center items-center">Sorry, no stays available for {numberOfGuests} guests on selected dates in {selectedCity} with those filters.</span>}
-          </div>
-        </section>
+    <div className="hidden lg:inline-flex text-xs md:text-[15px] mb-3 mt-1 space-x-1 text-gray-800 whitespace-nowrap">
+      {filterButtons.map((item) => (
+        <p
+          key={item}
+          onClick={() => handleFilter(item)}
+          className={
+            activeFilters.includes(item)
+              ? "button bg-red-400 text-white"
+              : "button"
+          }
+        >
+          {item}
+        </p>
+      ))}
+    </div>
 
-        <section className="hidden lg:flex min-w-[700px]">
-          <SearchMap
-            searchResults={searchResults}
-            selectedAddress={selectedAddress}
-            setSelectedAddress={setSelectedAddress}
-            filteredResults={filteredResults}
-           // Pass the searched location to the SearchMap component
-            selectedCity={selectedCity}
-            setViewport={setViewport}
-            viewport={viewport}
-            setSelectedCity={setSelectedCity}
-          />
-        </section>
-      </main>
+    <div className="flex flex-col gap-y-2">
+      {filteredResults?.map((item) => (
+        <InfoCard
+          key={item.id}
+          selectedCity={selectedCity}
+          selectedAddress={selectedAddress}
+          setSelectedAddress={setSelectedAddress}
+          item={item}
+          favorited={favorited}
+          setFavorited={setFavorited}
+          handleFavorites={handleFavorites}
+          setViewport={setViewport}
+        />
+      ))}
+      {filteredResults.length === 0 && (
+        <span className="flex border w-full h-96 justify-center items-center">
+          Sorry, no stays available for {numberOfGuests} guests on selected dates in {selectedCity} with those filters.
+        </span>
+      )}
+    </div>
+  </section>
+
+  <section className="flex-1 min-w-[300px] lg:min-w-[700px] mt-4 lg:mt-2  flex-grow">
+    <SearchMap
+      searchResults={searchResults}
+      selectedAddress={selectedAddress}
+      setSelectedAddress={setSelectedAddress}
+      filteredResults={filteredResults}
+      selectedCity={selectedCity}
+      setViewport={setViewport}
+      viewport={viewport}
+      setSelectedCity={setSelectedCity}
+    />
+  </section>
+</main>
+
       <Footer />
     </div>
   );

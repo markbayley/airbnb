@@ -35,11 +35,11 @@ function InfoCard({
         }}
         className={
           selectedAddress.id == item.id
-            ? "relative ring-4 ring-red-400 rounded-md py-2 px-2  cursor-pointer  hover:shadow-lg transition duration-200 ease-out "
+            ? "relative  rounded-md py-2 px-2  cursor-pointer  hover:shadow-lg transition duration-200 ease-out "
             : "relative bg-gray-100 rounded-md py-2 px-2  border-b cursor-pointer  hover:shadow-lg transition duration-200 ease-out first:border-t"
         }
       >
-        <div className="relative h-56 w-full md:h-80 md:w-full flex-shrink-0">
+        <div className="relative h-56  md:h-80 w-full flex-shrink-0">
           <Image
             alt="image-info"
             src={item.img}
@@ -63,45 +63,21 @@ function InfoCard({
         </div>
 
         {selectedAddress.id == item.id && (
-          <div className="flex gap-x-1 py-2 text-white text-lg bg-gray-100 rounded-b w-full justify-between">
-            <div className="relative h-12 w-20 md:h-24 md:w-40 flex-shrink-0 ">
-              <Image
-                alt="image-info"
-                src={item.img}
-                layout="fill"
-                objectFit="cover"
-                className="rounded cursor-pointer hover:opacity-80"
-              />
-            </div>
-            <div className="relative h-12 w-20 md:h-24 md:w-40 flex-shrink-0">
-              <Image
-                alt="image-info"
-                src={item.img}
-                layout="fill"
-                objectFit="cover"
-                className="rounded cursor-pointer hover:opacity-80"
-              />
-            </div>
-            <div className="relative h-12 w-20 md:h-24 md:w-40 flex-shrink-0">
-              <Image
-                alt="image-info"
-                src={item.img}
-                layout="fill"
-                objectFit="cover"
-                className="rounded cursor-pointer hover:opacity-80"
-              />
-            </div>
-            <div className="relative h-12 w-20 md:h-24 md:w-40 flex-shrink-0">
-              <Image
-                alt="image-info"
-                src={item.img}
-                layout="fill"
-                objectFit="cover"
-                className="rounded cursor-pointer hover:opacity-80"
-              />
-            </div>
-          </div>
-        )}
+  <div className="flex gap-x-1 py-2 text-white text-lg bg-gray-100 rounded-b w-full justify-between">
+    {[...Array(4)].map((_, index) => (
+      <div key={index} className="relative flex-1 h-12 md:h-24 ">
+        <Image
+          alt={`image-info-${index}`}
+          src={item.img}
+          layout="fill"
+          objectFit="cover"
+          className="rounded cursor-pointer hover:opacity-80"
+        />
+      </div>
+    ))}
+  </div>
+)}
+
 
         <div className="flex flex-col flex-grow">
           <div className="flex justify-between items-center mt-2">

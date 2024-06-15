@@ -47,54 +47,65 @@ const SearchMap = ({ selectedAddress, setSelectedAddress, filteredResults, selec
   }, [selectedCity]);
 
   return (
-    <div style={{ height: "88vh", width: "88vw" }} className="border-8 border-white  sticky top-20 ">
-      <MapGL
-        ref={mapRef}
-        {...viewport}
-        width="100%"
-        height="100%"
-        onViewportChange={handleViewportChange}
-        mapboxApiAccessToken={MAPBOX_TOKEN}
-        mapStyle="mapbox://styles/inblock/clx5v536g01iw01rb29t6ezfq"
-        className="bg-gray-300"
-      >
-        {filteredResults?.map((result) => (
-          <div key={result.id} onClick={() => { setSelectedAddress(result) , setSelectedCity(result.location), setViewport({ longitude: result.long,  latitude:result.lat, zoom: 14,  transitionDuration: 500,}) }}>
-            <Marker
-              longitude={result.long}
-              latitude={result.lat}
-              offsetLeft={-20}
-              offsetTop={-10}
-              
-            >
-              <div className="relative w-16 h-16">
-                <div className="z-50 absolute w-12 flex justify-center items-center text-auto bg-red-400 rounded  ml-6 -mt-2 text-white font-semibold ">
-                  {"$" + result.price}
-                </div>
-                <Image
-                  alt="image-marker"
-                  src={result.img}
-                  layout="fill"
-                  objectFit="cover"
-                  className={
-                    selectedAddress.long === result.long
-                      ? "rounded-full border-4 border-red-400 hover:border-red-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out"
-                      : "rounded-full border-4 border-white hover:border-red-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out"
-                  }
-                />
+    <div className="flex-grow h-[90vh] p-2 md:p-6 lg:pt-0 lg:pb-2 lg:pr-2 lg:pl-0">
+    <MapGL
+      ref={mapRef}
+      {...viewport}
+      width="100%"
+      height="100%"
+      onViewportChange={handleViewportChange}
+      mapboxApiAccessToken={MAPBOX_TOKEN}
+      mapStyle="mapbox://styles/inblock/clx5v536g01iw01rb29t6ezfq"
+      className="bg-gray-300"
+    >
+      {filteredResults?.map((result) => (
+        <div
+          key={result.id}
+          onClick={() => {
+            setSelectedAddress(result);
+            setSelectedCity(result.location);
+            setViewport({
+              longitude: result.long,
+              latitude: result.lat,
+              zoom: 14,
+              transitionDuration: 500,
+            });
+          }}
+        >
+          <Marker
+            longitude={result.long}
+            latitude={result.lat}
+            offsetLeft={-20}
+            offsetTop={-10}
+          >
+            <div className="relative w-16 h-16">
+              <div className="z-50 absolute w-12 flex justify-center items-center text-auto bg-red-400 rounded ml-6 -mt-2 text-white font-semibold">
+                {"$" + result.price}
               </div>
-            </Marker>
-          </div>
-        ))}
+              <Image
+                alt="image-marker"
+                src={result.img}
+                layout="fill"
+                objectFit="cover"
+                className={
+                  selectedAddress.long === result.long
+                    ? "rounded-full border-4 border-red-400 hover:border-red-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out"
+                    : "rounded-full border-4 border-white hover:border-red-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out"
+                }
+              />
+            </div>
+          </Marker>
+        </div>
+      ))}
 
-        <Geocoder
-          mapRef={mapRef}
-          onViewportChange={handleGeocoderViewportChange}
-          mapboxApiAccessToken={MAPBOX_TOKEN}
-          position="top-right"
-        />
-      </MapGL>
-    </div>
+      <Geocoder
+        mapRef={mapRef}
+        onViewportChange={handleGeocoderViewportChange}
+        mapboxApiAccessToken={MAPBOX_TOKEN}
+        position="top-right"
+      />
+    </MapGL>
+  </div>
   );
 };
 
