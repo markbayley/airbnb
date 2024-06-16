@@ -35,8 +35,8 @@ function InfoCard({
         }}
         className={
           selectedAddress.id == item.id
-            ? "relative  rounded-md py-2 px-2  cursor-pointer  hover:shadow-lg transition duration-200 ease-out "
-            : "relative bg-gray-100 rounded-md py-2 px-2  border-b cursor-pointer  hover:shadow-lg transition duration-200 ease-out first:border-t"
+            ? "relative  rounded-md py-2  cursor-pointer  hover:shadow-lg transition duration-200 ease-out "
+            : "relative bg-gray-100 rounded-md py-2   border-b cursor-pointer  hover:shadow-lg transition duration-200 ease-out first:border-t"
         }
       >
         <div className="relative h-56  md:h-80 w-full flex-shrink-0">
@@ -82,7 +82,7 @@ function InfoCard({
         <div className="flex flex-col flex-grow">
           <div className="flex justify-between items-center mt-2">
             <p className="font-semibold">
-              <a className="bg-teal-500 text-white px-1 rounded absolute top-3 left-2">
+              <a className="bg-teal-500 text-white text-[15px] px-2 py-1 rounded-r absolute top-3 left-0">
                 {item.location}
               </a>
             </p>
@@ -103,7 +103,7 @@ function InfoCard({
 
           <h4 className="flex w-full flex-wrap justify-between text-md md:text-xl">
             <span className="pt-1">{item.title}</span>
-            <span className="text-[18px]  font-semibold bg-red-400 rounded py-1 px-2 text-white">
+            <span className="text-[15px]  font-semibold bg-red-400 rounded py-1 px-2 text-white">
               {"$" + item.price + "/n"}
             </span>
           </h4>
@@ -219,7 +219,7 @@ function InfoCard({
                 </>
               )}
             </span>
-            <span className="hidden md:inline-flex items-center justify-end text-sm text-gray-700 flex-grow overflow-hidden nowrap ">
+            <span className="hidden xl:inline-flex items-center justify-end text-sm text-gray-700 flex-grow overflow-hidden nowrap ">
             {item.freeCancelation === "yes" && (
                 <>
                   {" "}

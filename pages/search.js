@@ -37,18 +37,20 @@ function Search({ searchResults }) {
   const [selectedCity, setSelectedCity] = useState(city);
 
   const formattedStartDate =
-    startDate && format(new Date(startDate), "dd MMMM yy");
-  const formattedEndDate = endDate && format(new Date(endDate), "dd MMMM yy");
+    startDate && format(new Date(startDate), "dd MMM yy");
+  const formattedEndDate = endDate && format(new Date(endDate), "dd MMM yy");
   const range = `${formattedStartDate} - ${formattedEndDate}`;
 
   const [activeFilters, setActiveFilters] = useState([]);
   const filterButtons = [
-    "Free Cancellation",
-    "Pets Allowed",
-    "Highly Rated",
-    "Budget Friendly",
+    "Cancel Free",
+    "Pets Ok",
+ 
+    
     "Breakfast",
     "Wi-Fi",
+    "Budget",
+    //"Rating",
   ];
 
   const handleFilter = (item) => {
@@ -99,15 +101,15 @@ if (activeFilters.includes("Favorites")) {
   filteredResults = filteredResults.filter((item) => favorited.includes(item));
 }
 
-if (activeFilters.includes("Highly Rated")) {
+if (activeFilters.includes("Rating")) {
   filteredResults = filteredResults.slice().sort((a, b) => b.star - a.star);
 }
 
-if (activeFilters.includes("Budget Friendly")) {
+if (activeFilters.includes("Budget")) {
   filteredResults = filteredResults.slice().sort((a, b) => a.price - b.price);
 }
 
-if (activeFilters.includes("Pets Allowed")) {
+if (activeFilters.includes("Pets Ok")) {
   filteredResults = filteredResults.filter(
     (item) => item.petsAllowed === "yes"
   );
@@ -125,7 +127,7 @@ if (activeFilters.includes("Wi-Fi")) {
   );
 }
 
-if (activeFilters.includes("Free Cancellation")) {
+if (activeFilters.includes("Cancel Free")) {
   filteredResults = filteredResults.filter(
     (item) => item.freeCancelation === "yes"
   );
@@ -161,24 +163,25 @@ if (numberOfGuests !== undefined) {
 
   return (
     <div className="flex flex-col h-screen">
-      <Header
+      <Header favorited={favorited}
         placeholder={
           selectedCity ? selectedCity : ""
         }
         handleFilter={handleFilter} activeFilters={activeFilters}
       />
    <main className="flex flex-col lg:flex-row  flex-grow">
-  <section className="flex-1 px-1 md:px-6 max-w-full lg:max-w-[750px]">
-    <div className="flex w-full justify-between my-2">
-      <div className="mt-2">
-        <h1 className="text-xl md:text-3xl font-semibold pl-1 capitalize">
+  <section className="flex-1 px-1 md:px-3 xl:px-6 max-w-full xl:max-w-[750px]">
+    <div className="flex w-full justify-between mt-2">
+      <div className="pl-1">
+        <h1 className="text-2xl md:text-3xl font-semibold capitalize">
           {selectedCity ? selectedCity : "Explore The World"}{" "}
         </h1>
-        <p className="text-xs pl-1">
+        <p className="text-xs ">
           {filteredResults.length + " Stays | "}
-          {startDate !== undefined ? 
-            range + " | " + numberOfGuests + " guests "
-          : "No dates or guest numbers "}
+          {numberOfDays ? 
+            range + " | " : "No dates selected" }
+             {numberOfGuests ?  numberOfGuests + " Guests " : ""} 
+       
         </p>
       </div>
 
@@ -187,49 +190,51 @@ if (numberOfGuests !== undefined) {
           <div className="flex flex-col items-end">
             <button
               onClick={() => { setSelectedAddress({}); setActiveFilters([]); }}
-              className="h-9 px-2 bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
+              className="h-8 px-2 bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
             >
               <FunnelIcon className="h-5 w-5 text-white hover:scale-125 transition duration-200 ease-out" />
             </button>
-            <span className="text-xs text-gray-500">Remove Filters</span>
-            <p className="text-xs pl-1">
-              {activeFilters.includes("Favorites") && <span className="text-red-400"> Favorites </span>}
-              {selectedAddress.id && <span className="text-red-400">| Address </span>}
-            </p>
+            <span className="text-xs text-gray-900">Remove Filters</span>
+           
           </div>
         ) : selectedCity ? (
           <div className="flex flex-col items-end">
             <button
               onClick={() => { setSelectedCity(null); resetQueryParams(); }}
-              className="h-9 px-2 bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
+              className="h-8 px-2 bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
             >
               <ArrowUturnLeftIcon className="h-5 w-5 text-white hover:scale-125 transition duration-200 ease-out" />
             </button>
-            <span className="text-xs text-gray-500">Clear Search</span>
+            <span className="text-xs text-gray-900">Clear Search</span>
           </div>
         ) : (
           <div className="flex flex-col items-end">
             <button
               onClick={() => router.push("/")}
-              className="h-9 px-2 bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
+              className="h-8 px-2 bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
             >
               <HomeIcon className="h-5 w-5 text-white hover:scale-125 transition duration-200 ease-out" />
             </button>
-            <span className="text-xs text-gray-500">Return Home</span>
+            <span className="text-xs text-gray-900">Return Home</span>
           </div>
         )}
       </div>
     </div>
 
-    <div className="hidden lg:inline-flex text-xs md:text-[15px] mb-3 mt-1 space-x-1 text-gray-800 whitespace-nowrap">
+    {/* <p className="w-full flex justify-end text-xs">
+              {activeFilters.includes("Favorites") && <span className="text-red-400 pr-1"> Favorites </span>}
+              {selectedAddress.id && <span className="text-red-400"> | Address </span>}
+            </p> */}
+
+    <div className="flex  text-xs xl:text-[14px] mb-3 mt-3 space-x-3 text-gray-800 whitespace-nowrap pl-1">
       {filterButtons.map((item) => (
         <p
           key={item}
           onClick={() => handleFilter(item)}
           className={
             activeFilters.includes(item)
-              ? "button bg-red-400 text-white"
-              : "button"
+              ? " p-1 rounded bg-red-400 text-white cursor-pointer"
+              : " p-1 rounded bg-gray-400 text-white cursor-pointer"
           }
         >
           {item}
@@ -259,7 +264,7 @@ if (numberOfGuests !== undefined) {
     </div>
   </section>
 
-  <section className="flex-1 min-w-[300px] lg:min-w-[700px] mt-4 lg:mt-2  flex-grow">
+  <section className="flex-1 min-w-[300px] lg:min-w-[400px] mt-4 lg:mt-2  flex-grow">
     <SearchMap
       searchResults={searchResults}
       selectedAddress={selectedAddress}
