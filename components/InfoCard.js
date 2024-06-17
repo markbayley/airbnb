@@ -1,6 +1,11 @@
 import { HeartIcon, StarIcon } from "@heroicons/react/24/solid";
 import { HeartIcon as HeartIconInactive } from "@heroicons/react/24/outline";
-import { MdOutlinePets, MdFreeCancellation, MdPerson, MdFreeBreakfast } from "react-icons/md";
+import {
+  MdOutlinePets,
+  MdFreeCancellation,
+  MdPerson,
+  MdFreeBreakfast,
+} from "react-icons/md";
 import { FaBed, FaBath, FaWifi } from "react-icons/fa";
 import { BsPiggyBankFill } from "react-icons/bs";
 import Image from "next/image";
@@ -14,12 +19,14 @@ function InfoCard({
   handleFavorites,
   selectedCity,
   setViewport,
+  setSelectedCity,
+  numberOfDays,
 }) {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
 
   const imageVariations = [
     { objectPosition: "bottom right" },
-    { objectPosition: "left", transform: "scaleX(-1)"  },
+    { objectPosition: "left", transform: "scaleX(-1)" },
     { objectPosition: "top left" },
     { objectPosition: "bottom", transform: "scaleX(-1)" },
   ];
@@ -28,18 +35,18 @@ function InfoCard({
     <>
       <div
         onClick={() => {
-          setSelectedAddress(item),
-            setViewport({
-              longitude: item.long,
-              latitude: item.lat,
-              zoom: 14,
-              transitionDuration: 300,
-            });
+          setSelectedAddress(item), setSelectedCity(item.location);
+          setViewport({
+            longitude: item.long,
+            latitude: item.lat,
+            zoom: 15,
+            transitionDuration: 300,
+          });
         }}
         className={
           selectedAddress.id == item.id
-            ? "relative rounded-md py-2 cursor-pointer hover:shadow-lg transition duration-200 ease-out"
-            : "relative bg-gray-100 rounded-md py-2 border-b cursor-pointer hover:shadow-lg transition duration-200 ease-out first:border-t"
+            ? "relative rounded-md p-1 cursor-pointer hover:shadow-lg transition duration-200 ease-out"
+            : "relative bg-gray-100 rounded-md p-1 border-b cursor-pointer hover:shadow-lg transition duration-200 ease-out"
         }
       >
         <div className="relative h-56 md:h-80 w-full flex-shrink-0 ">
@@ -54,11 +61,7 @@ function InfoCard({
           />
           <div className="absolute bottom-2 right-2 flex justify-between items-end pt-5 text-white">
             <p className="flex items-center">
-              <StarIcon
-                className={
-                  selectedAddress.id === item.id ? "h-5 text-white" : "h-5 text-red-400"
-                }
-              />
+              <StarIcon className={"h-5 text-white"} />
               {item.star}
             </p>
           </div>
@@ -90,37 +93,49 @@ function InfoCard({
               }
 
               return (
-                <div
-                  key={index}
-                  className="relative flex-1 h-12 md:h-24 active:scale-95 transition duration-200"
-                  onClick={() => setSelectedImageIndex(index)}
-                >
-                  <Image
-                    alt={`image-info-${index}`}
-                    src={item.img}
-                    layout="fill"
-                    objectFit="cover"
-                    objectPosition={objectPosition}
-                    className={`rounded cursor-pointer hover:opacity-80 transition duration-150`}
-                    style={{ transform: transformStyle }}
-                  />
-                </div>
+                <>
+                  <div
+                    key={index}
+                    className="relative flex-1 h-12 md:h-24 "
+                    onClick={() => setSelectedImageIndex(index)}
+                  >
+                    <Image
+                      alt={`image-info-${index}`}
+                      src={item.img}
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition={objectPosition}
+                      className={
+                        selectedImageIndex === index
+                          ? `rounded cursor-pointer active:opacity-80 border-b-4 border-red-400 transition duration-150 `
+                          : `rounded cursor-pointer hover:opacity-80 transition duration-150`
+                      }
+                      style={{ transform: transformStyle }}
+                    />
+                  </div>
+                </>
               );
             })}
           </div>
         )}
 
-        <div className="flex flex-col flex-grow">
+        <div className="flex flex-col flex-grow ">
           <div className="flex justify-between items-center mt-2">
-            <p className="font-semibold">
-              <a className="bg-teal-500 text-white text-[15px] px-2 py-1 rounded-r absolute top-3 left-0">
-                {item.location}
-              </a>
-            </p>
+            <div className="flex flex-col font-semibold bg-teal-500 absolute top-3 left-0 rounded-r pb-1">
+              <span className=" text-white text-[15px] px-2 py-1  ">
+                {numberOfDays
+                  ? "$" + item.price * numberOfDays
+                  : "$" + item.price }
+              </span>
+              <span className=" text-white text-[12px] px-2 -mt-3">
+                {numberOfDays ? "/" + numberOfDays + " nights" : "/ night"}
+              </span>
+            </div>
+
             <div>
               <button
                 key={item.id}
-                className="p-2 bg-white rounded-full shadow-lg absolute top-3 right-3"
+                className="p-2 bg-white rounded-full shadow-lg absolute top-3 right-2"
                 onClick={() => handleFavorites(item)}
               >
                 {favorited.includes(item) ? (
@@ -132,14 +147,14 @@ function InfoCard({
             </div>
           </div>
 
-          <h4 className="flex w-full flex-wrap justify-between text-md md:text-xl">
-            <span className="pt-1">{item.title}</span>
-            <span className="text-[15px] font-semibold bg-red-400 rounded py-1 px-2 text-white active:scale-90 transition duration-150">
-              {item.id === selectedAddress.id ? "Book Now" : "$" + item.price + "/n"}
+          <h4 className="flex w-full flex-wrap justify-between text-md md:text-xl ">
+            <span className="pt-1 ">{item.title}</span>
+            <span className="flex items-center text-[16px] bg-red-400  px-2 h-8 font-semibold text-white rounded active:scale-95 hover:shadow-lg">
+              Book Now
             </span>
           </h4>
 
-          <p className="flex items-center text-sm text-gray-700 flex-grow overflow-hidden nowrap mt-3">
+          <p className="flex items-center text-sm text-gray-700 flex-grow overflow-hidden nowrap mt-3 ">
             {item.description.includes("1 guest") && (
               <>
                 Guests <MdPerson className="mx-1 h-4 w-4" />
@@ -147,15 +162,15 @@ function InfoCard({
             )}
             {item.description.includes("2 guest") && (
               <>
-                Guests <MdPerson className="h-4 w-4" />
-                <MdPerson className="h-5 w-4" />
+                Guests <MdPerson className="h-4 w-4 mx-0" />
+                <MdPerson className="h-4 w-4 mx-0" />
               </>
             )}
             {item.description.includes("3 guest") && (
               <>
                 Guests <MdPerson className="h-4 w-4" />
                 <MdPerson className="h-4 w-4" />
-                <MdPerson className="h-5 w-4" />
+                <MdPerson className="h-4 w-4" />
               </>
             )}
             {item.description.includes("4 guest") && (
@@ -163,7 +178,7 @@ function InfoCard({
                 Guests <MdPerson className="h-4 w-4" />
                 <MdPerson className="h-4 w-4" />
                 <MdPerson className="h-4 w-4" />
-                <MdPerson className="h-5 w-4" />
+                <MdPerson className="h-4 w-4" />
               </>
             )}
             {item.description.includes("1 bed") && (
@@ -173,15 +188,15 @@ function InfoCard({
             )}
             {item.description.includes("2 beds") && (
               <>
-                | Beds <FaBed className="mx-1 h-4 w-4" />
-                <FaBed className="mx-1 h-5 w-4" />
+                | Beds <FaBed className="ml-1 h-4 w-4" />
+                <FaBed className="mx-1 h-4 w-4" />
               </>
             )}
             {item.description.includes("3 beds") && (
               <>
-                | Beds <FaBed className="mx-1 h-4 w-4" />
-                <FaBed className="mx-1 h-4 w-4" />
-                <FaBed className="mx-1 h-5 w-4" />
+                | Beds <FaBed className=" h-4 w-4" />
+                <FaBed className=" h-4 w-4 " />
+                <FaBed className=" h-4 w-4 " />
               </>
             )}
             {item.description.includes("4 beds") && (
@@ -189,7 +204,7 @@ function InfoCard({
                 | Beds <FaBed className="mx-1 h-4 w-4" />
                 <FaBed className="mx-1 h-4 w-4" />
                 <FaBed className="mx-1 h-4 w-4" />
-                <FaBed className="mx-1 h-5 w-4" />
+                <FaBed className="mx-1 h-4 w-4" />
               </>
             )}
             {item.description.includes("1 bath") && (
@@ -235,7 +250,7 @@ function InfoCard({
                 </>
               )}
             </span>
-            <span className="hidden xl:inline-flex items-center justify-end text-sm text-gray-700 flex-grow overflow-hidden nowrap">
+            <span className="hidden md:inline-flex items-center justify-end text-sm text-gray-700 flex-grow overflow-hidden nowrap">
               {item.freeCancelation === "yes" && (
                 <>
                   Cancel Free <MdFreeCancellation className="mx-1" />
@@ -266,4 +281,3 @@ function InfoCard({
 }
 
 export default InfoCard;
-

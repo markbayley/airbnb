@@ -7,7 +7,7 @@ import getCenter from "geolib/es/getCenter";
 import Image from "next/image";
 import axios from 'axios';
 
-const MAPBOX_TOKEN = "pk.eyJ1IjoiaW5ibG9jayIsImEiOiJjbHg4b3VoM3cxNDA4Mm1wem1wbDhlYmppIn0.YWSASiW3GzEdOTA8lXoEFw";
+// const MAPBOX_TOKEN = "pk.eyJ1IjoiaW5ibG9jayIsImEiOiJjbHg4b3VoM3cxNDA4Mm1wem1wbDhlYmppIn0.YWSASiW3GzEdOTA8lXoEFw";
 
 const SearchMap = ({ selectedAddress, setSelectedAddress, filteredResults, selectedCity, setViewport, viewport, setSelectedCity }) => {
 
@@ -47,14 +47,14 @@ const SearchMap = ({ selectedAddress, setSelectedAddress, filteredResults, selec
   }, [selectedCity]);
 
   return (
-    <div className="flex-grow h-[90vh] p-2 md:p-6 lg:pt-0 lg:pb-2 lg:pr-2 lg:pl-0">
+    <div className="sticky top-20 flex-grow h-[90vh] p-2 md:p-6 lg:pt-0 lg:pb-5 lg:pr-1 lg:pl-0">
     <MapGL
       ref={mapRef}
       {...viewport}
       width="100%"
       height="100%"
       onViewportChange={handleViewportChange}
-      mapboxApiAccessToken={MAPBOX_TOKEN}
+      mapboxApiAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
       mapStyle="mapbox://styles/inblock/clx5v536g01iw01rb29t6ezfq"
       className="bg-gray-300"
     >
@@ -101,7 +101,7 @@ const SearchMap = ({ selectedAddress, setSelectedAddress, filteredResults, selec
       <Geocoder
         mapRef={mapRef}
         onViewportChange={handleGeocoderViewportChange}
-        mapboxApiAccessToken={MAPBOX_TOKEN}
+        mapboxApiAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
         position="top-right"
       />
     </MapGL>

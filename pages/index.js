@@ -18,7 +18,7 @@ export default function Home({ exploreData, cardsData }) {
   const [featuredData, setFeaturedData] = useState([]);
 
   const topDestinations = [
-    ["San Francisco", "170 per night"],
+    ["San Francisco", "from $170 per night"],
     ["Paris", "from $165 per night"],
     ["Sydney", "from $150 per night"],
     ["London", "from $130 per night"],

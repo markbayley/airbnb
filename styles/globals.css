@@ -2,14 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 @layer components {
   .button {
-    @apply bg-gray-100 px-2 w-fit lg:px-4 py-2 border rounded-full cursor-pointer hover:shadow-lg active:scale-95 active:bg-gray-100 transition transform duration-100 ease-out
+    @apply bg-gray-100 px-2 w-fit lg:px-4 py-2 border rounded-full cursor-pointer hover:shadow-lg active:scale-95 active:bg-gray-100 transition transform duration-100 ease-out;
   }
 }
-
 
 .mulish {
   font-family: "Mulish", sans-serif;
@@ -17,4 +16,3 @@
   font-weight: 500;
   font-style: normal;
 }
-

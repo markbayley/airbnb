@@ -70,7 +70,7 @@ function Header({ placeholder, handleFilter, activeFilters, favorited }) {
       {isSearchBarOpen ? (
         // mobile search
         <div className="flex  mx-auto md:hidden my-1 hover:shadow-lg">
-          <div className="flex items-center ring-2 ring-red-400 rounded-l-full w-32 py-2">
+          <div className="flex items-center ring-2 ring-red-400 rounded-l-full w-24 py-2">
             <input
               value={searchInput}
               onChange={(e) => {
