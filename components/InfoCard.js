@@ -132,6 +132,10 @@ function InfoCard({
               </span>
             </div>
 
+            <div className="absolute top-70 left-0 text-gray-500 uppercase pl-1">
+              <span>{item.location}</span>
+            </div >
+
             <div>
               <button
                 key={item.id}

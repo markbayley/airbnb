@@ -8,7 +8,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { format } from "date-fns";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SearchMap from "@/components/SearchMap";
 
 function Search({ searchResults }) {
@@ -16,6 +16,17 @@ function Search({ searchResults }) {
   const router = useRouter();
   const { city, startDate, endDate, numberOfGuests, numberOfDays } =
     router?.query;
+
+    const [selectedCity, setSelectedCity] = useState(city);
+
+    console.log("city", city, router.query.city, selectedCity)
+
+      // Update selectedCity whenever the city query parameter changes
+  useEffect(() => {
+    if (city) {
+      setSelectedCity(city);
+    }
+  }, [city]);
 
   const resetQueryParams = () => {
     router.replace(
@@ -34,7 +45,7 @@ function Search({ searchResults }) {
     );
   };
 
-  const [selectedCity, setSelectedCity] = useState(city);
+ 
 
   const formattedStartDate =
     startDate && format(new Date(startDate), "dd MMM yy");
@@ -144,18 +155,18 @@ function Search({ searchResults }) {
     zoom: 4,
   });
 
-  console.log(
-    "selectedAddressID",
-    selectedAddress.id,
-    "location",
-    selectedCity,
-    "searchRsults",
-    searchResults,
-    "filteredResults",
-    filteredResults,
-    "viewport",
-    viewport
-  );
+  // console.log(
+  //   "selectedAddressID",
+  //   selectedAddress.id,
+  //   "location",
+  //   selectedCity,
+  //   "searchRsults",
+  //   searchResults,
+  //   "filteredResults",
+  //   filteredResults,
+  //   "viewport",
+  //   viewport
+  // );
 
 
 

@@ -43,7 +43,7 @@ export default function Home({ exploreData, cardsData }) {
       try {
         const response = await axios.get("https://pixabay.com/api/", {
           params: {
-            key: "44296476-2891cf0ed10ef410397d4aef5",
+            key: process.env.NEXT_PUBLIC_PIXABAY_TOKEN,
             q: "Travel",
             image_type: "photo",
             category: "places",
@@ -53,7 +53,7 @@ export default function Home({ exploreData, cardsData }) {
 
         const featuredCity = await axios.get("https://pixabay.com/api/", {
           params: {
-            key: "44296476-2891cf0ed10ef410397d4aef5",
+            key: process.env.NEXT_PUBLIC_PIXABAY_TOKEN,
             q: "Vancouver",
             image_type: "photo",
             category: "places",
