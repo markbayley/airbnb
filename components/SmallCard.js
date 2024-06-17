@@ -18,7 +18,7 @@ function SmallCard({ data }) {
   return (
     <div
       onClick={search}
-      className="flex items-end mt-5 space-x-4 rounded-xl shadow-md p-2 cursor-pointer hover:bg-gray-100 hover:scale-105 transition transform duration-200 ease-out"
+      className="flex items-end mt-5 space-x-4 rounded-xl shadow-md p-2 cursor-pointer hover:bg-gray-100 hover:scale-105 transition transform duration-200 ease-out active:scale-90"
     >
       <div className="relative h-28 w-28 ">
         <Image

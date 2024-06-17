@@ -45,12 +45,14 @@ function Search({ searchResults }) {
   const filterButtons = [
     "Cancel Free",
     "Pets Ok",
- 
-    
     "Breakfast",
     "Wi-Fi",
-    "Budget",
-    //"Rating",
+  ];
+
+  const sortButtons = [
+    "By Price",
+    "By Rating",
+    "Favorites"
   ];
 
   const handleFilter = (item) => {
@@ -101,11 +103,11 @@ if (activeFilters.includes("Favorites")) {
   filteredResults = filteredResults.filter((item) => favorited.includes(item));
 }
 
-if (activeFilters.includes("Rating")) {
+if (activeFilters.includes("By Rating")) {
   filteredResults = filteredResults.slice().sort((a, b) => b.star - a.star);
 }
 
-if (activeFilters.includes("Budget")) {
+if (activeFilters.includes("By Price")) {
   filteredResults = filteredResults.slice().sort((a, b) => a.price - b.price);
 }
 
@@ -186,11 +188,11 @@ if (numberOfGuests !== undefined) {
       </div>
 
       <div className="flex">
-        {selectedAddress.id || activeFilters.length > 0 ? (
+        { activeFilters.length > 0 ? (
           <div className="flex flex-col items-end">
             <button
-              onClick={() => { setSelectedAddress({}); setActiveFilters([]); }}
-              className="h-8 px-2 bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
+              onClick={() => { setActiveFilters([]); }}
+              className="h-8 px-2 bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md active:scale-90 transition duration-150"
             >
               <FunnelIcon className="h-5 w-5 text-white hover:scale-125 transition duration-200 ease-out" />
             </button>
@@ -200,8 +202,11 @@ if (numberOfGuests !== undefined) {
         ) : selectedCity ? (
           <div className="flex flex-col items-end">
             <button
-              onClick={() => { setSelectedCity(null); resetQueryParams(); }}
-              className="h-8 px-2 bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
+              onClick={() => { setSelectedCity(null); resetQueryParams(); setSelectedAddress({}), setViewport({ latitude: 10,
+                longitude: 0,
+                zoom: 1,
+                transitionDuration: 500}) }}
+              className="h-8 px-2 bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md active:scale-90 transition duration-150"
             >
               <ArrowUturnLeftIcon className="h-5 w-5 text-white hover:scale-125 transition duration-200 ease-out" />
             </button>
@@ -211,7 +216,7 @@ if (numberOfGuests !== undefined) {
           <div className="flex flex-col items-end">
             <button
               onClick={() => router.push("/")}
-              className="h-8 px-2 bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md"
+              className="h-8 px-2 bg-red-400 hover:shadow-xl max-w-fit flex items-center cursor-pointer border rounded-md active:scale-90 transition duration-150"
             >
               <HomeIcon className="h-5 w-5 text-white hover:scale-125 transition duration-200 ease-out" />
             </button>
@@ -225,16 +230,16 @@ if (numberOfGuests !== undefined) {
               {activeFilters.includes("Favorites") && <span className="text-red-400 pr-1"> Favorites </span>}
               {selectedAddress.id && <span className="text-red-400"> | Address </span>}
             </p> */}
-
-    <div className="flex  text-xs xl:text-[14px] mb-3 mt-3 space-x-3 text-gray-800 whitespace-nowrap pl-1">
+<div className="flex flex-wrap py-2">
+    <div className="flex justify-center md:justify-start w-full md:w-1/2 text-xs xl:text-[14px]  space-x-1 my-1 text-gray-800 whitespace-nowrap pl-1">
       {filterButtons.map((item) => (
         <p
           key={item}
           onClick={() => handleFilter(item)}
           className={
             activeFilters.includes(item)
-              ? " p-1 rounded bg-red-400 text-white cursor-pointer"
-              : " p-1 rounded bg-gray-400 text-white cursor-pointer"
+              ? " py-1 px-2 rounded-full bg-red-400 text-white cursor-pointer hover:opacity-90 active:scale-90 transition duration-150"
+              : " py-1 px-2 rounded-full bg-gray-400 text-white cursor-pointer hover:opacity-90 active:scale-90 transition duration-150"
           }
         >
           {item}
@@ -242,11 +247,31 @@ if (numberOfGuests !== undefined) {
       ))}
     </div>
 
+    
+    <div className="flex justify-center md:justify-end flex-grow text-xs xl:text-[14px]  space-x-1 my-1 text-gray-800 whitespace-nowrap pl-1">
+      {sortButtons.map((item) => (
+        <p
+          key={item}
+          onClick={() => handleFilter(item)}
+          className={
+            activeFilters.includes(item)
+              ? " py-1 px-2 rounded bg-red-400 text-white cursor-pointer hover:opacity-90 active:scale-90 transition duration-150"
+              : " py-1 px-2 rounded bg-gray-400 text-white cursor-pointer hover:opacity-90 active:scale-90 transition duration-150"
+          }
+        >
+          {item}
+        </p>
+      ))}
+    </div>
+
+    </div>
+
     <div className="flex flex-col gap-y-2">
       {filteredResults?.map((item) => (
         <InfoCard
           key={item.id}
           selectedCity={selectedCity}
+          setSelectedCity={setSelectedCity}
           selectedAddress={selectedAddress}
           setSelectedAddress={setSelectedAddress}
           item={item}
@@ -254,6 +279,7 @@ if (numberOfGuests !== undefined) {
           setFavorited={setFavorited}
           handleFavorites={handleFavorites}
           setViewport={setViewport}
+          numberOfDays={numberOfDays}
         />
       ))}
       {filteredResults.length === 0 && (

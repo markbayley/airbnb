@@ -62,12 +62,12 @@ const SearchMap = ({ selectedAddress, setSelectedAddress, filteredResults, selec
         <div
           key={result.id}
           onClick={() => {
-            setSelectedAddress(result);
+            selectedAddress.id === result.id ? setSelectedAddress({}) : setSelectedAddress(result);
             setSelectedCity(result.location);
             setViewport({
               longitude: result.long,
               latitude: result.lat,
-              zoom: 14,
+              zoom: 15,
               transitionDuration: 500,
             });
           }}
@@ -88,9 +88,9 @@ const SearchMap = ({ selectedAddress, setSelectedAddress, filteredResults, selec
                 layout="fill"
                 objectFit="cover"
                 className={
-                  selectedAddress.long === result.long
-                    ? "rounded-full border-4 border-red-400 hover:border-red-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out"
-                    : "rounded-full border-4 border-white hover:border-red-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out"
+                  selectedAddress.id === result.id
+                    ? "rounded-full border-4 border-red-400 hover:border-red-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out active:scale-90 tranition"
+                    : "rounded-full border-4 border-white hover:border-white-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out  active:scale-90 tranition"
                 }
               />
             </div>
