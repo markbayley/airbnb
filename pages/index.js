@@ -7,7 +7,6 @@ import Footer from "@/components/Footer";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import SearchMap from "@/components/SearchMap";
 
 export default function Home({ exploreData, cardsData }) {
   const [imageUrls, setImageUrls] = useState([]);

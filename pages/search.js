@@ -136,6 +136,14 @@ function Search({ searchResults }) {
     );
   }
 
+  const [viewport, setViewport] = useState({
+    width: "100%",
+    height: "100%",
+    latitude: 10,
+    longitude: 0,
+    zoom: 4,
+  });
+
   console.log(
     "selectedAddressID",
     selectedAddress.id,
@@ -144,16 +152,12 @@ function Search({ searchResults }) {
     "searchRsults",
     searchResults,
     "filteredResults",
-    filteredResults
+    filteredResults,
+    "viewport",
+    viewport
   );
 
-  const [viewport, setViewport] = useState({
-    width: "100%",
-    height: "100%",
-    latitude: 10,
-    longitude: 0,
-    zoom: 1,
-  });
+
 
   return (
     <div className="flex flex-col h-screen ">
