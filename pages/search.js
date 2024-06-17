@@ -151,22 +151,15 @@ function Search({ searchResults }) {
     width: "100%",
     height: "100%",
     latitude: 10,
-    longitude: 0,
-    zoom: 4,
+    longitude: -30,
+    zoom: 1.5,
   });
 
-  // console.log(
-  //   "selectedAddressID",
-  //   selectedAddress.id,
-  //   "location",
-  //   selectedCity,
-  //   "searchRsults",
-  //   searchResults,
-  //   "filteredResults",
-  //   filteredResults,
-  //   "viewport",
-  //   viewport
-  // );
+  console.log(
+
+    "viewport",
+    viewport
+  );
 
 
 
