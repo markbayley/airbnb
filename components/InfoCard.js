@@ -53,10 +53,9 @@ function InfoCard({
           <Image
             alt="image-info"
             src={item.img}
-            layout="fill"
-            objectFit="cover"
+            fill
             objectPosition={imageVariations[selectedImageIndex].objectPosition}
-            style={{ transform: imageVariations[selectedImageIndex].transform }}
+            style={{ objectFit:"cover", transform: imageVariations[selectedImageIndex].transform }}
             className="rounded-md"
           />
           <div className="absolute bottom-2 right-2 flex justify-between items-end pt-5 text-white">
@@ -102,15 +101,14 @@ function InfoCard({
                     <Image
                       alt={`image-info-${index}`}
                       src={item.img}
-                      layout="fill"
-                      objectFit="cover"
+                      fill
                       objectPosition={objectPosition}
                       className={
                         selectedImageIndex === index
                           ? `rounded cursor-pointer active:opacity-80 border-b-4 border-red-400 transition duration-150 `
                           : `rounded cursor-pointer hover:opacity-80 transition duration-150`
                       }
-                      style={{ transform: transformStyle }}
+                      style={{objectFit:"cover", transform: transformStyle }}
                     />
                   </div>
                 </>

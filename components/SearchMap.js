@@ -102,8 +102,8 @@ const SearchMap = ({
                 <Image
                   alt="image-marker"
                   src={result.img}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{objectFit:"cover"}}
                   className={
                     selectedAddress.id === result.id
                       ? "rounded-full border-4 border-red-400 hover:border-red-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out active:scale-90 tranition"

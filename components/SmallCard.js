@@ -24,7 +24,8 @@ function SmallCard({ data }) {
         <Image
           alt="image-small"
           src={data.imageUrl}
-          layout="fill"
+          fill
+          style={{objectFit:"cover"}}
           className="rounded-lg"
         />
       </div>
@@ -46,38 +47,3 @@ function SmallCard({ data }) {
 
 export default SmallCard;
 
-// import Image from "next/image";
-// import { useRouter } from "next/router";
-
-// const MyComponent = ({imageUrls}) => {
-
-//   const router = useRouter();
-//   return (
-//     <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-//       {imageUrls.map((url, index) => (
-//         <div className=" m-2 mt-5 space-x-4 rounded-xl cursor-pointer hover:bg-gray-100 hover:scale-105 transition transform duration-200 ease-out">
-//           {" "}
-
-// <div className="flex items-end">
-//           <div key={index} className="relative h-32 w-32 m-2">
-//             <Image
-//               onClick={() => router.push("/search")}
-//               alt={`image-${index}`}
-//               src={url}
-//               layout="fill"
-//               className="rounded-lg object-cover"
-//             />
-//           </div>
-//           <div className="pb-2 px-3">
-//             <h2 className="text-black">Rome</h2>
-//             <h2 className="text-gray-500">4.5 km away</h2>
-//           </div>
-//           </div>
-
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default MyComponent;

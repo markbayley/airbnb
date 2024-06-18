@@ -8,8 +8,8 @@ function LargeCard({ img, description, title, buttonText }) {
         <Image
          alt="image-large"
           src={img}
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{objectFit:"cover"}}
           className="rounded-2xl"
         />
       </div>

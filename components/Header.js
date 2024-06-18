@@ -82,9 +82,9 @@ function Header({ placeholder, handleFilter, activeFilters, favorited }) {
             />
           </div>
 
-          <div className="flex items-center justify-center py-2 px-4 bg-white  ring-2 ring-red-400">
+          <div  onClick={() => setIsDateRangePickerOpen(!isDateRangePickerOpen)} className="flex items-center justify-center py-2 px-4 bg-white  ring-2 ring-red-400">
             <button
-              onClick={() => setIsDateRangePickerOpen(!isDateRangePickerOpen)}
+       
             >
               <CalendarIcon
                 className={
@@ -130,9 +130,10 @@ function Header({ placeholder, handleFilter, activeFilters, favorited }) {
             <Image
               alt="image-header"
               src="https://links.papareact.com/qd3"
-              layout="fill"
-              objectFit="contain"
-              objectPosition="left"
+              width='100'
+              height='100'
+              style={{objectFit:"contain"}}
+              left
               className="active:scale-95 transition duration-150"
             />
           </div>
@@ -149,11 +150,11 @@ function Header({ placeholder, handleFilter, activeFilters, favorited }) {
                 />
               </div>
 
-              <div className="flex items-center justify-center py-2 px-4 bg-white  ring-2 ring-red-400 hover:shadow-lg">
-                <button
-                  onClick={() =>
+              <div    onClick={() =>
                     setIsDateRangePickerOpen(!isDateRangePickerOpen)
-                  }
+                  } className="flex items-center justify-center py-2 px-4 bg-white  ring-2 ring-red-400 hover:shadow-lg cursor-pointer">
+                <button
+               
                 >
                   <CalendarIcon
                     className={

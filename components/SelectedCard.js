@@ -32,8 +32,8 @@ function SelectedCard({
         <Image
          alt="image-info"
           src={selectedLocation.img}
-          layout="fill"
-          objectFit="cover"
+          fill
+          style={{objectFit:"cover"}}
           className="rounded-2xl"
         />
       </div>
