@@ -15,6 +15,7 @@ const SearchMap = ({
   setViewport,
   viewport,
   setSelectedCity,
+  photos,
 }) => {
   const mapRef = useRef();
 
@@ -61,6 +62,30 @@ const SearchMap = ({
     }
   }, [selectedCity]);
 
+  const [clickedMarkerIndex, setClickedMarkerIndex] = useState(null);
+  const markerRef = useRef(null);
+
+  const handleMarkerView = (index) => {
+    setClickedMarkerIndex(index);
+  };
+
+  const handleClickOutside = (event) => {
+    if (markerRef.current && !markerRef.current.contains(event.target)) {
+      setClickedMarkerIndex(null);
+    }
+  };
+
+  useEffect(() => {
+    if (clickedMarkerIndex !== null) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [clickedMarkerIndex]);
+
   return (
     <div className="sticky top-20 flex-grow h-[90vh] p-2 md:p-6 lg:pt-0 lg:pb-5 lg:pr-1 lg:pl-0">
       <MapGL
@@ -89,6 +114,7 @@ const SearchMap = ({
               });
             }}
           >
+       
             <Marker
               longitude={result.long}
               latitude={result.lat}
@@ -103,7 +129,7 @@ const SearchMap = ({
                   alt="image-marker"
                   src={result.img}
                   fill
-                  style={{objectFit:"cover"}}
+                  style={{ objectFit: "cover" }}
                   className={
                     selectedAddress.id === result.id
                       ? "rounded-full border-4 border-red-400 hover:border-red-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out active:scale-90 tranition"
@@ -112,8 +138,75 @@ const SearchMap = ({
                 />
               </div>
             </Marker>
+
           </div>
         ))}
+
+        {
+          photos?.map((result, i) => (
+            <div key={i} onClick={() => { handleMarkerView(i),  setViewport({
+              longitude: result?.location?.position?.longitude,
+              latitude: result?.location?.position?.latitude,
+              zoom: 15,
+              transitionDuration: 500,
+            });}}>
+              {result?.location?.position?.longitude && (
+                <Marker
+                key={result.id}
+                onClick={() => {
+                  // selectedAddress.id === result.id
+                  //   ? setSelectedAddress({})
+                  //   : setSelectedAddress(result);
+                  // setSelectedCity(result.location);
+                 
+                }}
+                
+                  longitude={result?.location?.position?.longitude}
+                  latitude={result?.location?.position?.latitude}
+                  offsetLeft={-20}
+                  offsetTop={-10}
+                  style={{
+                    zIndex: clickedMarkerIndex === i ? 50 : 1,
+
+                    transform:
+                      clickedMarkerIndex === i ? "scale(1.5)" : "scale(1)",
+                    transition: "transform 0.3s ease",
+                  }}
+                >
+                  <div
+                    ref={clickedMarkerIndex === i ? markerRef : null}
+                    className={
+                      clickedMarkerIndex === i
+                        ? "relative w-72 h-72 "
+                        : "relative w-14 h-14 "
+                    }
+                  >
+                    <div
+                      className={
+                        clickedMarkerIndex === i
+                          ? "z-50 absolute bottom-1 left-1 w-fit mr-1 text-xs p-1 rounded-sm bg-amber-500 capitalize text-white"
+                          : "invisible"
+                      }
+                    >
+                      {result.alt_description}
+                    </div>
+
+                    <Image
+                      alt="image-marker"
+                      src={result?.urls?.regular}
+                      fill
+                      style={{ objectFit: "cover" }}
+                      className={
+                        clickedMarkerIndex === i
+                          ? "rounded-lg border-4 border-white hover:border-white-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out  active:scale-90 tranition"
+                          : "rounded-lg border-4 border-white hover:border-white-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out  active:scale-90 tranition"
+                      }
+                    />
+                  </div>
+                </Marker>
+              )}
+            </div>
+          ))}
 
         <Geocoder
           mapRef={mapRef}

@@ -1,0 +1,1752 @@
+[
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/ES.jpg?w=600&f=auto",
+    "status": "Open",
+    "country": "Spain",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/IT.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Italy",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/FR.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "France",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/GB.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "United Kingdom of Great Britain and Northern Ireland",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/DE.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Germany",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/GR.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Greece",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/PT.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Portugal",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/HR.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Croatia",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/TR.jpg?w=600&f=auto",
+    "status": "Open",
+    "country": "Turkey",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/NL.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Netherlands",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/IE.jpg?w=600&f=auto",
+    "status": "Open",
+    "country": "Ireland",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/CH.jpg?w=600&f=auto",
+    "status": "Open",
+    "country": "Switzerland",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/MX.jpg?w=600&f=auto",
+    "status": "Restricted",
+    "country": "Mexico",
+    "description": "",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/BG.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Bulgaria",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/AE.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "United Arab Emirates",
+    "description": "Vaccinated allowed with conditions",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/US.jpg?w=600&f=auto",
+    "status": "Restricted",
+    "country": "United States of America",
+    "description": "Vaccinated allowed with conditions",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/AT.jpg?w=600&f=auto",
+    "status": "Open",
+    "country": "Austria",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/MT.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Malta",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/UA.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Ukraine",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/TH.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Thailand",
+    "description": "Vaccinated allowed with conditions",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/PL.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Poland",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/AL.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Albania",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/HU.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Hungary",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/CZ.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Czech Republic",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/CA.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Canada",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/RO.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Romania",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/MA.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Morocco",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/ME.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Montenegro",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/CR.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Costa Rica",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/NO.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Norway",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/CY.jpg?w=600&f=auto",
+    "status": "Open",
+    "country": "Cyprus",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/GE.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Georgia",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/BE.jpg?w=600&f=auto",
+    "status": "Open",
+    "country": "Belgium",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/RU.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Russian Federation",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/DK.jpg?w=250&f=auto",
+    "status": "Closed",
+    "country": "Denmark",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/BA.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Bosnia and Herzegovina",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/RS.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Serbia",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/MV.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Maldives",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/SE.jpg?w=600&f=auto",
+    "status": "Closed",
+    "country": "Sweden",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/EG.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Egypt",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/CO.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Colombia",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/PE.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Peru",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/IL.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Israel",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/BR.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Brazil",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/JP.jpg?w=200&f=auto",
+    "status": "Restricted",
+    "country": "Japan",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/IS.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Iceland",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/DO.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Dominican Republic",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/ID.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Indonesia",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/SI.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Slovenia",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/XK.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Republic of Kosovo",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/PA.jpg?w=600&f=auto",
+    "status": "Open",
+    "country": "Panama",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/MK.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Macedonia (the former Yugoslav Republic of)",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/TZ.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Tanzania, United Republic of",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/PH.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Philippines",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/AR.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Argentina",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/FI.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Finland",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/PM.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Saint Pierre and Miquelon",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/JM.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Jamaica",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/AU.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Australia",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/QA.jpg?w=600&f=auto",
+    "status": "Open",
+    "country": "Qatar",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/KR.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Korea (Republic of)",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/EE.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Estonia",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/LT.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Lithuania",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/SG.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Singapore",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/LK.jpg?w=600&f=auto",
+    "status": "Open",
+    "country": "Sri Lanka",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/KE.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Kenya",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/LV.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Latvia",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/ZA.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "South Africa",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/CU.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Cuba",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/JO.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Jordan",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/NP.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Nepal",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/UZ.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Uzbekistan",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/VN.jpg?w=600&f=auto",
+    "status": "Closed",
+    "country": "Vietnam",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/EC.jpg?w=600&f=auto",
+    "status": "Open",
+    "country": "Ecuador",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/AW.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Aruba",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/SK.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Slovakia",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/HK.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Hong Kong",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/GG.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Guernsey",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/BS.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Bahamas",
+    "description": "Vaccinated allowed with conditions",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/IN.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "India",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/CV.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Cabo Verde",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/TN.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Tunisia",
+    "description": "Vaccinated allowed with conditions",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/CL.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Chile",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/CN.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "China",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/AM.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Armenia",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/AZ.jpg?w=600&f=auto",
+    "status": "Closed",
+    "country": "Azerbaijan",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/BO.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Bolivia (Plurinational State of)",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/OM.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Oman",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/SC.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Seychelles",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/GI.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Gibraltar",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/MU.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Mauritius",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/SA.jpg?w=600&f=auto",
+    "status": "Restricted",
+    "country": "Saudi Arabia",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/BB.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Barbados",
+    "description": "Vaccinated allowed with conditions",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/NZ.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "New Zealand",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/NA.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Namibia",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/BY.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Belarus",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/GM.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Gambia",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/TC.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Turks and Caicos Islands",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/KG.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Kyrgyzstan",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/TW.jpg?w=600&f=auto",
+    "status": "Closed",
+    "country": "Taiwan",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/TJ.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Tajikistan",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/KH.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Cambodia",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/GT.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Guatemala",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/MY.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Malaysia",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/AX.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Åland Islands",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/KZ.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Kazakhstan",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/ZM.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Zambia",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/LB.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Lebanon",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/IR.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Iran (Islamic Republic of)",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/BZ.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Belize",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/MC.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Monaco",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/LU.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Luxembourg",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/AD.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Andorra",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/MD.jpg?w=600&f=auto",
+    "status": "Open",
+    "country": "Moldova (Republic of)",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/NG.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Nigeria",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/GH.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Ghana",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/AF.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Afghanistan",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/BH.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Bahrain",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/IM.jpg?w=600&f=auto",
+    "status": "Restricted",
+    "country": "Isle of Man",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/ZW.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Zimbabwe",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/NI.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Nicaragua",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/KY.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Cayman Islands",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/PF.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "French Polynesia",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/SN.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Senegal",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/CW.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Curaçao",
+    "description": "Vaccinated allowed with conditions",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/ET.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Ethiopia",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/BM.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Bermuda",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/SX.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Saint Martin (French part)",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/MW.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Malawi",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/PK.jpg?w=600&f=auto",
+    "status": "Open",
+    "country": "Pakistan",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/AQ.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Antarctica",
+    "description": "",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/AG.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Antigua and Barbuda",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/BQ.jpg?w=600&f=auto",
+    "status": "Restricted",
+    "country": "Bonaire, Sint Eustatius and Saba",
+    "description": "Vaccinated allowed with conditions",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/MG.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Madagascar",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/UG.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Uganda",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/UY.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Uruguay",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/DZ.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Algeria",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/FO.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Faroe Islands",
+    "description": "",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/KW.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Kuwait",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/PR.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Puerto Rico",
+    "description": "",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/LC.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Saint Lucia",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/BW.jpg?w=600&f=auto",
+    "status": "Restricted",
+    "country": "Botswana",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/MZ.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Mozambique",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/SO.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Somalia",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/BD.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Bangladesh",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/LA.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Lao People's Democratic Republic",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/FJ.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Fiji",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/MF.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Martinique",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/GA.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Gabon",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/GP.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Guadeloupe",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/HN.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Honduras",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/MR.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Mauritania",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/RW.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Rwanda",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/SJ.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Svalbard and Jan Mayen",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/JE.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Jersey",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/VU.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Vanuatu",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/HT.jpg?w=600&f=auto",
+    "status": "Open",
+    "country": "Haiti",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/MN.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Mongolia",
+    "description": "Vaccinated allowed with conditions",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/MM.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Myanmar",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/TT.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Trinidad and Tobago",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/AO.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Angola",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/GL.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Greenland",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/ML.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Mali",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/PY.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Paraguay",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/KM.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Comoros",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/CK.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Cook Islands",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/CI.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Côte d'Ivoire",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/DM.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Dominica",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/GY.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Guyana",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/KN.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Saint Kitts and Nevis",
+    "description": "Vaccinated allowed with conditions",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/SM.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "San Marino",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/CM.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Cameroon",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/MH.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Marshall Islands",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/NU.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Niue",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/ST.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Sao Tome and Principe",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/SB.jpg?w=200&f=auto",
+    "status": "Closed",
+    "country": "Solomon Islands",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/TO.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Tonga",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/VE.jpg?w=600&f=auto",
+    "status": "Closed",
+    "country": "Venezuela (Bolivarian Republic of)",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/VI.jpg?w=600&f=auto",
+    "status": "Open",
+    "country": "Virgin Islands (U.S.)",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/EH.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Western Sahara",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/AS.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "American Samoa",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/BT.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Bhutan",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/GU.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Guam",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/GW.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Guinea-Bissau",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/FM.jpg?w=600&f=auto",
+    "status": "Closed",
+    "country": "Micronesia (Federated States of)",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/SS.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "South Sudan",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/VA.jpg?w=600&f=auto",
+    "status": "Restricted",
+    "country": "Holy See",
+    "description": "",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/AI.jpg?w=300&f=auto",
+    "status": "Restricted",
+    "country": "Anguilla",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/BV.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Bouvet Island",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/BN.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Brunei Darussalam",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/CF.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Central African Republic",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/DJ.jpg?w=200&f=auto",
+    "status": "Restricted",
+    "country": "Djibouti",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/FK.jpg?w=250&f=auto",
+    "status": "Closed",
+    "country": "Falkland Islands (Malvinas)",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/LI.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Liechtenstein",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/MO.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Macao",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/NC.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "New Caledonia",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/KP.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Korea (Democratic People's Republic of)",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/PG.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Papua New Guinea",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/SH.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Saint Helena, Ascension and Tristan da Cunha",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/VC.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Saint Vincent and the Grenadines",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/SD-1.jpg?w=600&f=auto",
+    "status": "Open",
+    "country": "Sudan",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/CX.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Christmas Island",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/MP.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Northern Mariana Islands",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/PS.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Palestine, State of",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/SL.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Sierra Leone",
+    "description": "Vaccinated allowed with conditions",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/TK.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Tokelau",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/VG.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Virgin Islands (British)",
+    "description": "Vaccinated allowed with conditions",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/YE.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Yemen",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/TD.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Chad",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/CC.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Cocos (Keeling) Islands",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/SV.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "El Salvador",
+    "description": "Vaccinated allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/TF.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "French Southern Territories",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/GD.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Grenada",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/LY.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Libya",
+    "description": "",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/MQ.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Sint Maarten (Dutch part)",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/NR.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Nauru",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/PW.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Palau",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/WS.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Samoa",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/SY.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Syrian Arab Republic",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/TM.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Turkmenistan",
+    "description": "",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/CD.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Congo (Democratic Republic of the)",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/MS.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Montserrat",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/NE.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Niger",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/BL.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "Saint Barthélemy",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/TV.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Tuvalu",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/IO.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "British Indian Ocean Territory",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/BF.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Burkina Faso",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/BI.jpg?w=600&f=auto",
+    "status": "Restricted",
+    "country": "Burundi",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/CG.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Congo",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/HM.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Heard Island and McDonald Islands",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/LS.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Lesotho",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/PN.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Pitcairn",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/GS.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "South Georgia and the South Sandwich Islands",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/TL.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Timor-Leste",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/TG.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Togo",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/WF.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Wallis and Futuna",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/ER.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Eritrea",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/GF.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "French Guiana",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/IQ.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Iraq",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/KI.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Kiribati",
+    "description": "",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/LR.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Liberia",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/SR.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Suriname",
+    "description": "",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/BJ.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Benin",
+    "description": "",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/GQ.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Equatorial Guinea",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/GN.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Guinea",
+    "description": "",
+    "moreDetails": "Test required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/YT.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Mayotte",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/NF.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Norfolk Island",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/RE.jpg?w=350&f=auto",
+    "status": "Closed",
+    "country": "Réunion",
+    "description": "Tourists not allowed",
+    "moreDetails": ""
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/SZ.jpg?w=350&f=auto",
+    "status": "Restricted",
+    "country": "Swaziland",
+    "description": "",
+    "moreDetails": "Quarantine required"
+  },
+  {
+    "image": "https://cdn.statically.io/img/canitravel.net/img/countries/full/GU.jpg?w=350&f=auto",
+    "status": "Open",
+    "country": "United States Minor Outlying Islands",
+    "description": "No major restrictions in place",
+    "moreDetails": ""
+  }
+]

@@ -45,6 +45,44 @@ function Search({ searchResults }) {
     );
   };
 
+
+
+  let [photos, setPhotos] = useState([]);
+  let [query, setQuery] = useState("");
+
+  console.log("photos", photos)
+  console.log("query", query)
+
+  const superagent = require("superagent");
+  const clientID = "PvvWIfrMMfNqoEEuVve3X6KE1gksd31-C1Pn-SP3yL4";
+
+  const simpleGet = (options) => {
+    superagent.get(options.url).then(function (res) {
+      if (options.onSuccess) options.onSuccess(res);
+    });
+  };
+
+  const numberOfPhotos = 30;
+  const url =
+    "https://api.unsplash.com/photos/random/?count=" +
+    numberOfPhotos +
+    "&client_id=" +
+    clientID;
+
+  useEffect(() => {
+    const photosUrl = selectedCity
+      ? `${url}&query=${selectedCity + " " + query}`
+      : url;
+
+    simpleGet({
+      url: photosUrl,
+      onSuccess: (res) => {
+        setPhotos(res.body);
+      },
+    });
+  }, [selectedCity]);
+
+
  
 
   const formattedStartDate =
@@ -155,12 +193,7 @@ function Search({ searchResults }) {
     zoom: 1.5,
   });
 
-  console.log(
-
-    "viewport",
-    viewport
-  );
-
+ 
 
 
   return (
@@ -304,6 +337,7 @@ function Search({ searchResults }) {
             setViewport={setViewport}
             viewport={viewport}
             setSelectedCity={setSelectedCity}
+            photos={photos}
           />
         </section>
       </main>

@@ -66,17 +66,17 @@ function Header({ placeholder, handleFilter, activeFilters, favorited }) {
   };
 
   return (
-    <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md px-3 md:px-5 lg:px-10 h-20 py-2">
+    <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md pl-2 md:px-5 lg:px-10 h-20 py-4 md:py-2">
       {isSearchBarOpen ? (
         // mobile search
         <div className="flex  mx-auto md:hidden my-1 hover:shadow-lg">
-          <div className="flex items-center ring-2 ring-red-400 rounded-l-full w-24 py-2">
+          <div className="flex items-center ring-2 ring-red-400 rounded-l-full w-28 py-3">
             <input
               value={searchInput}
               onChange={(e) => {
                 setSearchInput(e.target.value), setIsSearchUpdated(true);
               }}
-              className="flex-grow bg-transparent outline-none text-gray-600 capitalize pl-4  text-sm"
+              className="flex-grow bg-transparent outline-none text-gray-600 capitalize pl-4 text-sm"
               type="text"
               placeholder={placeholder || "Start your search"}
             />
@@ -117,7 +117,7 @@ function Header({ placeholder, handleFilter, activeFilters, favorited }) {
           </div>
 
           <div onClick={() => setIsSearchBarOpen(false)}>
-            <XMarkIcon className="h-6 p-1 shadow-lg bg-gray-400 text-white rounded-full ml-3" />
+            <XMarkIcon className="h-6 p-1 shadow-lg bg-gray-400 text-white rounded-full ml-2" />
           </div>
         </div>
       ) : (
@@ -133,7 +133,7 @@ function Header({ placeholder, handleFilter, activeFilters, favorited }) {
               width='100'
               height='100'
               style={{objectFit:"contain"}}
-              left
+              left="true"
               className="active:scale-95 transition duration-150"
             />
           </div>

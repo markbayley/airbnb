@@ -7,14 +7,17 @@ import Footer from "@/components/Footer";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import PhotoGallery from "@/components/PhotoGallery";
 
 export default function Home({ exploreData, cardsData }) {
   const [imageUrls, setImageUrls] = useState([]);
   const [featuredUrls, setFeaturedUrls] = useState([]);
-
   const [destinationData, setDestinationData] = useState([]);
-
   const [featuredData, setFeaturedData] = useState([]);
+
+
+
+
 
   const topDestinations = [
     ["San Francisco", "from $170 per night"],
@@ -80,7 +83,7 @@ export default function Home({ exploreData, cardsData }) {
           imageUrl: featuredUrls[index] || "",
         }));
 
-        setFeaturedData(featuredData)
+        setFeaturedData(featuredData);
 
         setDestinationData(mergedData);
       } catch (error) {
@@ -93,6 +96,8 @@ export default function Home({ exploreData, cardsData }) {
 
   console.log(destinationData, "data");
 
+  console.log("featuredUrls", featuredUrls);
+
   return (
     <div className="bg-white">
       <Head>
@@ -102,11 +107,15 @@ export default function Home({ exploreData, cardsData }) {
       <Header />
       <Banner img={imageUrls[4]} />
 
+   
+
       <main className="max-w-9xl mx-auto px-2 sm:mx-16 ">
-        <section className="pt-6">
-          <h2 className="text-3xl font-semibold pb-5 text-gray-500 ">
+        <section className="">
+          <h2 className="text-3xl font-semibold py-8 text-gray-500 ">
             Top Destinations
-            <p className="text-black text-xl font-light pt-2">Go where you want to go and experience more</p>
+            <p className="text-black text-xl font-light pt-2">
+              Go where you want to go today
+            </p>
           </h2>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-2">
@@ -114,22 +123,29 @@ export default function Home({ exploreData, cardsData }) {
               <SmallCard key={index} data={data} />
             ))}
           </div>
-          {/* </div> */}
+
+          <h2 className="text-3xl font-semibold text-gray-500 pt-8">
+            Travel Explorer
+            <p className="text-black text-xl font-light pt-2">
+              See the world through others eyes
+            </p>
+          </h2>
+
+          <PhotoGallery
+    
+    />
+       
           <h2 className="text-3xl font-semibold py-8 text-gray-500">
-            Explore Canada
-            <p className="text-black text-xl font-light pt-2">Find the perfect place for your lifestyle</p>
+            Featured: Canada
+            <p className="text-black text-xl font-light pt-2">
+              Find the perfect destination for you
+            </p>
           </h2>
           <div className="flex space-x-3 overflow-scroll scrollbar-hide ">
-          {featuredData?.map((data, index) => (
+            {featuredData?.map((data, index) => (
               <MediumCard key={index} data={data} />
             ))}
           </div>
-
-          {/* <SearchMap /> */}
-
-          {/* <div>
-      <LargeCard img={imageUrls[7]} title="The Great Outdoors" description="Get started today" buttonText="Get inspired"/>
-    </div> */}
         </section>
       </main>
       <Footer />
