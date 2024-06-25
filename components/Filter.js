@@ -48,7 +48,7 @@ function Filter({
               className="text-sm rounded-l pl-3 w-full text-gray-800 outline-none py-2 my-2 border-l-2 border-b-2 border-t-2 border-gray-400"
               placeholder="Search Photos"
             />
-            <button value={detailSearch}  onClick={handleDetailSearch} className="border-2 mr-2 border-gray-400 border-l-0 bg-rose-500 text-white rounded-r-full px-3 py-2"><HiOutlineSearch className="h-5 w-5"/></button>
+            <button value={detailSearch}  onClick={handleDetailSearch} className="border-2 mr-2 border-gray-400 border-l-0 bg-red-400 text-white rounded-r-full px-3 py-2"><HiOutlineSearch className="h-5 w-5"/></button>
           </div>
           {/* Dropdown for medium screens and smaller */}
           <div className="block lg:hidden my-1 text-sm">
@@ -127,7 +127,7 @@ function Filter({
               }
             >
               <HiOutlineX
-                className={`h-10 w-10 p-2  rounded-full border-2 border-rose-500 text-rose-500 hover:shadow-xl`}
+                className={`h-10 w-10 p-2  rounded-full border-2 border-red-400 text-red-400 hover:shadow-xl`}
               />
             </button>
           </div>

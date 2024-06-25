@@ -114,7 +114,7 @@ const SearchMap = ({
               });
             }}
           >
-       
+       {result.long &&
             <Marker
               longitude={result.long}
               latitude={result.lat}
@@ -138,10 +138,11 @@ const SearchMap = ({
                 />
               </div>
             </Marker>
+}
 
           </div>
         ))}
-
+{/* 
         {
           photos?.map((result, i) => (
             <div key={i} onClick={() => { handleMarkerView(i),  setViewport({
@@ -150,7 +151,7 @@ const SearchMap = ({
               zoom: 15,
               transitionDuration: 500,
             });}}>
-              {result?.location?.position?.longitude && (
+               {result?.location?.position?.longitude !== 0 || undefined && (
                 <Marker
                 key={result.id}
                 onClick={() => {
@@ -206,7 +207,7 @@ const SearchMap = ({
                 </Marker>
               )}
             </div>
-          ))}
+          ))} */}
 
         <Geocoder
           mapRef={mapRef}

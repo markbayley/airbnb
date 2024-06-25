@@ -184,12 +184,12 @@ function PhotoGallery({
 
         {showDetail ? (
           //IMAGE GALLERY
-          <section className="border-red-500">
-            <div className="flex flex-col md:flex-row gap-x-4   md:border-4">
+          <section className="">
+            <div className="flex flex-col md:flex-row gap-x-4 ">
               <div
                 //key={i}
                 //onClick={() => clickHandler(photos)}
-                className="relative  flex-1 min-w-[300px] lg:min-w-[40vw]  flex-grow"
+                className="relative  flex-1 min-w-[300px] lg:min-w-[40vw]  flex-grow shadow-xl "
               >
                 {showMap ? (
                   <TravelMap
@@ -212,7 +212,7 @@ function PhotoGallery({
                       // src={showDetail.travel}
                       src={mainImage ? mainImage : selectedCountryDetail.travel}
                       alt="large-photo"
-                      className="rounded hover:opacity-90 shadow-xl"
+                      className="rounded-xl hover:opacity-90 shadow-xl"
                     />
                   </>
                 )}
@@ -225,7 +225,7 @@ function PhotoGallery({
               <div className="grid md:grid-cols-3 gap-4  justify-center">
                 {photos?.slice(0, 9).map((photo, i) => (
                   // {[...Array(9)].map((_, i) => (
-                  <div className="relative active:scale-95 transition ease-out duration-150">
+                  <div className="relative active:scale-95 transition ease-out duration-150 shadow-xl">
                     {/* <div className="absolute bottom-1 text-white text-xs z-50">
                         {photo.location.name}
                       </div> */}
@@ -246,7 +246,7 @@ function PhotoGallery({
                           //src={"/italy.jpg"}
                           src={photo.urls.regular}
                           alt="small-photo"
-                          className="rounded hover:opacity-90 shadow-xl"
+                          className="rounded-xl hover:opacity-90 shadow-xl"
                         />
                       ) : (
                         <div
@@ -282,67 +282,70 @@ function PhotoGallery({
         ) : (
           //MAIN SEARCH
           <section>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-16 justify-center">
-              {filteredResults?.slice(0, 16).map((country, i) => (
-                <div
-                  key={i}
-                  onClick={() => clickHandler(country)}
-                  className="relative w-[95vw]  md:w-72 aspect-square  cursor-pointer active:scale-95 transition ease-out duration-150 "
-                >
-                  {country.travel && (
-                    <Image
-                      fill
-                      style={{ objectFit: "cover" }}
-                      src={country?.travel}
-                      alt={country?.name}
-                      className="rounded hover:opacity-90 shadow-xl"
-                    />
-                  )}
-                  <div className="absolute top-2 left-0 px-2 py-1 rounded-r text-white bg-amber-500">
-                    {country?.name}
-                  </div>
-
-                  <div className="flex items-center absolute bottom-1 left-0 text-white text-xs">
-                    {selectedSorting === "Rating" ? (
-                      <div className="flex flex-1 items-center gap-1 px-3 py-1 rounded-r text-white bg-blue-500 ">
-                        <PiScalesBold className="h-5 w-5" />{" "}
-                        {country?.gini < 35
-                          ? " Good"
-                          : country?.gini < 50
-                          ? " Avg"
-                          : " Poor"}
-                      </div>
-                    ) : selectedSorting === "Area" ? (
-                      <div className="flex flex-1 items-center gap-1 px-3 py-1 rounded-r text-white bg-teal-500">
-                        <BsMinecartLoaded className="h-5 w-5" />{" "}
-                        {country?.area < 1000000
-                          ? " Low"
-                          : country?.area < 5000000
-                          ? " Med"
-                          : " High"}
-                      </div>
-                    ) : selectedSorting === "Population" ? (
-                      <div className="flex flex-grow items-center gap-1 px-3 py-1 rounded-r text-white bg-rose-500">
-                        <HiUsers className="h-5 w-5" />{" "}
-                        {(country?.population / 1000000).toFixed(0) + "m"}
-                      </div>
-                    ) : null}
-                  </div>
-                  <button
-                    key={country?.cioc}
-                    className="p-2 bg-white rounded-full shadow-lg absolute top-2 right-2"
-                    onClick={() => handleFavorites(country)}
-                  >
-                    {favorited?.includes(country) ? (
-                      <HiHeart className="h-5 w-5 cursor-pointer text-red-400 hover:scale-110 transition duration-200 ease-out active:scale-90" />
-                    ) : (
-                      <HiOutlineHeart className="h-5 w-5 cursor-pointer text-red-400 hover:scale-110 transition duration-200 ease-out active:scale-90" />
-                    )}
-                  </button>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 3xl:grid-cols-6 gap-4  justify-center">
+            {filteredResults?.slice(0, 12).map((country, i) => (
+              <div
+                key={i}
+                onClick={() => clickHandler(country)}
+                className="relative w-full sm:w-[45vw] md:w-72 lg:w-64 xl:w-64 2xl:w-64  aspect-square cursor-pointer active:scale-95 transition ease-out duration-150"
+              >
+                {country.travel && (
+                  <Image
+                    fill
+                    style={{ objectFit: "cover" }}
+                    src={country?.travel}
+                    alt={country?.name}
+                    className="rounded-xl hover:opacity-90 shadow-xl"
+                  />
+                )}
+                <div className="absolute top-2 left-0 px-2 py-1 rounded-r text-white bg-amber-500">
+                  {country?.name}
                 </div>
-              ))}
-            </div>
-          </section>
+    
+                <div className="flex items-center absolute bottom-1 left-0 text-white text-xs">
+                  {selectedSorting === "Rating" ? (
+                    <div className="flex flex-1 items-center gap-1 px-3 py-1 rounded-r text-white bg-blue-500 ">
+                      <PiScalesBold className="h-5 w-5" />
+                      {country?.gini < 35
+                        ? " Good"
+                        : country?.gini < 50
+                        ? " Avg"
+                        : " Poor"}
+                    </div>
+                  ) : selectedSorting === "Area" ? (
+                    <div className="flex flex-1 items-center gap-1 px-3 py-1 rounded-r text-white bg-teal-500">
+                      <BsMinecartLoaded className="h-5 w-5" />
+                      {country?.area < 1000000
+                        ? " Low"
+                        : country?.area < 5000000
+                        ? " Med"
+                        : " High"}
+                    </div>
+                  ) : selectedSorting === "Population" ? (
+                    <div className="flex flex-grow items-center gap-1 px-3 py-1 rounded-r text-white bg-rose-500">
+                      <HiUsers className="h-5 w-5" />
+                      {(country?.population / 1000000).toFixed(0) + "m"}
+                    </div>
+                  ) : null}
+                </div>
+                <button
+                  key={country?.cioc}
+                  className="p-2 bg-white rounded-full shadow-lg absolute top-2 right-2"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleFavorites(country);
+                  }}
+                >
+                  {favorited?.includes(country) ? (
+                    <HiHeart className="h-5 w-5 cursor-pointer text-red-400 hover:scale-110 transition duration-200 ease-out active:scale-90" />
+                  ) : (
+                    <HiOutlineHeart className="h-5 w-5 cursor-pointer text-red-400 hover:scale-110 transition duration-200 ease-out active:scale-90" />
+                  )}
+                </button>
+              </div>
+            ))}
+          </div>
+        </section>
         )}
       </div>
     </div>

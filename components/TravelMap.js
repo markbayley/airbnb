@@ -22,6 +22,7 @@ const TravelMap = ({
   }, []);
 
   console.log("viewport", viewport);
+  const[center, setCenter] = useState([])
 
   useEffect(() => {
     if (selectedCountry) {
@@ -38,6 +39,7 @@ const TravelMap = ({
             }
           );
           const center = response.data.features[0].center;
+          setCenter(center)
           setViewport((prevViewport) => ({
             ...prevViewport,
             latitude: center[1],
@@ -52,6 +54,8 @@ const TravelMap = ({
     }
   }, [selectedCountry]);
 
+  console.log("photos", photos)
+
   return (
     <div className="sticky top-20 flex-grow h-full z-10 ">
       <MapGL
@@ -62,6 +66,7 @@ const TravelMap = ({
         onViewportChange={handleViewportChange}
         mapboxApiAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
         mapStyle="mapbox://styles/inblock/clxn0epe700gd01poar3c1bmc"
+        className="rounded-xl"
       >
         {" "}
         <div className="flex w-full justify-end p-2">
@@ -82,10 +87,10 @@ const TravelMap = ({
                 }));
               }}
             >
-              {result?.location?.position?.longitude && (
+              {result?.location?.position?.longitude  && (
                 <Marker
-                  longitude={result.location?.position?.longitude}
-                  latitude={result.location?.position?.latitude}
+                  longitude={result.location?.position?.longitude ? result.location?.position?.longitude : center[0]}
+                  latitude={result.location?.position?.latitude ? result.location?.position?.latitude : center[1]}
                   offsetLeft={-20}
                   offsetTop={-10}
                 >
