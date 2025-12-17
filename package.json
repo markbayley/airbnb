@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{js,jsx,json,md,css}\""
   },
   "dependencies": {
     "@badrap/bar-of-progress": "^0.2.2",
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "postcss": "^8",
+    "prettier": "^3.7.4",
     "tailwindcss": "^3.4.1"
   }
 }

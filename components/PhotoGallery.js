@@ -8,14 +8,10 @@ import { BsMinecartLoaded } from "react-icons/bs";
 import Filter from "@/components/Filter";
 import TravelMap from "@/components/TravelMap";
 
-import superagent from "superagent";
 import { useEffect, useState } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
-function PhotoGallery({
-
-
-}) {
+function PhotoGallery({}) {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -49,7 +45,6 @@ function PhotoGallery({
   };
 
   const [favorited, setFavorited] = useState([]);
-  console.log("favorited", favorited);
 
   const handleFavorites = (item) => {
     setFavorited((prevFilters) =>
@@ -62,14 +57,67 @@ function PhotoGallery({
   useEffect(() => {
     const lowerCaseSearchValue = searchValue.toLowerCase();
 
-    const mergedCountries = countryData.filter((country) =>
+    const mergedCountries = countryData?.filter((country) =>
       country?.name.toLowerCase().includes(lowerCaseSearchValue)
     );
 
     const updatedCountries = mergedCountries.map((flag) => {
-      const travelData = jsonData.find(
-        (travel) => travel.country === flag.name
-      );
+      // Try exact match first
+      let travelData = jsonData.find((travel) => travel.country === flag.name);
+
+      // If no exact match, try fuzzy matching for common name variations
+      if (!travelData) {
+        travelData = jsonData.find((travel) => {
+          const countryName = flag.name.toLowerCase();
+          const travelCountry = travel.country.toLowerCase();
+
+          // Check if either contains the other
+          if (
+            countryName.includes(travelCountry) ||
+            travelCountry.includes(countryName)
+          ) {
+            return true;
+          }
+
+          // Common aliases mapping
+          const aliases = {
+            "united states": ["usa", "united states of america"],
+            "united kingdom": [
+              "uk",
+              "united kingdom of great britain and northern ireland",
+            ],
+            "south korea": ["korea, republic of", "republic of korea", "korea"],
+            "north korea": [
+              "korea, democratic people's republic of",
+              "democratic people's republic of korea",
+            ],
+            vietnam: ["viet nam"],
+            laos: ["lao people's democratic republic"],
+            "czech republic": ["czechia"],
+            "ivory coast": ["côte d'ivoire"],
+            congo: ["congo (brazzaville)", "republic of the congo"],
+            "democratic republic of the congo": [
+              "congo (kinshasa)",
+              "congo, the democratic republic of the",
+            ],
+          };
+
+          // Check aliases
+          for (const [key, values] of Object.entries(aliases)) {
+            if (
+              (countryName.includes(key) &&
+                values.some((v) => travelCountry.includes(v))) ||
+              (travelCountry.includes(key) &&
+                values.some((v) => countryName.includes(v)))
+            ) {
+              return true;
+            }
+          }
+
+          return false;
+        });
+      }
+
       return {
         ...flag,
         travel: travelData ? travelData.image : null,
@@ -84,18 +132,40 @@ function PhotoGallery({
     setLoading(true);
     setError(null);
 
-    fetch(`https://restcountries.com/v2/all`)
-      .then((resp) => resp.json())
+    // REST Countries v3 requires specifying fields for /all endpoint
+    const fields = "name,population,region,area,gini,cioc,cca3,flags";
+
+    fetch(`https://restcountries.com/v3.1/all?fields=${fields}`)
+      .then((resp) => {
+        if (!resp.ok) {
+          throw new Error(`Error fetching countries: ${resp.status}`);
+        }
+        return resp.json();
+      })
       .then((response) => {
-        if (response.status === 404) {
-          setError("Error fetching countries");
+        if (Array.isArray(response)) {
+          // Transform v3 API response to match v2 structure
+          const transformedData = response.map((country) => ({
+            // Spread original data first
+            ...country,
+            // Then override with transformed values
+            name: country.name?.common || country.name,
+            population: country.population,
+            region: country.region,
+            area: country.area,
+            gini: country.gini ? Object.values(country.gini)[0] : null,
+            cioc: country.cioc || country.cca3,
+            flags: country.flags,
+          }));
+          setCountryData(transformedData);
         } else {
-          setCountryData(response);
+          setError("Invalid data format received");
         }
         setLoading(false);
       })
-      .catch(({ message }) => {
-        setError(message);
+      .catch((error) => {
+        console.error("REST Countries API Error:", error);
+        setError(error.message);
         setLoading(false);
       });
   }, []);
@@ -104,25 +174,22 @@ function PhotoGallery({
   const numberOfPhotos = 9;
   const baseURL = `https://api.unsplash.com/photos/random/?count=${numberOfPhotos}&client_id=${clientID}`;
 
-  const simpleGet = (options) => {
-    superagent.get(options.url).then((res) => {
-      if (options.onSuccess) options.onSuccess(res);
-    });
-  };
-
   useEffect(() => {
     if (selectedCountry && !loading) {
       setLoading(true);
 
       const photosUrl = `${baseURL}&query=${selectedCountry + " " + query}`;
 
-      simpleGet({
-        url: photosUrl,
-        onSuccess: (res) => {
-          setPhotos(res.body);
+      fetch(photosUrl)
+        .then((res) => res.json())
+        .then((data) => {
+          setPhotos(data);
           setLoading(false);
-        },
-      });
+        })
+        .catch((error) => {
+          console.error("Error fetching photos:", error);
+          setLoading(false);
+        });
     }
   }, [selectedCountry, query]);
 
@@ -158,10 +225,8 @@ function PhotoGallery({
   };
 
   return (
-    <div
-      className={`flex flex-col items-center border-red-500  ${inter.className}`}
-    >
-      <div className="border-red-500 ">
+    <div className={`flex flex-col mt-6 ${inter.className}`}>
+      <div className="">
         <Filter
           filterButtons={filterButtons}
           sortButtons={sortButtons}
@@ -189,7 +254,7 @@ function PhotoGallery({
               <div
                 //key={i}
                 //onClick={() => clickHandler(photos)}
-                className="relative  flex-1 min-w-[300px] lg:min-w-[40vw]  flex-grow shadow-xl "
+                className="relative  flex-1 min-w-[300px] lg:min-w-[40vw] flex-grow "
               >
                 {showMap ? (
                   <TravelMap
@@ -208,6 +273,7 @@ function PhotoGallery({
                   <>
                     <Image
                       fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
                       style={{ objectFit: "cover" }}
                       // src={showDetail.travel}
                       src={mainImage ? mainImage : selectedCountryDetail.travel}
@@ -225,16 +291,18 @@ function PhotoGallery({
               <div className="grid md:grid-cols-3 gap-4  justify-center">
                 {photos?.slice(0, 9).map((photo, i) => (
                   // {[...Array(9)].map((_, i) => (
-                  <div className="relative active:scale-95 transition ease-out duration-150 shadow-xl">
+                  <div
+                    key={i}
+                    className="relative active:scale-95 transition ease-out duration-150 shadow-xl"
+                  >
                     {/* <div className="absolute bottom-1 text-white text-xs z-50">
                         {photo.location.name}
                       </div> */}
                     <div
-                      key={i}
                       //onClick={() => clickHandler(photo)}
                       onClick={() => {
-                        setMainImage(photo.urls.regular),
-                          setSelectedPhoto(photo.id);
+                        (setMainImage(photo.urls.regular),
+                          setSelectedPhoto(photo.id));
                       }}
                       className="relative w-[95vw]  md:w-[12vw] aspect-square cursor-pointer "
                     >
@@ -242,6 +310,7 @@ function PhotoGallery({
                         // { selectedCountryDetail.travel ?
                         <Image
                           fill
+                          sizes="(max-width: 768px) 95vw, 12vw"
                           style={{ objectFit: "cover" }}
                           //src={"/italy.jpg"}
                           src={photo.urls.regular}
@@ -282,70 +351,71 @@ function PhotoGallery({
         ) : (
           //MAIN SEARCH
           <section>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 3xl:grid-cols-6 gap-4  justify-center">
-            {filteredResults?.slice(0, 12).map((country, i) => (
-              <div
-                key={i}
-                onClick={() => clickHandler(country)}
-                className="relative w-full sm:w-[45vw] md:w-72 lg:w-64 xl:w-64 2xl:w-64  aspect-square cursor-pointer active:scale-95 transition ease-out duration-150"
-              >
-                {country.travel && (
-                  <Image
-                    fill
-                    style={{ objectFit: "cover" }}
-                    src={country?.travel}
-                    alt={country?.name}
-                    className="rounded-xl hover:opacity-90 shadow-xl"
-                  />
-                )}
-                <div className="absolute top-2 left-0 px-2 py-1 rounded-r text-white bg-amber-500">
-                  {country?.name}
-                </div>
-    
-                <div className="flex items-center absolute bottom-1 left-0 text-white text-xs">
-                  {selectedSorting === "Rating" ? (
-                    <div className="flex flex-1 items-center gap-1 px-3 py-1 rounded-r text-white bg-blue-500 ">
-                      <PiScalesBold className="h-5 w-5" />
-                      {country?.gini < 35
-                        ? " Good"
-                        : country?.gini < 50
-                        ? " Avg"
-                        : " Poor"}
-                    </div>
-                  ) : selectedSorting === "Area" ? (
-                    <div className="flex flex-1 items-center gap-1 px-3 py-1 rounded-r text-white bg-teal-500">
-                      <BsMinecartLoaded className="h-5 w-5" />
-                      {country?.area < 1000000
-                        ? " Low"
-                        : country?.area < 5000000
-                        ? " Med"
-                        : " High"}
-                    </div>
-                  ) : selectedSorting === "Population" ? (
-                    <div className="flex flex-grow items-center gap-1 px-3 py-1 rounded-r text-white bg-rose-500">
-                      <HiUsers className="h-5 w-5" />
-                      {(country?.population / 1000000).toFixed(0) + "m"}
-                    </div>
-                  ) : null}
-                </div>
-                <button
-                  key={country?.cioc}
-                  className="p-2 bg-white rounded-full shadow-lg absolute top-2 right-2"
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    handleFavorites(country);
-                  }}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-4 3xl:grid-cols-4 gap-4  justify-between">
+              {filteredResults?.slice(0, 12).map((country, i) => (
+                <div
+                  key={i}
+                  onClick={() => clickHandler(country)}
+                  className="relative w-full sm:w-[45vw] md:w-72 lg:w-64 xl:w-64 2xl:w-64  aspect-square cursor-pointer active:scale-95 transition ease-out duration-150"
                 >
-                  {favorited?.includes(country) ? (
-                    <HiHeart className="h-5 w-5 cursor-pointer text-red-400 hover:scale-110 transition duration-200 ease-out active:scale-90" />
-                  ) : (
-                    <HiOutlineHeart className="h-5 w-5 cursor-pointer text-red-400 hover:scale-110 transition duration-200 ease-out active:scale-90" />
+                  {country.travel && (
+                    <Image
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 45vw, (max-width: 1280px) 33vw, (max-width: 1536px) 25vw, 20vw"
+                      style={{ objectFit: "cover" }}
+                      src={country?.travel}
+                      alt={country?.name}
+                      className="rounded-xl hover:opacity-90 shadow-xl"
+                    />
                   )}
-                </button>
-              </div>
-            ))}
-          </div>
-        </section>
+                  <div className="absolute top-2 left-0 px-2 py-1 rounded-r text-white bg-amber-500">
+                    {country?.name}
+                  </div>
+
+                  <div className="flex items-center absolute bottom-1 left-0 text-white text-xs">
+                    {selectedSorting === "Rating" ? (
+                      <div className="flex flex-1 items-center gap-1 px-3 py-1 rounded-r text-white bg-blue-500 ">
+                        <PiScalesBold className="h-5 w-5" />
+                        {country?.gini < 35
+                          ? " Good"
+                          : country?.gini < 50
+                            ? " Avg"
+                            : " Poor"}
+                      </div>
+                    ) : selectedSorting === "Area" ? (
+                      <div className="flex flex-1 items-center gap-1 px-3 py-1 rounded-r text-white bg-teal-500">
+                        <BsMinecartLoaded className="h-5 w-5" />
+                        {country?.area < 1000000
+                          ? " Low"
+                          : country?.area < 5000000
+                            ? " Med"
+                            : " High"}
+                      </div>
+                    ) : selectedSorting === "Population" ? (
+                      <div className="flex flex-grow items-center gap-1 px-3 py-1 rounded-r text-white bg-rose-500">
+                        <HiUsers className="h-5 w-5" />
+                        {(country?.population / 1000000).toFixed(0) + "m"}
+                      </div>
+                    ) : null}
+                  </div>
+                  <button
+                    key={country?.cioc}
+                    className="p-2 bg-white rounded-full shadow-lg absolute top-2 right-2"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleFavorites(country);
+                    }}
+                  >
+                    {favorited?.includes(country) ? (
+                      <HiHeart className="h-5 w-5 cursor-pointer text-red-400 hover:scale-110 transition duration-200 ease-out active:scale-90" />
+                    ) : (
+                      <HiOutlineHeart className="h-5 w-5 cursor-pointer text-red-400 hover:scale-110 transition duration-200 ease-out active:scale-90" />
+                    )}
+                  </button>
+                </div>
+              ))}
+            </div>
+          </section>
         )}
       </div>
     </div>

@@ -114,35 +114,34 @@ const SearchMap = ({
               });
             }}
           >
-       {result.long &&
-            <Marker
-              longitude={result.long}
-              latitude={result.lat}
-              offsetLeft={-20}
-              offsetTop={-10}
-            >
-              <div className="relative w-16 h-16">
-                <div className="z-50 absolute w-12 flex justify-center items-center text-auto bg-red-400 rounded ml-6 -mt-2 text-white font-semibold">
-                  {"$" + result.price}
+            {result.long && (
+              <Marker
+                longitude={result.long}
+                latitude={result.lat}
+                offsetLeft={-20}
+                offsetTop={-10}
+              >
+                <div className="relative w-16 h-16">
+                  <div className="z-50 absolute w-12 flex justify-center items-center text-auto bg-red-400 rounded ml-6 -mt-2 text-white font-semibold">
+                    {"$" + result.price}
+                  </div>
+                  <Image
+                    alt="image-marker"
+                    src={result.img}
+                    fill
+                    style={{ objectFit: "cover" }}
+                    className={
+                      selectedAddress.id === result.id
+                        ? "rounded-full border-4 border-red-400 hover:border-red-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out active:scale-90 tranition"
+                        : "rounded-full border-4 border-white hover:border-white-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out  active:scale-90 tranition"
+                    }
+                  />
                 </div>
-                <Image
-                  alt="image-marker"
-                  src={result.img}
-                  fill
-                  style={{ objectFit: "cover" }}
-                  className={
-                    selectedAddress.id === result.id
-                      ? "rounded-full border-4 border-red-400 hover:border-red-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out active:scale-90 tranition"
-                      : "rounded-full border-4 border-white hover:border-white-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out  active:scale-90 tranition"
-                  }
-                />
-              </div>
-            </Marker>
-}
-
+              </Marker>
+            )}
           </div>
         ))}
-{/* 
+        {/* 
         {
           photos?.map((result, i) => (
             <div key={i} onClick={() => { handleMarkerView(i),  setViewport({

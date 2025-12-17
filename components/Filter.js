@@ -26,15 +26,14 @@ function Filter({
   setSearchValue,
   query,
 }) {
-
-  const [detailSearch, setDetailSearch] = useState('')
+  const [detailSearch, setDetailSearch] = useState("");
 
   const handleDetailSearch = (e) => {
     //e.preventDfault()
-    setQuery(detailSearch)
-  }
+    setQuery(detailSearch);
+  };
 
-  console.log("detailSearch", detailSearch)
+  console.log("detailSearch", detailSearch);
 
   return (
     <div className="flex  md:flex-row items-center justify-between flex-wrap w-full  my-4 text-xs md:text-sm  ">
@@ -45,10 +44,16 @@ function Filter({
               value={detailSearch}
               onChange={(e) => setDetailSearch(e.target.value)}
               type="text"
-              className="text-sm rounded-l pl-3 w-full text-gray-800 outline-none py-2 my-2 border-l-2 border-b-2 border-t-2 border-gray-400"
-              placeholder="Search Photos"
+              className="text-sm rounded-l pl-3 w-full placeholder-red-400 text-teal-600 outline-none py-2 my-2 border-l-2 border-b-2 border-t-2 border-red-400"
+              placeholder="Search Photos..."
             />
-            <button value={detailSearch}  onClick={handleDetailSearch} className="border-2 mr-2 border-gray-400 border-l-0 bg-red-400 text-white rounded-r-full px-3 py-2"><HiOutlineSearch className="h-5 w-5"/></button>
+            <button
+              value={detailSearch}
+              onClick={handleDetailSearch}
+              className="border-2 mr-2 border-red-400 border-l-0 bg-red-400 text-white rounded-r-full px-3 py-2"
+            >
+              <HiOutlineSearch className="h-5 w-5" />
+            </button>
           </div>
           {/* Dropdown for medium screens and smaller */}
           <div className="block lg:hidden my-1 text-sm">
@@ -58,7 +63,7 @@ function Filter({
               value={query}
             >
               <option value="" disabled>
-                Theme
+                Themes
               </option>
               {detailButtons.map((item, idx) => (
                 <option key={idx} value={item}>
@@ -76,8 +81,8 @@ function Filter({
                 onClick={() => setQuery(item)}
                 className={
                   query === item
-                    ? "cursor-pointer rounded-full border py-2 px-2 bg-teal-500 text-white hover:shadow-xl active:scale-95 transition duration-200"
-                    : "cursor-pointer rounded-full border-2 border-teal-500 text-teal-600 py-2 px-2 hover:shadow-xl active:scale-95 transition duration-200"
+                    ? "cursor-pointer rounded-full border py-2 px-4 bg-teal-500 text-white hover:shadow-xl active:scale-95 transition duration-200"
+                    : "cursor-pointer rounded-full border-2 border-teal-500 text-teal-600 py-2 px-4 hover:shadow-xl active:scale-95 transition duration-200"
                 }
               >
                 {item}
@@ -88,7 +93,7 @@ function Filter({
           <div className="flex gap-1 md:gap-3 my-1 mx-2 md:mx-0">
             <button
               onClick={() => {
-                setShowDetail(true), setShowMap(false);
+                (setShowDetail(true), setShowMap(false));
               }}
               className={
                 "cursor-pointer active:scale-95 transition duration-200"
@@ -96,7 +101,7 @@ function Filter({
             >
               <RiGalleryView2
                 className={`h-10 w-10 p-2  rounded-full border-2 border-amber-500 hover:shadow-xl ${
-                 showMap === false
+                  showMap === false
                     ? "bg-amber-500 text-white"
                     : " text-amber-500"
                 }  `}
@@ -105,7 +110,7 @@ function Filter({
 
             <button
               onClick={() => {
-                setShowDetail(true), setShowMap(true);
+                (setShowDetail(true), setShowMap(true));
               }}
               className={
                 "cursor-pointer active:scale-95 transition duration-200"
@@ -120,7 +125,7 @@ function Filter({
 
             <button
               onClick={() => {
-                setShowDetail(false), setShowMap(false), setMainImage("");
+                (setShowDetail(false), setShowMap(false), setMainImage(""));
               }}
               className={
                 "cursor-pointer active:scale-95 transition duration-200 "
@@ -139,14 +144,13 @@ function Filter({
               value={searchValue}
               onChange={(e) => setSearchValue(e.target.value)}
               type="text"
-              className="text-sm rounded pl-3 w-full text-gray-800 outline-none py-2 my-2 border-2 border-gray-400"
+              className="text-sm rounded-full pl-3 w-full placeholder-teal-600 outline-none py-2 my-2 border-2 border-teal-500"
               placeholder="Search Countries"
             />
           </div>
 
-
-           {/* Dropdown for medium screens and smaller */}
-           <div className="block lg:hidden my-1 mx-2 md:mx-0 text-sm">
+          {/* Dropdown for medium screens and smaller */}
+          <div className="block lg:hidden my-1 mx-2 md:mx-0 text-sm">
             <select
               // onChange={(e) => setQuery(e.target.value)}
               onChange={(e) => handleFilter(e.target.value)}
@@ -154,7 +158,7 @@ function Filter({
               //value={item}
             >
               <option value="" disabled>
-                Theme
+                Region
               </option>
               {filterButtons.map((item, idx) => (
                 <option key={idx} value={item}>
@@ -172,16 +176,15 @@ function Filter({
                 onClick={() => handleFilter(item)}
                 className={
                   selectedRegion === item
-                    ? "cursor-pointer rounded-full border py-2 px-2 bg-teal-500 text-white hover:shadow-xl active:scale-95 transition duration-200"
-                    : "cursor-pointer rounded-full border-2 border-teal-500 text-teal-600 py-2 px-2 hover:shadow-xl active:scale-95 transition duration-200"
+                    ? "cursor-pointer rounded-full border py-2 px-4 bg-teal-500 text-white hover:shadow-xl active:scale-95 transition duration-200"
+                    : "cursor-pointer rounded-full border-2 border-teal-500 text-teal-600 py-2 px-4 hover:shadow-xl active:scale-95 transition duration-200"
                 }
               >
                 {item}
               </button>
             ))}
           </div>
-
-
+          {/* 
           <div className="flex  gap-1 md:gap-3 mx-2 md:mx-0">
             {sortButtons.map((item, idx) => (
               <button
@@ -226,7 +229,7 @@ function Filter({
                 )}
               </button>
             ))}
-          </div>
+          </div> */}
         </>
       )}
     </div>

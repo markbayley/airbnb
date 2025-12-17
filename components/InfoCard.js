@@ -23,6 +23,7 @@ function InfoCard({
   numberOfDays,
 }) {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [imageError, setImageError] = useState(false);
 
   const imageVariations = [
     { objectPosition: "bottom right" },
@@ -31,11 +32,14 @@ function InfoCard({
     { objectPosition: "bottom", transform: "scaleX(-1)" },
   ];
 
+  const fallbackImage = "/roomimages/bedroom1.jpg";
+  const mainImageSrc = imageError || !item.img ? fallbackImage : item.img;
+
   return (
     <>
       <div
         onClick={() => {
-          setSelectedAddress(item), setSelectedCity(item.location);
+          (setSelectedAddress(item), setSelectedCity(item.location));
           setViewport({
             longitude: item.long,
             latitude: item.lat,
@@ -49,14 +53,20 @@ function InfoCard({
             : "relative bg-gray-100 rounded-md p-1 border-b cursor-pointer hover:shadow-lg transition duration-200 ease-out"
         }
       >
-        <div className="relative h-56 md:h-80 w-full flex-shrink-0 ">
+        <div className="relative h-56 md:h-80 w-full flex-shrink-0">
           <Image
             alt="image-info"
-            src={item.img}
+            src={mainImageSrc}
             fill
-            objectPosition={imageVariations[selectedImageIndex].objectPosition}
-            style={{ objectFit:"cover", transform: imageVariations[selectedImageIndex].transform }}
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 750px, 750px"
+            style={{
+              objectFit: "cover",
+              objectPosition:
+                imageVariations[selectedImageIndex].objectPosition,
+              transform: imageVariations[selectedImageIndex].transform,
+            }}
             className="rounded-md"
+            onError={() => setImageError(true)}
           />
           <div className="absolute bottom-2 right-2 flex justify-between items-end pt-5 text-white">
             <p className="flex items-center">
@@ -92,26 +102,28 @@ function InfoCard({
               }
 
               return (
-                <>
-                  <div
-                    key={index}
-                    className="relative flex-1 h-12 md:h-24 "
-                    onClick={() => setSelectedImageIndex(index)}
-                  >
-                    <Image
-                      alt={`image-info-${index}`}
-                      src={item.img}
-                      fill
-                      objectPosition={objectPosition}
-                      className={
-                        selectedImageIndex === index
-                          ? `rounded cursor-pointer active:opacity-80 border-b-4 border-red-400 transition duration-150 `
-                          : `rounded cursor-pointer hover:opacity-80 transition duration-150`
-                      }
-                      style={{objectFit:"cover", transform: transformStyle }}
-                    />
-                  </div>
-                </>
+                <div
+                  key={index}
+                  className="relative flex-1 h-12 md:h-24 "
+                  onClick={() => setSelectedImageIndex(index)}
+                >
+                  <Image
+                    alt={`image-info-${index}`}
+                    src={mainImageSrc}
+                    fill
+                    sizes="(max-width: 768px) 25vw, 100px"
+                    className={
+                      selectedImageIndex === index
+                        ? `rounded cursor-pointer active:opacity-80 border-b-4 border-red-400 transition duration-150 `
+                        : `rounded cursor-pointer hover:opacity-80 transition duration-150`
+                    }
+                    style={{
+                      objectFit: "cover",
+                      objectPosition: objectPosition,
+                      transform: transformStyle,
+                    }}
+                  />
+                </div>
               );
             })}
           </div>
@@ -123,7 +135,7 @@ function InfoCard({
               <span className=" text-white text-[15px] px-2 py-1  ">
                 {numberOfDays
                   ? "$" + item.price * numberOfDays
-                  : "$" + item.price }
+                  : "$" + item.price}
               </span>
               <span className=" text-white text-[12px] px-2 -mt-3">
                 {numberOfDays ? "/" + numberOfDays + " nights" : "/ night"}
@@ -132,7 +144,7 @@ function InfoCard({
 
             <div className="absolute top-70 left-0 text-gray-500 uppercase pl-1">
               <span>{item.location}</span>
-            </div >
+            </div>
 
             <div>
               <button

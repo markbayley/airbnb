@@ -11,9 +11,9 @@ function SmallCard({ data }) {
       pathname: "/search",
       query: {
         city: data.city[0],
-      } 
-    })
-  }
+      },
+    });
+  };
 
   return (
     <div
@@ -25,7 +25,8 @@ function SmallCard({ data }) {
           alt="image-small"
           src={data.imageUrl}
           fill
-          style={{objectFit:"cover"}}
+          sizes="(max-width: 768px) 112px, 112px"
+          style={{ objectFit: "cover" }}
           className="rounded-lg"
         />
       </div>
@@ -46,4 +47,3 @@ function SmallCard({ data }) {
 }
 
 export default SmallCard;
-

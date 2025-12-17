@@ -23,7 +23,8 @@ function MediumCard({ data }) {
           alt="image-medium"
           src={data.imageUrl}
           fill
-          style={{objectFit:"cover"}}
+          sizes="256px"
+          style={{ objectFit: "cover" }}
           className="rounded-xl"
         />
       </div>

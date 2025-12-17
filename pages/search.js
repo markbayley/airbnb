@@ -8,7 +8,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { format } from "date-fns";
 import { useRouter } from "next/router";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import SearchMap from "@/components/SearchMap";
 
 function Search({ searchResults }) {
@@ -17,11 +17,12 @@ function Search({ searchResults }) {
   const { city, startDate, endDate, numberOfGuests, numberOfDays } =
     router?.query;
 
-    const [selectedCity, setSelectedCity] = useState(city);
+  const [selectedCity, setSelectedCity] = useState(city);
+  const [photos, setPhotos] = useState([]);
+  const [activeFilters, setActiveFilters] = useState([]);
+  const [favorited, setFavorited] = useState([]);
 
-    console.log("city", city, router.query.city, selectedCity)
-
-      // Update selectedCity whenever the city query parameter changes
+  // Update selectedCity whenever the city query parameter changes
   useEffect(() => {
     if (city) {
       setSelectedCity(city);
@@ -45,54 +46,26 @@ function Search({ searchResults }) {
     );
   };
 
-
-
-  let [photos, setPhotos] = useState([]);
-  let [query, setQuery] = useState("");
-
-  console.log("photos", photos)
-  console.log("query", query)
-
-  const superagent = require("superagent");
-  const clientID = "PvvWIfrMMfNqoEEuVve3X6KE1gksd31-C1Pn-SP3yL4";
-
-  const simpleGet = (options) => {
-    superagent.get(options.url).then(function (res) {
-      if (options.onSuccess) options.onSuccess(res);
-    });
-  };
-
-  const numberOfPhotos = 30;
-  const url =
-    "https://api.unsplash.com/photos/random/?count=" +
-    numberOfPhotos +
-    "&client_id=" +
-    clientID;
-
+  // Fetch Unsplash photos when selectedCity changes
   useEffect(() => {
-    const photosUrl = selectedCity
-      ? `${url}&query=${selectedCity + " " + query}`
-      : url;
+    if (!selectedCity) return;
 
-    simpleGet({
-      url: photosUrl,
-      onSuccess: (res) => {
-        setPhotos(res.body);
-      },
-    });
+    const clientID = "PvvWIfrMMfNqoEEuVve3X6KE1gksd31-C1Pn-SP3yL4";
+    const numberOfPhotos = 30;
+    const url = `https://api.unsplash.com/photos/random/?count=${numberOfPhotos}&query=${selectedCity}&client_id=${clientID}`;
+
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setPhotos(data))
+      .catch((error) => console.error("Error fetching photos:", error));
   }, [selectedCity]);
-
-
- 
 
   const formattedStartDate =
     startDate && format(new Date(startDate), "dd MMM yy");
   const formattedEndDate = endDate && format(new Date(endDate), "dd MMM yy");
   const range = `${formattedStartDate} - ${formattedEndDate}`;
 
-  const [activeFilters, setActiveFilters] = useState([]);
   const filterButtons = ["Cancel Free", "Pets Ok", "Breakfast", "Wi-Fi"];
-
   const sortButtons = ["By Price", "By Rating", "Favorites"];
 
   const handleFilter = (item) => {
@@ -103,7 +76,6 @@ function Search({ searchResults }) {
     );
   };
 
-  const [favorited, setFavorited] = useState([]);
   const handleFavorites = (item) => {
     setFavorited((prevFilters) =>
       prevFilters.includes(item)
@@ -112,78 +84,81 @@ function Search({ searchResults }) {
     );
   };
 
-  let filteredResults;
+  // Memoize filtered results to prevent recalculation on every render
+  const filteredResults = useMemo(() => {
+    let results;
 
-  // Filter based on selectedAddress and selectedCity
-  if (selectedAddress && selectedAddress.id !== undefined) {
-    // Filter out the selectedAddress from searchResults
-    const filteredOutSelected = searchResults.filter(
-      (item) => item.id === selectedAddress.id
-    );
+    // Filter based on selectedAddress and selectedCity
+    if (selectedAddress && selectedAddress.id !== undefined) {
+      // Filter out the selectedAddress from searchResults
+      const filteredOutSelected = searchResults.filter(
+        (item) => item.id === selectedAddress.id
+      );
 
-    // Filter other items based on location if needed
-    const otherItems = searchResults.filter(
-      (item) => item.location === selectedCity && item.id !== selectedAddress.id
-    );
+      // Filter other items based on location if needed
+      const otherItems = searchResults.filter(
+        (item) =>
+          item.location === selectedCity && item.id !== selectedAddress.id
+      );
 
-    // Concatenate filteredOutSelected and otherItems
-    filteredResults = [...filteredOutSelected, ...otherItems];
-  } else if (selectedCity) {
-    // Filter items based on location if selectedAddress is not defined
-    filteredResults = searchResults.filter(
-      (item) => item.location.toLowerCase() === selectedCity.toLowerCase()
-    );
-  } else {
-    // Default case: return all searchResults
-    filteredResults = searchResults;
-  }
+      // Concatenate filteredOutSelected and otherItems
+      results = [...filteredOutSelected, ...otherItems];
+    } else if (selectedCity) {
+      // Filter items based on location if selectedAddress is not defined
+      results = searchResults.filter(
+        (item) => item.location.toLowerCase() === selectedCity.toLowerCase()
+      );
+    } else {
+      // Default case: return all searchResults
+      results = searchResults;
+    }
 
-  // Apply active filters
-  if (activeFilters.includes("Favorites")) {
-    filteredResults = filteredResults.filter((item) =>
-      favorited.includes(item)
-    );
-  }
+    // Apply active filters
+    if (activeFilters.includes("Favorites")) {
+      results = results.filter((item) => favorited.includes(item));
+    }
 
-  if (activeFilters.includes("By Rating")) {
-    filteredResults = filteredResults.slice().sort((a, b) => b.star - a.star);
-  }
+    if (activeFilters.includes("By Rating")) {
+      results = results.slice().sort((a, b) => b.star - a.star);
+    }
 
-  if (activeFilters.includes("By Price")) {
-    filteredResults = filteredResults.slice().sort((a, b) => a.price - b.price);
-  }
+    if (activeFilters.includes("By Price")) {
+      results = results.slice().sort((a, b) => a.price - b.price);
+    }
 
-  if (activeFilters.includes("Pets Ok")) {
-    filteredResults = filteredResults.filter(
-      (item) => item.petsAllowed === "yes"
-    );
-  }
+    if (activeFilters.includes("Pets Ok")) {
+      results = results.filter((item) => item.petsAllowed === "yes");
+    }
 
-  if (activeFilters.includes("Breakfast")) {
-    filteredResults = filteredResults.filter((item) =>
-      item.description.includes("Kitchen")
-    );
-  }
+    if (activeFilters.includes("Breakfast")) {
+      results = results.filter((item) => item.description.includes("Kitchen"));
+    }
 
-  if (activeFilters.includes("Wi-Fi")) {
-    filteredResults = filteredResults.filter((item) =>
-      item.description.includes("Wi-Fi")
-    );
-  }
+    if (activeFilters.includes("Wi-Fi")) {
+      results = results.filter((item) => item.description.includes("Wi-Fi"));
+    }
 
-  if (activeFilters.includes("Cancel Free")) {
-    filteredResults = filteredResults.filter(
-      (item) => item.freeCancelation === "yes"
-    );
-  }
+    if (activeFilters.includes("Cancel Free")) {
+      results = results.filter((item) => item.freeCancelation === "yes");
+    }
 
-  // Filter based on number of guests
-  if (numberOfGuests !== undefined) {
-    const guestsString = `${numberOfGuests} guests`;
-    filteredResults = filteredResults.filter((item) =>
-      item.description.includes(guestsString)
-    );
-  }
+    // Filter based on number of guests
+    if (numberOfGuests !== undefined) {
+      const guestsString = `${numberOfGuests} guests`;
+      results = results.filter((item) =>
+        item.description.includes(guestsString)
+      );
+    }
+
+    return results;
+  }, [
+    searchResults,
+    selectedAddress,
+    selectedCity,
+    activeFilters,
+    favorited,
+    numberOfGuests,
+  ]);
 
   const [viewport, setViewport] = useState({
     width: "100%",
@@ -192,9 +167,6 @@ function Search({ searchResults }) {
     longitude: -30,
     zoom: 1.5,
   });
-
- 
-
 
   return (
     <div className="flex flex-col h-screen ">

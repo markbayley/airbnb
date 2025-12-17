@@ -1,4 +1,3 @@
-
 ![airbnb1](https://github.com/markbayley/airbnb/assets/57758972/d20c1149-feca-47ca-a533-31136f2883f3)
 
 ![airbnb2](https://github.com/markbayley/airbnb/assets/57758972/5fe04eb1-505b-4e62-85f3-d4eaf0c2a4d5)

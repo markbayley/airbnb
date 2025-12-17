@@ -13,7 +13,7 @@ const TravelMap = ({
   photos,
   viewport,
   setViewport,
-  selectedPhoto
+  selectedPhoto,
 }) => {
   const mapRef = useRef();
 
@@ -22,7 +22,7 @@ const TravelMap = ({
   }, []);
 
   console.log("viewport", viewport);
-  const[center, setCenter] = useState([])
+  const [center, setCenter] = useState([]);
 
   useEffect(() => {
     if (selectedCountry) {
@@ -39,7 +39,7 @@ const TravelMap = ({
             }
           );
           const center = response.data.features[0].center;
-          setCenter(center)
+          setCenter(center);
           setViewport((prevViewport) => ({
             ...prevViewport,
             latitude: center[1],
@@ -54,7 +54,7 @@ const TravelMap = ({
     }
   }, [selectedCountry]);
 
-  console.log("photos", photos)
+  console.log("photos", photos);
 
   return (
     <div className="sticky top-20 flex-grow h-full z-10 ">
@@ -65,7 +65,8 @@ const TravelMap = ({
         height="100%"
         onViewportChange={handleViewportChange}
         mapboxApiAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
-        mapStyle="mapbox://styles/inblock/clxn0epe700gd01poar3c1bmc"
+       
+        mapStyle="mapbox://styles/inblock/clx5v536g01iw01rb29t6ezfq"
         className="rounded-xl"
       >
         {" "}
@@ -87,10 +88,18 @@ const TravelMap = ({
                 }));
               }}
             >
-              {result?.location?.position?.longitude  && (
+              {result?.location?.position?.longitude && (
                 <Marker
-                  longitude={result.location?.position?.longitude ? result.location?.position?.longitude : center[0]}
-                  latitude={result.location?.position?.latitude ? result.location?.position?.latitude : center[1]}
+                  longitude={
+                    result.location?.position?.longitude
+                      ? result.location?.position?.longitude
+                      : center[0]
+                  }
+                  latitude={
+                    result.location?.position?.latitude
+                      ? result.location?.position?.latitude
+                      : center[1]
+                  }
                   offsetLeft={-20}
                   offsetTop={-10}
                 >
@@ -101,8 +110,10 @@ const TravelMap = ({
                       src={result?.urls?.small}
                       fill
                       style={{ objectFit: "cover" }}
-                      className={ result.id === selectedPhoto ?   "z-50 rounded-full border-4 border-rose-400 hover:border-white-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out  active:scale-90 tranition":
-                        "z-50 rounded-full border-2 border-white hover:border-white-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out  active:scale-90 tranition"
+                      className={
+                        result.id === selectedPhoto
+                          ? "z-50 rounded-full border-4 border-rose-400 hover:border-white-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out  active:scale-90 tranition"
+                          : "z-50 rounded-full border-2 border-white hover:border-white-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out  active:scale-90 tranition"
                       }
                     />
                   </div>

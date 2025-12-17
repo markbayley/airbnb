@@ -65,43 +65,47 @@ function Header({ placeholder, handleFilter, activeFilters, favorited }) {
     setIsSearchUpdated(false);
   };
 
+  // Check if we're on the search page to show favorites
+  const isSearchPage = router.pathname === "/search";
+
   return (
-    <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md pl-2 md:px-5 lg:px-10 h-20 py-4 md:py-2">
+    <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md pl-2 md:px-5 lg:px-10 py-4 md:py-0">
       {isSearchBarOpen ? (
         // mobile search
-        <div className="flex  mx-auto md:hidden my-1 hover:shadow-lg">
+        <div className="flex mx-auto md:hidden hover:shadow-lg">
           <div className="flex items-center ring-2 ring-red-400 rounded-l-full w-28 py-3">
             <input
               value={searchInput}
               onChange={(e) => {
-                setSearchInput(e.target.value), setIsSearchUpdated(true);
+                (setSearchInput(e.target.value), setIsSearchUpdated(true));
               }}
-              className="flex-grow bg-transparent outline-none text-gray-600 capitalize pl-4 text-sm"
+              className="flex-grow bg-transparent outline-none text-gray-800 font-semibold capitalize pl-4 text-sm"
               type="text"
-              placeholder={placeholder || "Start your search"}
+              placeholder={placeholder || "City?"}
             />
           </div>
 
-          <div  onClick={() => setIsDateRangePickerOpen(!isDateRangePickerOpen)} className="flex items-center justify-center py-2 px-4 bg-white  ring-2 ring-red-400">
-            <button
-       
-            >
+          <div
+            onClick={() => setIsDateRangePickerOpen(!isDateRangePickerOpen)}
+            className="flex items-center justify-center px-2 bg-white  ring-2 ring-red-400"
+          >
+            <button>
               <CalendarIcon
                 className={
                   numberOfDays !== 0
-                    ? "h-5 w-5 text-gray-500 hover:scale-125 transition duration-200 ease-out"
-                    : "h-5 w-5 text-gray-400 hover:scale-125 transition duration-200 ease-out"
+                    ? "h-8 w-8 text-gray-500 hover:scale-125 transition duration-200 ease-out"
+                    : "h-8 w-8 text-gray-400 hover:scale-125 transition duration-200 ease-out"
                 }
               />
             </button>
           </div>
 
           <div className="flex items-center justify-center py-2 pl-3 bg-white  ring-2 ring-red-400">
-            <UsersIcon className="h-5 w-5  text-gray-500 hover:scale-125 transition duration-200 ease-out" />
+            <UsersIcon className="h-7 w-7 text-gray-500 hover:scale-125 transition duration-200 ease-out" />
             <input
               value={numberOfGuests}
               onChange={(e) => {
-                setNumberOfGuests(e.target.value), setIsSearchUpdated(true);
+                (setNumberOfGuests(e.target.value), setIsSearchUpdated(true));
               }}
               type="number"
               min={1}
@@ -112,7 +116,7 @@ function Header({ placeholder, handleFilter, activeFilters, favorited }) {
           <div className="ring-2 ring-red-400 rounded-r-full bg-red-400 px-2 ">
             <MagnifyingGlassIcon
               onClick={search}
-              className="h-9  text-white  p-2 cursor-pointer hover:scale-125 transition duration-200 ease-out"
+              className="h-9 w-9 text-white pt-1 cursor-pointer hover:scale-125 transition duration-200 ease-out"
             />
           </div>
 
@@ -125,53 +129,52 @@ function Header({ placeholder, handleFilter, activeFilters, favorited }) {
           {/* main menu */}
           <div
             onClick={() => router.push("/")}
-            className="relative flex items-center h-8 cursor-pointer my-auto "
+            className="ml-1 relative flex items-center h-8 cursor-pointer my-auto "
           >
             <Image
               alt="image-header"
               src="https://links.papareact.com/qd3"
-              width='100'
-              height='100'
-              style={{objectFit:"contain"}}
-              left="true"
+              width={100}
+              height={100}
+              style={{ objectFit: "contain", height: "auto" }}
               className="active:scale-95 transition duration-150"
             />
           </div>
 
           <div>
             <div className="hidden md:flex items-center justify-center my-4 ">
-              <div className="flex items-center ring-2 ring-red-400 rounded-l-full md:w-32 lg:w-auto px-3 py-2 hover:shadow-lg">
+              <div className="flex items-center ring-2 ring-red-400 rounded-l-full md:w-32 lg:w-auto px-3 py-3 hover:shadow-lg">
                 <input
                   value={searchInput}
                   onChange={(e) => setSearchInput(e.target.value)}
-                  className="flex-grow bg-transparent outline-none text-gray-600 capitalize  text-sm"
+                  className="flex-grow bg-transparent outline-none text-gray-900 placeholder-gray-500 capitalize text-sm font-semibold"
                   type="text"
-                  placeholder={placeholder || "Start your search"}
+                  placeholder={placeholder || "What City?"}
                 />
               </div>
 
-              <div    onClick={() =>
-                    setIsDateRangePickerOpen(!isDateRangePickerOpen)
-                  } className="flex items-center justify-center py-2 px-4 bg-white  ring-2 ring-red-400 hover:shadow-lg cursor-pointer">
-                <button
-               
-                >
+              <div
+                onClick={() => setIsDateRangePickerOpen(!isDateRangePickerOpen)}
+                className="flex items-center justify-center py-1 px-3 bg-white  ring-2 ring-red-400 hover:shadow-lg cursor-pointer"
+              >
+                <button>
                   <CalendarIcon
                     className={
                       numberOfDays !== 0
-                        ? "h-5 w-5 text-gray-500 hover:scale-125 transition duration-200 ease-out active:scale-90"
-                        : "h-5 w-5 text-gray-400 hover:scale-125 transition duration-200 ease-out active:scale-90"
+                        ? "h-9 w-9 text-gray-500 hover:scale-125 transition duration-200 ease-out active:scale-90"
+                        : "h-9 w-9 text-gray-400 hover:scale-125 transition duration-200 ease-out active:scale-90"
                     }
                   />
                 </button>
               </div>
 
               <div className="flex items-center justify-center py-2 pl-3 bg-white  ring-2 ring-red-400 hover:shadow-lg">
-                <UsersIcon className="h-5 w-5  text-gray-500 hover:scale-125 transition duration-200 ease-out" />
+                <UsersIcon className="h-7 w-7 text-gray-500 hover:scale-125 transition duration-200 ease-out" />
                 <input
                   value={numberOfGuests}
                   onChange={(e) => {
-                    setNumberOfGuests(e.target.value), setIsSearchUpdated(true);
+                    (setNumberOfGuests(e.target.value),
+                      setIsSearchUpdated(true));
                   }}
                   type="number"
                   min={1}
@@ -182,16 +185,16 @@ function Header({ placeholder, handleFilter, activeFilters, favorited }) {
               <div
                 className={
                   isSearchUpdated
-                    ? "ring-2 ring-red-400 rounded-r-full bg-red-400 px-2 hover:shadow-lg "
-                    : "ring-2 ring-red-400 rounded-r-full bg-red-400 px-2 hover:shadow-lg "
+                    ? "ring-2 ring-red-400 rounded-r-full bg-red-400 hover:bg-red-500 px-2 hover:shadow-lg "
+                    : "ring-2 ring-red-400 rounded-r-full bg-red-400  hover:bg-red-500 px-2 hover:shadow-lg "
                 }
               >
                 <MagnifyingGlassIcon
                   onClick={search}
                   className={
                     isSearchUpdated
-                      ? "h-9  text-white  p-2 cursor-pointer hover:scale-125 transition duration-200 ease-out active:scale-90 "
-                      : "h-9  text-white  p-2 cursor-pointer hover:scale-125 transition duration-200 ease-out active:scale-90 "
+                      ? "h-11  text-white  p-2 cursor-pointer hover:scale-125 transition duration-200 ease-out active:scale-90 "
+                      : "h-11  text-white  p-2 cursor-pointer hover:scale-125 transition duration-200 ease-out active:scale-90 "
                   }
                 />
               </div>
@@ -199,7 +202,7 @@ function Header({ placeholder, handleFilter, activeFilters, favorited }) {
           </div>
 
           {/* mobile search icon */}
-          <div className="flex items-center justify-end text-gray-500 space-x-4">
+          <div className="flex items-center justify-end text-gray-500 space-x-4 pr-4">
             <div className="flex md:hidden ring-2 ring-red-400 rounded-full bg-red-400  active:scale-90 transition duration-150">
               <MagnifyingGlassIcon
                 onClick={() => setIsSearchBarOpen(true)}
@@ -207,36 +210,38 @@ function Header({ placeholder, handleFilter, activeFilters, favorited }) {
               />
             </div>
 
-            <div
-              key={"Favorites"}
-              onClick={() => handleFilter("Favorites")}
-              className={
-                activeFilters && activeFilters?.includes("Favorites")
-                  ? "p-1 ring-2 mx-3 ring-red-400 bg-white  rounded-full transition duration-200 ease-out shadow-lg active:scale-90 "
-                  : "p-1 ring-2 mx-3 ring-red-400 bg-white  rounded-full transition duration-200 ease-out shadow-lg active:scale-90 "
-              }
-            >
-              {activeFilters && activeFilters?.includes("Favorites") ? (
-                <div className="relative">
-                  <span className="absolute -right-2 flex justify-center -top-3 h-4 w-4 text-xs font-semibold text-white rounded-full bg-teal-500">
-                    {favorited?.length || 0}
-                  </span>{" "}
-                  <HeartIcon className="h-6 cursor-pointer text-red-400 hover:scale-110 transition duration-200 ease-out hover:shadow-xl" />
-                </div>
-              ) : (
-                <div className="relative">
-                  <span className="absolute -right-2 flex justify-center -top-3 h-4 w-4 text-xs font-semibold text-white rounded-full bg-teal-500">
-                    {favorited?.length || 0}
-                  </span>{" "}
-                  <HeartIconInactive className="h-6 cursor-pointer text-red-400 hover:scale-110 transition duration-200 ease-out hover:shadow-xl" />
-                </div>
-              )}
-            </div>
+            {isSearchPage && (
+              <div
+                key={"Favorites"}
+                onClick={() => handleFilter && handleFilter("Favorites")}
+                className={
+                  activeFilters && activeFilters?.includes("Favorites")
+                    ? "p-1 ring-2 mx-3 ring-red-400 bg-white  rounded-full transition duration-200 ease-out shadow-lg active:scale-90 "
+                    : "p-1 ring-2 mx-3 ring-red-400 bg-white  rounded-full transition duration-200 ease-out shadow-lg active:scale-90 "
+                }
+              >
+                {activeFilters && activeFilters?.includes("Favorites") ? (
+                  <div className="relative">
+                    <span className="absolute -right-2 flex justify-center -top-3 h-4 w-4 text-xs font-semibold text-white rounded-full bg-teal-500">
+                      {favorited?.length || 0}
+                    </span>{" "}
+                    <HeartIcon className="h-6 cursor-pointer text-red-400 hover:scale-110 transition duration-200 ease-out hover:shadow-xl" />
+                  </div>
+                ) : (
+                  <div className="relative">
+                    <span className="absolute -right-2 flex justify-center -top-3 h-4 w-4 text-xs font-semibold text-white rounded-full bg-teal-500">
+                      {favorited?.length || 0}
+                    </span>{" "}
+                    <HeartIconInactive className="h-6 cursor-pointer text-red-400 hover:scale-110 transition duration-200 ease-out hover:shadow-xl" />
+                  </div>
+                )}
+              </div>
+            )}
 
-            <div className="flex items-center space-x-2 border-2 p-2 rounded-full hover:shadow-md active:scale-90 transition duration-150">
+            {/* <div className="flex items-center space-x-2 border-2 p-2 rounded-full hover:shadow-md active:scale-90 transition duration-150">
               <Bars3Icon className="h-6 cursor-pointer" />
               <UserCircleIcon className="h-6 cursor-pointer" />
-            </div>
+            </div> */}
           </div>
         </>
       )}

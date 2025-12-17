@@ -1,13 +1,6 @@
 import React from "react";
 
-
-const links1 = [
-  "About Us",
-  "Contact",
-  "Community",
-  "Programs",
-  "Legal",
-];
+const links1 = ["About Us", "Contact", "Community", "Programs", "Legal"];
 
 const links2 = [
   "Accessability",
@@ -33,39 +26,44 @@ const links4 = [
   "Help Centre",
 ];
 
-
 function Footer() {
   return (
     <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-y-10 text-gray-600 px-20 py-14 bg-gray-100 mt-8">
-       <div className="space-y-4 text-xs text-gray-800 ">
+      <div className="space-y-4 text-xs text-gray-800 ">
         <h5 className="font-bold">ABOUT</h5>
         {links1.map((item, idx) => (
-           <p key={idx} className="cursor-pointer hover:text-red-400">{item}</p>
+          <p key={idx} className="cursor-pointer hover:text-red-400">
+            {item}
+          </p>
         ))}
       </div>
 
       <div className="space-y-4 text-xs text-gray-800 ">
         <h5 className="font-bold">COMMUNITY</h5>
         {links2.map((item, idx) => (
-           <p key={idx} className="cursor-pointer hover:text-red-400">{item}</p>
+          <p key={idx} className="cursor-pointer hover:text-red-400">
+            {item}
+          </p>
         ))}
       </div>
 
       <div className="space-y-4 text-xs text-gray-800 ">
         <h5 className="font-bold">OFFERS</h5>
         {links3.map((item, idx) => (
-           <p key={idx} className="cursor-pointer hover:text-red-400">{item}</p>
+          <p key={idx} className="cursor-pointer hover:text-red-400">
+            {item}
+          </p>
         ))}
       </div>
 
       <div className="space-y-4 text-xs text-gray-800 ">
         <h5 className="font-bold">TERMS</h5>
         {links4.map((item, idx) => (
-           <p key={idx} className="cursor-pointer hover:text-red-400">{item}</p>
+          <p key={idx} className="cursor-pointer hover:text-red-400">
+            {item}
+          </p>
         ))}
       </div>
-
-    
     </div>
   );
 }
