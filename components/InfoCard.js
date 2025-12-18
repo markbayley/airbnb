@@ -25,15 +25,13 @@ function InfoCard({
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [imageError, setImageError] = useState(false);
 
-  const imageVariations = [
-    { objectPosition: "bottom right" },
-    { objectPosition: "left", transform: "scaleX(-1)" },
-    { objectPosition: "top left" },
-    { objectPosition: "bottom", transform: "scaleX(-1)" },
-  ];
-
   const fallbackImage = "/roomimages/bedroom1.jpg";
-  const mainImageSrc = imageError || !item.img ? fallbackImage : item.img;
+  
+  // Handle both array and single image formats
+  const imageArray = Array.isArray(item.img) ? item.img : [item.img];
+  const mainImageSrc = imageError || !item.img 
+    ? fallbackImage 
+    : imageArray[selectedImageIndex] || imageArray[0];
 
   return (
     <>
@@ -61,9 +59,6 @@ function InfoCard({
             sizes="(max-width: 768px) 100vw, (max-width: 1280px) 750px, 750px"
             style={{
               objectFit: "cover",
-              objectPosition:
-                imageVariations[selectedImageIndex].objectPosition,
-              transform: imageVariations[selectedImageIndex].transform,
             }}
             className="rounded-md"
             onError={() => setImageError(true)}
@@ -78,29 +73,7 @@ function InfoCard({
 
         {selectedAddress.id == item.id && (
           <div className="flex gap-x-1 py-2 text-white text-lg bg-gray-100 rounded-b w-full justify-between">
-            {[...Array(4)].map((_, index) => {
-              let objectPosition = "center";
-              let transformStyle = "";
-
-              switch (index) {
-                case 0:
-                  objectPosition = "bottom right";
-                  break;
-                case 1:
-                  objectPosition = "left";
-                  transformStyle = "scaleX(-1)"; // Flip horizontally
-                  break;
-                case 2:
-                  objectPosition = "top left";
-                  break;
-                case 3:
-                  objectPosition = "bottom";
-                  transformStyle = "scaleX(-1)"; // Flip horizontally
-                  break;
-                default:
-                  break;
-              }
-
+            {imageArray.slice(0, 4).map((imgSrc, index) => {
               return (
                 <div
                   key={index}
@@ -109,7 +82,7 @@ function InfoCard({
                 >
                   <Image
                     alt={`image-info-${index}`}
-                    src={mainImageSrc}
+                    src={imgSrc}
                     fill
                     sizes="(max-width: 768px) 25vw, 100px"
                     className={
@@ -119,8 +92,6 @@ function InfoCard({
                     }
                     style={{
                       objectFit: "cover",
-                      objectPosition: objectPosition,
-                      transform: transformStyle,
                     }}
                   />
                 </div>

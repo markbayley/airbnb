@@ -15,7 +15,7 @@ function Banner({ img }) {
         className="brightness-75"
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center w-full text-center">
-        <h2 className="text-2xl sm:text-4xl text-white brightness-150 bg-black/50 px-4 py-2 rounded-lg font-semibold">
+        <h2 className="text-2xl sm:text-4xl text-white brightness-150 bg-black/30 px-4 py-2 rounded-lg font-semibold">
           Not sure where to go? Perfect!
         </h2>
         <button

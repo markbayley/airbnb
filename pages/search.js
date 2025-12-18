@@ -9,7 +9,18 @@ import {
 import { format } from "date-fns";
 import { useRouter } from "next/router";
 import React, { useEffect, useState, useMemo } from "react";
-import SearchMap from "@/components/SearchMap";
+import dynamic from "next/dynamic";
+import roomsData from "@/data/rooms.json";
+
+// Dynamically import SearchMap with no SSR to reduce initial load
+const SearchMap = dynamic(() => import("@/components/SearchMap"), {
+  ssr: false,
+  loading: () => (
+    <div className="flex items-center justify-center h-[90vh] bg-gray-200">
+      <div className="text-gray-600">Loading map...</div>
+    </div>
+  ),
+});
 
 function Search({ searchResults }) {
   const [selectedAddress, setSelectedAddress] = useState({});
@@ -18,7 +29,6 @@ function Search({ searchResults }) {
     router?.query;
 
   const [selectedCity, setSelectedCity] = useState(city);
-  const [photos, setPhotos] = useState([]);
   const [activeFilters, setActiveFilters] = useState([]);
   const [favorited, setFavorited] = useState([]);
 
@@ -45,20 +55,6 @@ function Search({ searchResults }) {
       { shallow: true }
     );
   };
-
-  // Fetch Unsplash photos when selectedCity changes
-  useEffect(() => {
-    if (!selectedCity) return;
-
-    const clientID = "PvvWIfrMMfNqoEEuVve3X6KE1gksd31-C1Pn-SP3yL4";
-    const numberOfPhotos = 30;
-    const url = `https://api.unsplash.com/photos/random/?count=${numberOfPhotos}&query=${selectedCity}&client_id=${clientID}`;
-
-    fetch(url)
-      .then((res) => res.json())
-      .then((data) => setPhotos(data))
-      .catch((error) => console.error("Error fetching photos:", error));
-  }, [selectedCity]);
 
   const formattedStartDate =
     startDate && format(new Date(startDate), "dd MMM yy");
@@ -309,7 +305,6 @@ function Search({ searchResults }) {
             setViewport={setViewport}
             viewport={viewport}
             setSelectedCity={setSelectedCity}
-            photos={photos}
           />
         </section>
       </main>
@@ -322,9 +317,12 @@ function Search({ searchResults }) {
 export default Search;
 
 export async function getServerSideProps() {
-  const searchResults = await fetch(
-    "https://gist.githubusercontent.com/markbayley/a998d77811cfdd839bd4ce78250cc2c6/raw/0ff87e6952ccb68684d568084ab9e6fea564e603/marker.json"
-  ).then((res) => res.json());
+  // Using local JSON file instead of remote fetch for better performance
+  const startTime = Date.now();
+  const searchResults = roomsData;
+  const loadTime = Date.now() - startTime;
+  
+  console.log(`Rooms data loaded locally in ${loadTime}ms`);
 
   return {
     props: {

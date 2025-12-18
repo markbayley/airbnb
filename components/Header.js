@@ -7,6 +7,7 @@ import {
   UsersIcon,
   CalendarIcon,
   XMarkIcon,
+  HomeIcon,
 } from "@heroicons/react/24/solid";
 import { useEffect, useState } from "react";
 import "react-date-range/dist/styles.css"; // main style file
@@ -14,6 +15,7 @@ import "react-date-range/dist/theme/default.css"; // theme css file
 import { DateRange } from "react-date-range";
 import { useRouter } from "next/router";
 import { differenceInDays } from "date-fns";
+import Link from "next/link";
 
 import { HeartIcon, StarIcon } from "@heroicons/react/24/solid";
 import { HeartIcon as HeartIconInactive } from "@heroicons/react/24/outline";
@@ -67,6 +69,7 @@ function Header({ placeholder, handleFilter, activeFilters, favorited }) {
 
   // Check if we're on the search page to show favorites
   const isSearchPage = router.pathname === "/search";
+  const isExplorePage = router.pathname === "/explore";
 
   return (
     <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md pl-2 md:px-5 lg:px-10 py-4 md:py-0">
@@ -133,7 +136,7 @@ function Header({ placeholder, handleFilter, activeFilters, favorited }) {
           >
             <Image
               alt="image-header"
-              src="https://links.papareact.com/qd3"
+              src="/Airbnb_Logo.png"
               width={100}
               height={100}
               style={{ objectFit: "contain", height: "auto" }}
@@ -203,6 +206,16 @@ function Header({ placeholder, handleFilter, activeFilters, favorited }) {
 
           {/* mobile search icon */}
           <div className="flex items-center justify-end text-gray-500 space-x-4 pr-4">
+            {isExplorePage ? (
+              <Link href="/">
+                <HomeIcon className="h-8 text-gray-600 cursor-pointer hover:text-red-400 hover:scale-110 transition duration-200 ease-out" />
+              </Link>
+            ) : (
+              <Link href="/explore">
+                <GlobeAltIcon className="h-8 text-teal-500 cursor-pointer hover:text-red-400 hover:scale-110 transition duration-200 ease-out" />
+              </Link>
+            )}
+            
             <div className="flex md:hidden ring-2 ring-red-400 rounded-full bg-red-400  active:scale-90 transition duration-150">
               <MagnifyingGlassIcon
                 onClick={() => setIsSearchBarOpen(true)}

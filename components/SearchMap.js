@@ -1,13 +1,13 @@
 import "mapbox-gl/dist/mapbox-gl.css";
 import "react-map-gl-geocoder/dist/mapbox-gl-geocoder.css";
-import React, { useState, useRef, useEffect, useCallback } from "react";
+import React, { useState, useRef, useEffect, useCallback, useMemo } from "react";
 import MapGL, { Marker } from "react-map-gl";
-import Geocoder from "react-map-gl-geocoder";
-import getCenter from "geolib/es/getCenter";
+// import Geocoder from "react-map-gl-geocoder";
+// import getCenter from "geolib/es/getCenter";
 import Image from "next/image";
 import axios from "axios";
 
-const SearchMap = ({
+const SearchMap = React.memo(({
   selectedAddress,
   setSelectedAddress,
   filteredResults,
@@ -15,7 +15,6 @@ const SearchMap = ({
   setViewport,
   viewport,
   setSelectedCity,
-  photos,
 }) => {
   const mapRef = useRef();
 
@@ -24,13 +23,13 @@ const SearchMap = ({
     []
   );
 
-  const handleGeocoderViewportChange = useCallback((newViewport) => {
-    const geocoderDefaultOverrides = { transitionDuration: 1000 };
-    return handleViewportChange({
-      ...newViewport,
-      ...geocoderDefaultOverrides,
-    });
-  }, []);
+  // const handleGeocoderViewportChange = useCallback((newViewport) => {
+  //   const geocoderDefaultOverrides = { transitionDuration: 1000 };
+  //   return handleViewportChange({
+  //     ...newViewport,
+  //     ...geocoderDefaultOverrides,
+  //   });
+  // }, []);
 
   // Function to update the viewport based on the search location
   useEffect(() => {
@@ -98,49 +97,54 @@ const SearchMap = ({
         mapStyle="mapbox://styles/inblock/clx5v536g01iw01rb29t6ezfq"
         className="bg-gray-300"
       >
-        {filteredResults?.map((result) => (
-          <div
-            key={result.id}
-            onClick={() => {
-              selectedAddress.id === result.id
-                ? setSelectedAddress({})
-                : setSelectedAddress(result);
-              setSelectedCity(result.location);
-              setViewport({
-                longitude: result.long,
-                latitude: result.lat,
-                zoom: 15,
-                transitionDuration: 500,
-              });
-            }}
-          >
-            {result.long && (
-              <Marker
-                longitude={result.long}
-                latitude={result.lat}
-                offsetLeft={-20}
-                offsetTop={-10}
+        {filteredResults?.map((result) => {
+          if (!result.long) return null;
+          
+          const isSelected = selectedAddress.id === result.id;
+          const imageSrc = Array.isArray(result.img) ? result.img[0] : result.img;
+          
+          return (
+            <Marker
+              key={result.id}
+              longitude={result.long}
+              latitude={result.lat}
+              offsetLeft={-20}
+              offsetTop={-10}
+            >
+              <div 
+                className="relative w-16 h-16"
+                onClick={() => {
+                  isSelected
+                    ? setSelectedAddress({})
+                    : setSelectedAddress(result);
+                  setSelectedCity(result.location);
+                  setViewport({
+                    longitude: result.long,
+                    latitude: result.lat,
+                    zoom: 15,
+                    transitionDuration: 500,
+                  });
+                }}
               >
-                <div className="relative w-16 h-16">
-                  <div className="z-50 absolute w-12 flex justify-center items-center text-auto bg-red-400 rounded ml-6 -mt-2 text-white font-semibold">
-                    {"$" + result.price}
-                  </div>
-                  <Image
-                    alt="image-marker"
-                    src={result.img}
-                    fill
-                    style={{ objectFit: "cover" }}
-                    className={
-                      selectedAddress.id === result.id
-                        ? "rounded-full border-4 border-red-400 hover:border-red-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out active:scale-90 tranition"
-                        : "rounded-full border-4 border-white hover:border-white-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out  active:scale-90 tranition"
-                    }
-                  />
+                <div className="z-50 absolute w-12 flex justify-center items-center text-auto bg-red-400 rounded ml-6 -mt-2 text-white font-semibold">
+                  {"$" + result.price}
                 </div>
-              </Marker>
-            )}
-          </div>
-        ))}
+                <Image
+                  alt="image-marker"
+                  src={imageSrc}
+                  fill
+                  sizes="64px"
+                  style={{ objectFit: "cover" }}
+                  className={
+                    isSelected
+                      ? "rounded-full border-4 border-red-400 hover:border-red-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out active:scale-90 tranition"
+                      : "rounded-full border-4 border-white hover:border-white-400 shadow-xl cursor-pointer text-2xl hover:scale-105 transform duration-100 ease-out  active:scale-90 tranition"
+                  }
+                />
+              </div>
+            </Marker>
+          );
+        })}
         {/* 
         {
           photos?.map((result, i) => (
@@ -208,15 +212,17 @@ const SearchMap = ({
             </div>
           ))} */}
 
-        <Geocoder
+        {/* <Geocoder
           mapRef={mapRef}
           onViewportChange={handleGeocoderViewportChange}
           mapboxApiAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
           position="top-right"
-        />
+        /> */}
       </MapGL>
     </div>
   );
-};
+});
+
+SearchMap.displayName = 'SearchMap';
 
 export default SearchMap;

@@ -20,6 +20,11 @@ function SelectedCard({
   handleFavorites,
   city,
 }) {
+  // Handle both array and single image formats
+  const imageToDisplay = Array.isArray(selectedLocation.img) 
+    ? selectedLocation.img[0] 
+    : selectedLocation.img;
+    
   return (
     <div
       // onClick={() => setSelectedLocation(item)}
@@ -30,7 +35,7 @@ function SelectedCard({
       <div className="relative h-24 w-40 md:h-52 md:w-80 flex-shrink-0">
         <Image
           alt="image-info"
-          src={selectedLocation.img}
+          src={imageToDisplay}
           fill
           sizes="(max-width: 768px) 160px, 320px"
           style={{ objectFit: "cover" }}

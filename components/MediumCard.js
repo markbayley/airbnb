@@ -18,12 +18,12 @@ function MediumCard({ data }) {
       onClick={search}
       className="cursor-pointer hover:bg-gray-100 hover:scale-95 transition transform duration-200 ease-out"
     >
-      <div className="relative h-64 w-64">
+      <div className="relative h-80 w-80">
         <Image
           alt="image-medium"
           src={data.imageUrl}
           fill
-          sizes="256px"
+          sizes="320px"
           style={{ objectFit: "cover" }}
           className="rounded-xl"
         />

@@ -1,0 +1,2535 @@
+[
+  {
+    "id": "LON1",
+    "img": [
+      "/roomimages/bedroom1.jpg",
+      "/roomimages/bathroom1.jpg",
+      "/roomimages/lounge1.jpg",
+      "/roomimages/kitchen1.jpg"
+    ],
+    "location": "London",
+    "title": "Stay at this spacious Edwardian House",
+    "description": "1 guest · 1 bedroom · 1 bed · 1.5 shared bathrooms · Wi-Fi · Kitchen · Free parking · Washing Machine",
+    "star": 4.73,
+    "price": 32,
+    "total": 117,
+    "long": -0.0022275,
+    "lat": 51.5421655,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "LON2",
+    "img": [
+      "/roomimages/bedroom2.jpg",
+      "/roomimages/bathroom2.jpg",
+      "/roomimages/lounge2.jpg",
+      "/roomimages/kitchen2.jpg"
+    ],
+    "location": "London",
+    "title": "Independent luxury studio apartment",
+    "description": "2 guest · 3 bedroom · 1 bed · 1.5 shared bathrooms · Wi-Fi · Kitchen",
+    "star": 4.33,
+    "price": 41,
+    "total": 157,
+    "long": -0.095091,
+    "lat": 51.48695,
+    "petsAllowed": "no",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "LON3",
+    "img": [
+      "/roomimages/bedroom3.jpg",
+      "/roomimages/bathroom3.jpg",
+      "/roomimages/lounge3.jpg",
+      "/roomimages/kitchen3.jpg"
+    ],
+    "location": "London",
+    "title": "Studio Apartments",
+    "description": "4 guest · 4 bedroom · 4 bed · 2 bathrooms · Free parking · Washing Machine",
+    "star": 3.84,
+    "price": 35,
+    "total": 207,
+    "long": -0.135638,
+    "lat": 51.521916,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "LON4",
+    "img": [
+      "/roomimages/bedroom4.jpg",
+      "/roomimages/bathroom4.jpg",
+      "/roomimages/lounge4.jpg",
+      "/roomimages/kitchen4.jpg"
+    ],
+    "location": "London",
+    "title": "30 mins to Oxford Street, Excel London",
+    "description": "1 guest · 1 bedroom · 1 bed · 1.5 shared bathrooms · Wi-Fi · Kitchen · Free parking · Washing Machine",
+    "star": 4.13,
+    "price": 55,
+    "total": 320,
+    "long": -0.069961,
+    "lat": 51.472618,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "LON5",
+    "img": [
+      "/roomimages/bedroom5.jpg",
+      "/roomimages/bathroom5.jpg",
+      "/roomimages/lounge5.jpg",
+      "/roomimages/kitchen5.jpg"
+    ],
+    "location": "London",
+    "title": "Spacious Peaceful Modern Bedroom",
+    "description": "3 guest · 1 bedroom · 1 bed · 1.5 shared bathrooms · Wi-Fi · Free parking · Dry Cleaning",
+    "star": 4.89,
+    "price": 60,
+    "total": 450,
+    "long": -0.08472,
+    "lat": 51.510794,
+    "petsAllowed": "yes",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "LON6",
+    "img": [
+      "/roomimages/bedroom6.jpg",
+      "/roomimages/bathroom6.jpg",
+      "/roomimages/lounge6.jpg",
+      "/roomimages/kitchen6.jpg"
+    ],
+    "location": "London",
+    "title": "The Blue Room In London",
+    "description": "2 guest · 1 bedroom · 1 bed · 1.5 shared bathrooms · Wi-Fi · Washing Machine",
+    "star": 4.23,
+    "price": 65,
+    "total": 480,
+    "long": -0.094116,
+    "lat": 51.51401,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "LON7",
+    "img": [
+      "/roomimages/bedroom7.jpg",
+      "/roomimages/bathroom7.jpg",
+      "/roomimages/lounge7.jpg",
+      "/roomimages/kitchen7.jpg"
+    ],
+    "location": "London",
+    "title": "5 Star Luxury Apartment",
+    "description": "3 guest · 1 bedroom · 1 bed · 1.5 shared bathrooms · Wi-Fi · Kitchen · Free parking · Washing Machine",
+    "star": 3.85,
+    "price": 90,
+    "total": 650,
+    "long": -0.109889,
+    "lat": 51.521245,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "LIS1",
+    "img": [
+      "/roomimages/bedroom8.jpg",
+      "/roomimages/bathroom8.jpg",
+      "/roomimages/lounge8.jpg",
+      "/roomimages/kitchen8.jpg"
+    ],
+    "location": "Lisbon",
+    "title": "Charming Apartment in Alfama",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 120,
+    "long": -9.1339,
+    "lat": 38.7127,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "LIS2",
+    "img": [
+      "/roomimages/bedroom9.jpg",
+      "/roomimages/bathroom9.jpg",
+      "/roomimages/lounge9.jpg",
+      "/roomimages/kitchen9.jpg"
+    ],
+    "location": "Lisbon",
+    "title": "Modern Flat in Bairro Alto",
+    "description": "4 guests · 2 bedrooms · 2 beds · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 150,
+    "long": -9.1449,
+    "lat": 38.7117,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "LIS3",
+    "img": [
+      "/roomimages/bedroom10.jpg",
+      "/roomimages/bathroom10.jpg",
+      "/roomimages/lounge10.jpg",
+      "/roomimages/kitchen10.jpg"
+    ],
+    "location": "Lisbon",
+    "title": "Cozy Studio in Baixa",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 110,
+    "long": -9.1349,
+    "lat": 38.7137,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "LIS4",
+    "img": [
+      "/roomimages/bedroom1.jpg",
+      "/roomimages/bathroom1.jpg",
+      "/roomimages/lounge1.jpg",
+      "/roomimages/kitchen1.jpg"
+    ],
+    "location": "Lisbon",
+    "title": "Luxury Suite in Chiado",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 200,
+    "long": -9.1429,
+    "lat": 38.7107,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "LIS5",
+    "img": [
+      "/roomimages/bedroom2.jpg",
+      "/roomimages/bathroom2.jpg",
+      "/roomimages/lounge2.jpg",
+      "/roomimages/kitchen2.jpg"
+    ],
+    "location": "Lisbon",
+    "title": "Bright Apartment in Principe Real",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.6,
+    "price": 130,
+    "long": -9.1469,
+    "lat": 38.7157,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "LIS6",
+    "img": [
+      "/roomimages/bedroom3.jpg",
+      "/roomimages/bathroom3.jpg",
+      "/roomimages/lounge3.jpg",
+      "/roomimages/kitchen3.jpg"
+    ],
+    "location": "Lisbon",
+    "title": "Chic Flat in Santos",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 140,
+    "long": -9.1509,
+    "lat": 38.7097,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "LIS7",
+    "img": [
+      "/roomimages/bedroom4.jpg",
+      "/roomimages/bathroom4.jpg",
+      "/roomimages/lounge4.jpg",
+      "/roomimages/kitchen4.jpg"
+    ],
+    "location": "Lisbon",
+    "title": "Elegant Loft in Lapa",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 150,
+    "long": -9.1399,
+    "lat": 38.7167,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "LIS8",
+    "img": [
+      "/roomimages/bedroom5.jpg",
+      "/roomimages/bathroom5.jpg",
+      "/roomimages/lounge5.jpg",
+      "/roomimages/kitchen5.jpg"
+    ],
+    "location": "Lisbon",
+    "title": "Stylish Condo in Rossio",
+    "description": "4 guests · 2 bedrooms · 2 beds · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 170,
+    "long": -9.1329,
+    "lat": 38.7127,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "LIS9",
+    "img": [
+      "/roomimages/bedroom6.jpg",
+      "/roomimages/bathroom6.jpg",
+      "/roomimages/lounge6.jpg",
+      "/roomimages/kitchen6.jpg"
+    ],
+    "location": "Lisbon",
+    "title": "Sunny Apartment in Cais do Sodré",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.6,
+    "price": 125,
+    "long": -9.1359,
+    "lat": 38.7117,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "LIS10",
+    "img": [
+      "/roomimages/bedroom7.jpg",
+      "/roomimages/bathroom7.jpg",
+      "/roomimages/lounge7.jpg",
+      "/roomimages/kitchen7.jpg"
+    ],
+    "location": "Lisbon",
+    "title": "Boutique Apartment in Belém",
+    "description": "3 guests · 2 bedrooms · 2 beds · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 180,
+    "long": -9.1429,
+    "lat": 38.7147,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "NY0",
+    "img": [
+      "/roomimages/bedroom8.jpg",
+      "/roomimages/bathroom8.jpg",
+      "/roomimages/lounge8.jpg",
+      "/roomimages/kitchen8.jpg"
+    ],
+    "location": "New York",
+    "title": "Cozy Apartment in Manhattan",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.5,
+    "price": 100,
+    "total": 300,
+    "long": -73.985428,
+    "lat": 40.748817,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "SF1",
+    "img": [
+      "/roomimages/bedroom9.jpg",
+      "/roomimages/bathroom9.jpg",
+      "/roomimages/lounge9.jpg",
+      "/roomimages/kitchen9.jpg"
+    ],
+    "location": "San Francisco",
+    "title": "Charming Victorian in Haight-Ashbury",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 150,
+    "long": -122.446747,
+    "lat": 37.769421,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "SF2",
+    "img": [
+      "/roomimages/bedroom10.jpg",
+      "/roomimages/bathroom10.jpg",
+      "/roomimages/lounge10.jpg",
+      "/roomimages/kitchen10.jpg"
+    ],
+    "location": "San Francisco",
+    "title": "Modern Condo near Fisherman's Wharf",
+    "description": "4 guests · 2 bedrooms · 2 beds · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 200,
+    "long": -122.418823,
+    "lat": 37.807879,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "SF3",
+    "img": [
+      "/roomimages/bedroom1.jpg",
+      "/roomimages/bathroom1.jpg",
+      "/roomimages/lounge1.jpg",
+      "/roomimages/kitchen1.jpg"
+    ],
+    "location": "San Francisco",
+    "title": "Luxury Loft in SoMa",
+    "description": "3 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 250,
+    "long": -122.395058,
+    "lat": 37.778519,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "SF4",
+    "img": [
+      "/roomimages/bedroom2.jpg",
+      "/roomimages/bathroom2.jpg",
+      "/roomimages/lounge2.jpg",
+      "/roomimages/kitchen2.jpg"
+    ],
+    "location": "San Francisco",
+    "title": "Cozy Apartment in Mission District",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.6,
+    "price": 140,
+    "long": -122.419236,
+    "lat": 37.75986,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "SF5",
+    "img": [
+      "/roomimages/bedroom3.jpg",
+      "/roomimages/bathroom3.jpg",
+      "/roomimages/lounge3.jpg",
+      "/roomimages/kitchen3.jpg"
+    ],
+    "location": "San Francisco",
+    "title": "Elegant Suite near Union Square",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 180,
+    "long": -122.408444,
+    "lat": 37.788151,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "SF6",
+    "img": [
+      "/roomimages/bedroom4.jpg",
+      "/roomimages/bathroom4.jpg",
+      "/roomimages/lounge4.jpg",
+      "/roomimages/kitchen4.jpg"
+    ],
+    "location": "San Francisco",
+    "title": "Spacious Flat in North Beach",
+    "description": "3 guests · 2 bedrooms · 2 beds · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 190,
+    "long": -122.411552,
+    "lat": 37.805735,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "SF7",
+    "img": [
+      "/roomimages/bedroom5.jpg",
+      "/roomimages/bathroom5.jpg",
+      "/roomimages/lounge5.jpg",
+      "/roomimages/kitchen5.jpg"
+    ],
+    "location": "San Francisco",
+    "title": "Chic Studio in Nob Hill",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.5,
+    "price": 130,
+    "long": -122.415499,
+    "lat": 37.793502,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "SF8",
+    "img": [
+      "/roomimages/bedroom6.jpg",
+      "/roomimages/bathroom6.jpg",
+      "/roomimages/lounge6.jpg",
+      "/roomimages/kitchen6.jpg"
+    ],
+    "location": "San Francisco",
+    "title": "Boutique Apartment in Hayes Valley",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 160,
+    "long": -122.424813,
+    "lat": 37.776273,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "SF9",
+    "img": [
+      "/roomimages/bedroom7.jpg",
+      "/roomimages/bathroom7.jpg",
+      "/roomimages/lounge7.jpg",
+      "/roomimages/kitchen7.jpg"
+    ],
+    "location": "San Francisco",
+    "title": "Historic Home in Alamo Square",
+    "description": "3 guests · 2 bedrooms · 2 beds · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 210,
+    "long": -122.43453,
+    "lat": 37.77636,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "SF10",
+    "img": [
+      "/roomimages/bedroom8.jpg",
+      "/roomimages/bathroom8.jpg",
+      "/roomimages/lounge8.jpg",
+      "/roomimages/kitchen8.jpg"
+    ],
+    "location": "San Francisco",
+    "title": "Bright Apartment near Golden Gate Park",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 170,
+    "long": -122.486372,
+    "lat": 37.770104,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "DEN1",
+    "img": [
+      "/roomimages/bedroom9.jpg",
+      "/roomimages/bathroom9.jpg",
+      "/roomimages/lounge9.jpg",
+      "/roomimages/kitchen9.jpg"
+    ],
+    "location": "Denver",
+    "title": "Modern Loft in Downtown",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 120,
+    "long": -104.990251,
+    "lat": 39.739236,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "DEN2",
+    "img": [
+      "/roomimages/bedroom10.jpg",
+      "/roomimages/bathroom10.jpg",
+      "/roomimages/lounge10.jpg",
+      "/roomimages/kitchen10.jpg"
+    ],
+    "location": "Denver",
+    "title": "Cozy Apartment in Capitol Hill",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 110,
+    "long": -104.979933,
+    "lat": 39.731209,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "DEN3",
+    "img": [
+      "/roomimages/bedroom1.jpg",
+      "/roomimages/bathroom1.jpg",
+      "/roomimages/lounge1.jpg",
+      "/roomimages/kitchen1.jpg"
+    ],
+    "location": "Denver",
+    "title": "Stylish Flat in LoDo",
+    "description": "3 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 130,
+    "long": -104.999927,
+    "lat": 39.753159,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "DEN4",
+    "img": [
+      "/roomimages/bedroom2.jpg",
+      "/roomimages/bathroom2.jpg",
+      "/roomimages/lounge2.jpg",
+      "/roomimages/kitchen2.jpg"
+    ],
+    "location": "Denver",
+    "title": "Charming House in Highlands",
+    "description": "4 guests · 2 bedrooms · 2 beds · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 140,
+    "long": -105.010708,
+    "lat": 39.764036,
+    "petsAllowed": "yes",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "DEN5",
+    "img": [
+      "/roomimages/bedroom3.jpg",
+      "/roomimages/bathroom3.jpg",
+      "/roomimages/lounge3.jpg",
+      "/roomimages/kitchen3.jpg"
+    ],
+    "location": "Denver",
+    "title": "Sunny Apartment in Cherry Creek",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 115,
+    "long": -104.953,
+    "lat": 39.715124,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "DEN6",
+    "img": [
+      "/roomimages/bedroom4.jpg",
+      "/roomimages/bathroom4.jpg",
+      "/roomimages/lounge4.jpg",
+      "/roomimages/kitchen4.jpg"
+    ],
+    "location": "Denver",
+    "title": "Historic Loft in Five Points",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi",
+    "star": 4.8,
+    "price": 125,
+    "long": -104.980758,
+    "lat": 39.755556,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "DEN7",
+    "img": [
+      "/roomimages/bedroom5.jpg",
+      "/roomimages/bathroom5.jpg",
+      "/roomimages/lounge5.jpg",
+      "/roomimages/kitchen5.jpg"
+    ],
+    "location": "Denver",
+    "title": "Spacious Condo in River North",
+    "description": "4 guests · 2 bedrooms · 2 beds · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 150,
+    "long": -104.987141,
+    "lat": 39.759991,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "DEN8",
+    "img": [
+      "/roomimages/bedroom6.jpg",
+      "/roomimages/bathroom6.jpg",
+      "/roomimages/lounge6.jpg",
+      "/roomimages/kitchen6.jpg"
+    ],
+    "location": "Denver",
+    "title": "Modern Apartment in Wash Park",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi",
+    "star": 4.7,
+    "price": 110,
+    "long": -104.971948,
+    "lat": 39.70471,
+    "petsAllowed": "yes",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "DEN9",
+    "img": [
+      "/roomimages/bedroom7.jpg",
+      "/roomimages/bathroom7.jpg",
+      "/roomimages/lounge7.jpg",
+      "/roomimages/kitchen7.jpg"
+    ],
+    "location": "Denver",
+    "title": "Cozy Studio in Uptown",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.6,
+    "price": 90,
+    "long": -104.979394,
+    "lat": 39.745171,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "DEN10",
+    "img": [
+      "/roomimages/bedroom8.jpg",
+      "/roomimages/bathroom8.jpg",
+      "/roomimages/lounge8.jpg",
+      "/roomimages/kitchen8.jpg"
+    ],
+    "location": "Denver",
+    "title": "Luxurious Loft in Golden Triangle",
+    "description": "3 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 130,
+    "long": -104.989394,
+    "lat": 39.734002,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "MIA1",
+    "img": [
+      "/roomimages/bedroom9.jpg",
+      "/roomimages/bathroom9.jpg",
+      "/roomimages/lounge9.jpg",
+      "/roomimages/kitchen9.jpg"
+    ],
+    "location": "Miami",
+    "title": "Ocean View Condo",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 120,
+    "long": -80.19179,
+    "lat": 25.76168,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "MIA2",
+    "img": [
+      "/roomimages/bedroom10.jpg",
+      "/roomimages/bathroom10.jpg",
+      "/roomimages/lounge10.jpg",
+      "/roomimages/kitchen10.jpg"
+    ],
+    "location": "Miami",
+    "title": "Beachfront Apartment",
+    "description": "3 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 135,
+    "long": -80.132837,
+    "lat": 25.790654,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "MIA3",
+    "img": [
+      "/roomimages/bedroom1.jpg",
+      "/roomimages/bathroom1.jpg",
+      "/roomimages/lounge1.jpg",
+      "/roomimages/kitchen1.jpg"
+    ],
+    "location": "Miami",
+    "title": "Luxury Condo in Brickell",
+    "description": "4 guests · 2 bedrooms · 2 beds · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 150,
+    "long": -80.192753,
+    "lat": 25.761543,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "MIA4",
+    "img": [
+      "/roomimages/bedroom2.jpg",
+      "/roomimages/bathroom2.jpg",
+      "/roomimages/lounge2.jpg",
+      "/roomimages/kitchen2.jpg"
+    ],
+    "location": "Miami",
+    "title": "Modern Studio in Wynwood",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi",
+    "star": 4.6,
+    "price": 100,
+    "long": -80.200879,
+    "lat": 25.799891,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "MIA5",
+    "img": [
+      "/roomimages/bedroom3.jpg",
+      "/roomimages/bathroom3.jpg",
+      "/roomimages/lounge3.jpg",
+      "/roomimages/kitchen3.jpg"
+    ],
+    "location": "Miami",
+    "title": "Cozy Apartment in Little Havana",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 80,
+    "long": -80.210182,
+    "lat": 25.774843,
+    "petsAllowed": "yes",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "MIA6",
+    "img": [
+      "/roomimages/bedroom4.jpg",
+      "/roomimages/bathroom4.jpg",
+      "/roomimages/lounge4.jpg",
+      "/roomimages/kitchen4.jpg"
+    ],
+    "location": "Miami",
+    "title": "Spacious House in Coral Gables",
+    "description": "4 guests · 2 bedrooms · 2 beds · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 160,
+    "long": -80.268383,
+    "lat": 25.72149,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "MIA7",
+    "img": [
+      "/roomimages/bedroom5.jpg",
+      "/roomimages/bathroom5.jpg",
+      "/roomimages/lounge5.jpg",
+      "/roomimages/kitchen5.jpg"
+    ],
+    "location": "Miami",
+    "title": "Art Deco Apartment in South Beach",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 140,
+    "long": -80.132217,
+    "lat": 25.782545,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "MIA8",
+    "img": [
+      "/roomimages/bedroom6.jpg",
+      "/roomimages/bathroom6.jpg",
+      "/roomimages/lounge6.jpg",
+      "/roomimages/kitchen6.jpg"
+    ],
+    "location": "Miami",
+    "title": "Elegant Studio in Coconut Grove",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi",
+    "star": 4.7,
+    "price": 90,
+    "long": -80.257763,
+    "lat": 25.726243,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "MIA9",
+    "img": [
+      "/roomimages/bedroom7.jpg",
+      "/roomimages/bathroom7.jpg",
+      "/roomimages/lounge7.jpg",
+      "/roomimages/kitchen7.jpg"
+    ],
+    "location": "Miami",
+    "title": "Chic Loft in Midtown",
+    "description": "3 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 110,
+    "long": -80.191887,
+    "lat": 25.809174,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "MIA10",
+    "img": [
+      "/roomimages/bedroom8.jpg",
+      "/roomimages/bathroom8.jpg",
+      "/roomimages/lounge8.jpg",
+      "/roomimages/kitchen8.jpg"
+    ],
+    "location": "Miami",
+    "title": "Bright Apartment in Design District",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 100,
+    "long": -80.193382,
+    "lat": 25.815499,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "VAN1",
+    "img": [
+      "/roomimages/bedroom9.jpg",
+      "/roomimages/bathroom9.jpg",
+      "/roomimages/lounge9.jpg",
+      "/roomimages/kitchen9.jpg"
+    ],
+    "location": "Vancouver",
+    "title": "Stylish Loft in Gastown",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 140,
+    "long": -123.1046,
+    "lat": 49.2827,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "VAN2",
+    "img": [
+      "/roomimages/bedroom10.jpg",
+      "/roomimages/bathroom10.jpg",
+      "/roomimages/lounge10.jpg",
+      "/roomimages/kitchen10.jpg"
+    ],
+    "location": "Vancouver",
+    "title": "Modern Apartment in Yaletown",
+    "description": "4 guests · 2 bedrooms · 2 beds · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 200,
+    "long": -123.1207,
+    "lat": 49.2746,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "VAN3",
+    "img": [
+      "/roomimages/bedroom1.jpg",
+      "/roomimages/bathroom1.jpg",
+      "/roomimages/lounge1.jpg",
+      "/roomimages/kitchen1.jpg"
+    ],
+    "location": "Vancouver",
+    "title": "Cozy Condo near Stanley Park",
+    "description": "3 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 170,
+    "long": -123.1447,
+    "lat": 49.2957,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "VAN4",
+    "img": [
+      "/roomimages/bedroom2.jpg",
+      "/roomimages/bathroom2.jpg",
+      "/roomimages/lounge2.jpg",
+      "/roomimages/kitchen2.jpg"
+    ],
+    "location": "Vancouver",
+    "title": "Luxury Suite in Coal Harbour",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 220,
+    "long": -123.1235,
+    "lat": 49.2888,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "VAN5",
+    "img": [
+      "/roomimages/bedroom3.jpg",
+      "/roomimages/bathroom3.jpg",
+      "/roomimages/lounge3.jpg",
+      "/roomimages/kitchen3.jpg"
+    ],
+    "location": "Vancouver",
+    "title": "Charming Apartment in Kitsilano",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.6,
+    "price": 150,
+    "long": -123.1552,
+    "lat": 49.2694,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "VAN6",
+    "img": [
+      "/roomimages/bedroom4.jpg",
+      "/roomimages/bathroom4.jpg",
+      "/roomimages/lounge4.jpg",
+      "/roomimages/kitchen4.jpg"
+    ],
+    "location": "Vancouver",
+    "title": "Boutique Studio in West End",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 180,
+    "long": -123.1356,
+    "lat": 49.2832,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "VAN7",
+    "img": [
+      "/roomimages/bedroom5.jpg",
+      "/roomimages/bathroom5.jpg",
+      "/roomimages/lounge5.jpg",
+      "/roomimages/kitchen5.jpg"
+    ],
+    "location": "Vancouver",
+    "title": "Elegant Loft in Mount Pleasant",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 160,
+    "long": -123.0994,
+    "lat": 49.2626,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "VAN8",
+    "img": [
+      "/roomimages/bedroom6.jpg",
+      "/roomimages/bathroom6.jpg",
+      "/roomimages/lounge6.jpg",
+      "/roomimages/kitchen6.jpg"
+    ],
+    "location": "Vancouver",
+    "title": "Spacious Condo in Downtown",
+    "description": "4 guests · 2 bedrooms · 2 beds · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 190,
+    "long": -123.1159,
+    "lat": 49.2822,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "VAN9",
+    "img": [
+      "/roomimages/bedroom7.jpg",
+      "/roomimages/bathroom7.jpg",
+      "/roomimages/lounge7.jpg",
+      "/roomimages/kitchen7.jpg"
+    ],
+    "location": "Vancouver",
+    "title": "Bright Apartment in Granville Island",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.6,
+    "price": 140,
+    "long": -123.1352,
+    "lat": 49.2707,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "VAN10",
+    "img": [
+      "/roomimages/bedroom8.jpg",
+      "/roomimages/bathroom8.jpg",
+      "/roomimages/lounge8.jpg",
+      "/roomimages/kitchen8.jpg"
+    ],
+    "location": "Vancouver",
+    "title": "Chic Apartment in Olympic Village",
+    "description": "3 guests · 2 bedrooms · 2 beds · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 210,
+    "long": -123.1041,
+    "lat": 49.2676,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "BER0",
+    "img": [
+      "/roomimages/bedroom9.jpg",
+      "/roomimages/bathroom9.jpg",
+      "/roomimages/lounge9.jpg",
+      "/roomimages/kitchen9.jpg"
+    ],
+    "location": "Berlin",
+    "title": "Modern Studio near Alexanderplatz",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi",
+    "star": 4.7,
+    "price": 80,
+    "total": 240,
+    "long": 13.413215,
+    "lat": 52.521918,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "BER1",
+    "img": [
+      "/roomimages/bedroom10.jpg",
+      "/roomimages/bathroom10.jpg",
+      "/roomimages/lounge10.jpg",
+      "/roomimages/kitchen10.jpg"
+    ],
+    "location": "Berlin",
+    "title": "Stylish Loft near Brandenburg Gate",
+    "description": "3 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 120,
+    "long": 13.383333,
+    "lat": 52.516667,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "BER2",
+    "img": [
+      "/roomimages/bedroom1.jpg",
+      "/roomimages/bathroom1.jpg",
+      "/roomimages/lounge1.jpg",
+      "/roomimages/kitchen1.jpg"
+    ],
+    "location": "Berlin",
+    "title": "Cozy Apartment in Kreuzberg",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 85,
+    "long": 13.398333,
+    "lat": 52.498333,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "BER3",
+    "img": [
+      "/roomimages/bedroom2.jpg",
+      "/roomimages/bathroom2.jpg",
+      "/roomimages/lounge2.jpg",
+      "/roomimages/kitchen2.jpg"
+    ],
+    "location": "Berlin",
+    "title": "Modern Flat in Mitte",
+    "description": "4 guests · 2 bedrooms · 2 beds · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 150,
+    "long": 13.389333,
+    "lat": 52.529333,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "BER4",
+    "img": [
+      "/roomimages/bedroom3.jpg",
+      "/roomimages/bathroom3.jpg",
+      "/roomimages/lounge3.jpg",
+      "/roomimages/kitchen3.jpg"
+    ],
+    "location": "Berlin",
+    "title": "Artistic Studio in Friedrichshain",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.6,
+    "price": 95,
+    "long": 13.45,
+    "lat": 52.515,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "BER5",
+    "img": [
+      "/roomimages/bedroom4.jpg",
+      "/roomimages/bathroom4.jpg",
+      "/roomimages/lounge4.jpg",
+      "/roomimages/kitchen4.jpg"
+    ],
+    "location": "Berlin",
+    "title": "Charming Flat in Prenzlauer Berg",
+    "description": "3 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 110,
+    "long": 13.416667,
+    "lat": 52.54,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "BER6",
+    "img": [
+      "/roomimages/bedroom5.jpg",
+      "/roomimages/bathroom5.jpg",
+      "/roomimages/lounge5.jpg",
+      "/roomimages/kitchen5.jpg"
+    ],
+    "location": "Berlin",
+    "title": "Luxury Apartment near Alexanderplatz",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 160,
+    "long": 13.422222,
+    "lat": 52.521111,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "BER7",
+    "img": [
+      "/roomimages/bedroom6.jpg",
+      "/roomimages/bathroom6.jpg",
+      "/roomimages/lounge6.jpg",
+      "/roomimages/kitchen6.jpg"
+    ],
+    "location": "Berlin",
+    "title": "Spacious Loft near Checkpoint Charlie",
+    "description": "4 guests · 2 bedrooms · 2 beds · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 140,
+    "long": 13.39,
+    "lat": 52.507,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "BER8",
+    "img": [
+      "/roomimages/bedroom7.jpg",
+      "/roomimages/bathroom7.jpg",
+      "/roomimages/lounge7.jpg",
+      "/roomimages/kitchen7.jpg"
+    ],
+    "location": "Berlin",
+    "title": "Elegant Apartment in Charlottenburg",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.6,
+    "price": 130,
+    "long": 13.283333,
+    "lat": 52.516667,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "BER9",
+    "img": [
+      "/roomimages/bedroom8.jpg",
+      "/roomimages/bathroom8.jpg",
+      "/roomimages/lounge8.jpg",
+      "/roomimages/kitchen8.jpg"
+    ],
+    "location": "Berlin",
+    "title": "Boutique Flat near Gendarmenmarkt",
+    "description": "3 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi",
+    "star": 4.8,
+    "price": 115,
+    "long": 13.393333,
+    "lat": 52.512222,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "BER10",
+    "img": [
+      "/roomimages/bedroom9.jpg",
+      "/roomimages/bathroom9.jpg",
+      "/roomimages/lounge9.jpg",
+      "/roomimages/kitchen9.jpg"
+    ],
+    "location": "Berlin",
+    "title": "Trendy Studio in Neukölln",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.5,
+    "price": 90,
+    "long": 13.433333,
+    "lat": 52.473333,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "PAR0",
+    "img": [
+      "/roomimages/bedroom10.jpg",
+      "/roomimages/bathroom10.jpg",
+      "/roomimages/lounge10.jpg",
+      "/roomimages/kitchen10.jpg"
+    ],
+    "location": "Paris",
+    "title": "Charming Flat near Eiffel Tower",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Kitchen",
+    "star": 4.8,
+    "price": 120,
+    "total": 360,
+    "long": 2.294694,
+    "lat": 48.858093,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "PAR1",
+    "img": [
+      "/roomimages/bedroom1.jpg",
+      "/roomimages/bathroom1.jpg",
+      "/roomimages/lounge1.jpg",
+      "/roomimages/kitchen1.jpg"
+    ],
+    "location": "Paris",
+    "title": "Eiffel Tower View Apartment",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 140,
+    "long": 2.294694,
+    "lat": 48.858093,
+    "petsAllowed": "yes",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "PAR2",
+    "img": [
+      "/roomimages/bedroom2.jpg",
+      "/roomimages/bathroom2.jpg",
+      "/roomimages/lounge2.jpg",
+      "/roomimages/kitchen2.jpg"
+    ],
+    "location": "Paris",
+    "title": "Charming Montmartre Studio",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 130,
+    "long": 2.344694,
+    "lat": 48.858793,
+    "petsAllowed": "no",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "PAR3",
+    "img": [
+      "/roomimages/bedroom3.jpg",
+      "/roomimages/bathroom3.jpg",
+      "/roomimages/lounge3.jpg",
+      "/roomimages/kitchen3.jpg"
+    ],
+    "location": "Paris",
+    "title": "Luxurious Champs-Élysées Flat",
+    "description": "4 guests · 2 bedrooms · 2 beds · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 200,
+    "long": 2.284694,
+    "lat": 48.858193,
+    "petsAllowed": "yes",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "PAR4",
+    "img": [
+      "/roomimages/bedroom4.jpg",
+      "/roomimages/bathroom4.jpg",
+      "/roomimages/lounge4.jpg",
+      "/roomimages/kitchen4.jpg"
+    ],
+    "location": "Paris",
+    "title": "Cozy Studio near Notre-Dame",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.6,
+    "price": 120,
+    "long": 2.294894,
+    "lat": 48.858293,
+    "petsAllowed": "no",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "PAR5",
+    "img": [
+      "/roomimages/bedroom5.jpg",
+      "/roomimages/bathroom5.jpg",
+      "/roomimages/lounge5.jpg",
+      "/roomimages/kitchen5.jpg"
+    ],
+    "location": "Paris",
+    "title": "Modern Loft near Le Marais",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 150,
+    "long": 2.274694,
+    "lat": 48.858093,
+    "petsAllowed": "yes",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "PAR6",
+    "img": [
+      "/roomimages/bedroom6.jpg",
+      "/roomimages/bathroom6.jpg",
+      "/roomimages/lounge6.jpg",
+      "/roomimages/kitchen6.jpg"
+    ],
+    "location": "Paris",
+    "title": "Elegant Flat with Louvre View",
+    "description": "3 guests · 2 bedrooms · 2 beds · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 180,
+    "long": 2.294794,
+    "lat": 48.858493,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "PAR7",
+    "img": [
+      "/roomimages/bedroom7.jpg",
+      "/roomimages/bathroom7.jpg",
+      "/roomimages/lounge7.jpg",
+      "/roomimages/kitchen7.jpg"
+    ],
+    "location": "Paris",
+    "title": "Quaint Apartment near Sacré-Cœur",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.5,
+    "price": 110,
+    "long": 2.294494,
+    "lat": 48.858293,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "PAR8",
+    "img": [
+      "/roomimages/bedroom8.jpg",
+      "/roomimages/bathroom8.jpg",
+      "/roomimages/lounge8.jpg",
+      "/roomimages/kitchen8.jpg"
+    ],
+    "location": "Paris",
+    "title": "Spacious Flat in Saint-Germain",
+    "description": "4 guests · 2 bedrooms · 2 beds · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 190,
+    "long": 2.274994,
+    "lat": 48.858193,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "PAR9",
+    "img": [
+      "/roomimages/bedroom9.jpg",
+      "/roomimages/bathroom9.jpg",
+      "/roomimages/lounge9.jpg",
+      "/roomimages/kitchen9.jpg"
+    ],
+    "location": "Paris",
+    "title": "Artist's Loft near the Seine",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 135,
+    "long": 2.294994,
+    "lat": 48.858093,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "PAR10",
+    "img": [
+      "/roomimages/bedroom10.jpg",
+      "/roomimages/bathroom10.jpg",
+      "/roomimages/lounge10.jpg",
+      "/roomimages/kitchen10.jpg"
+    ],
+    "location": "Paris",
+    "title": "Boutique Apartment near Opera",
+    "description": "3 guests · 2 bedrooms · 2 beds · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 160,
+    "long": 2.284994,
+    "lat": 48.858493,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "SIN0",
+    "img": [
+      "/roomimages/bedroom1.jpg",
+      "/roomimages/bathroom1.jpg",
+      "/roomimages/lounge1.jpg",
+      "/roomimages/kitchen1.jpg"
+    ],
+    "location": "Singapore",
+    "title": "Luxury Condo with Pool",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen · Pool",
+    "star": 4.9,
+    "price": 150,
+    "total": 450,
+    "long": 103.819839,
+    "lat": 1.352083,
+    "petsAllowed": "yes",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "BKK1",
+    "img": [
+      "/roomimages/bedroom2.jpg",
+      "/roomimages/bathroom2.jpg",
+      "/roomimages/lounge2.jpg",
+      "/roomimages/kitchen2.jpg"
+    ],
+    "location": "Bangkok",
+    "title": "Modern Condo in Sukhumvit",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 70,
+    "long": 100.561,
+    "lat": 13.726,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "BKK2",
+    "img": [
+      "/roomimages/bedroom3.jpg",
+      "/roomimages/bathroom3.jpg",
+      "/roomimages/lounge3.jpg",
+      "/roomimages/kitchen3.jpg"
+    ],
+    "location": "Bangkok",
+    "title": "Chic Studio in Silom",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 65,
+    "long": 100.523,
+    "lat": 13.724,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "BKK3",
+    "img": [
+      "/roomimages/bedroom4.jpg",
+      "/roomimages/bathroom4.jpg",
+      "/roomimages/lounge4.jpg",
+      "/roomimages/kitchen4.jpg"
+    ],
+    "location": "Bangkok",
+    "title": "Elegant Suite in Sathorn",
+    "description": "3 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 85,
+    "long": 100.529,
+    "lat": 13.715,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "BKK4",
+    "img": [
+      "/roomimages/bedroom5.jpg",
+      "/roomimages/bathroom5.jpg",
+      "/roomimages/lounge5.jpg",
+      "/roomimages/kitchen5.jpg"
+    ],
+    "location": "Bangkok",
+    "title": "Luxury Apartment in Thonglor",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 5,
+    "price": 95,
+    "long": 100.579,
+    "lat": 13.734,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "BKK5",
+    "img": [
+      "/roomimages/bedroom6.jpg",
+      "/roomimages/bathroom6.jpg",
+      "/roomimages/lounge6.jpg",
+      "/roomimages/kitchen6.jpg"
+    ],
+    "location": "Bangkok",
+    "title": "Cozy Room in Phrom Phong",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.6,
+    "price": 60,
+    "long": 100.568,
+    "lat": 13.727,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "BKK6",
+    "img": [
+      "/roomimages/bedroom7.jpg",
+      "/roomimages/bathroom7.jpg",
+      "/roomimages/lounge7.jpg",
+      "/roomimages/kitchen7.jpg"
+    ],
+    "location": "Bangkok",
+    "title": "Boutique Flat in Ekkamai",
+    "description": "3 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 75,
+    "long": 100.595,
+    "lat": 13.731,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "BKK7",
+    "img": [
+      "/roomimages/bedroom8.jpg",
+      "/roomimages/bathroom8.jpg",
+      "/roomimages/lounge8.jpg",
+      "/roomimages/kitchen8.jpg"
+    ],
+    "location": "Bangkok",
+    "title": "Trendy Studio in Ari",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 55,
+    "long": 100.532,
+    "lat": 13.772,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "BKK8",
+    "img": [
+      "/roomimages/bedroom9.jpg",
+      "/roomimages/bathroom9.jpg",
+      "/roomimages/lounge9.jpg",
+      "/roomimages/kitchen9.jpg"
+    ],
+    "location": "Bangkok",
+    "title": "Luxurious Condo in Asoke",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 80,
+    "long": 100.562,
+    "lat": 13.737,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "BKK9",
+    "img": [
+      "/roomimages/bedroom10.jpg",
+      "/roomimages/bathroom10.jpg",
+      "/roomimages/lounge10.jpg",
+      "/roomimages/kitchen10.jpg"
+    ],
+    "location": "Bangkok",
+    "title": "Modern Loft in Bang Rak",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 70,
+    "long": 100.518,
+    "lat": 13.72,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "BKK10",
+    "img": [
+      "/roomimages/bedroom1.jpg",
+      "/roomimages/bathroom1.jpg",
+      "/roomimages/lounge1.jpg",
+      "/roomimages/kitchen1.jpg"
+    ],
+    "location": "Bangkok",
+    "title": "Elegant Room in Lumphini",
+    "description": "3 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 65,
+    "long": 100.545,
+    "lat": 13.732,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "TOK1",
+    "img": [
+      "/roomimages/bedroom2.jpg",
+      "/roomimages/bathroom2.jpg",
+      "/roomimages/lounge2.jpg",
+      "/roomimages/kitchen2.jpg"
+    ],
+    "location": "Tokyo",
+    "title": "Modern Apartment in Shibuya",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 110,
+    "long": 139.6982,
+    "lat": 35.6616,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "TOK2",
+    "img": [
+      "/roomimages/bedroom3.jpg",
+      "/roomimages/bathroom3.jpg",
+      "/roomimages/lounge3.jpg",
+      "/roomimages/kitchen3.jpg"
+    ],
+    "location": "Tokyo",
+    "title": "Cozy Studio in Asakusa",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 95,
+    "long": 139.7966,
+    "lat": 35.7114,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "TOK3",
+    "img": [
+      "/roomimages/bedroom4.jpg",
+      "/roomimages/bathroom4.jpg",
+      "/roomimages/lounge4.jpg",
+      "/roomimages/kitchen4.jpg"
+    ],
+    "location": "Tokyo",
+    "title": "Stylish Flat in Roppongi",
+    "description": "3 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 130,
+    "long": 139.7304,
+    "lat": 35.6628,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "TOK4",
+    "img": [
+      "/roomimages/bedroom5.jpg",
+      "/roomimages/bathroom5.jpg",
+      "/roomimages/lounge5.jpg",
+      "/roomimages/kitchen5.jpg"
+    ],
+    "location": "Tokyo",
+    "title": "Luxurious Suite in Ginza",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 5,
+    "price": 200,
+    "long": 139.7647,
+    "lat": 35.6721,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "TOK5",
+    "img": [
+      "/roomimages/bedroom6.jpg",
+      "/roomimages/bathroom6.jpg",
+      "/roomimages/lounge6.jpg",
+      "/roomimages/kitchen6.jpg"
+    ],
+    "location": "Tokyo",
+    "title": "Elegant Condo in Shinjuku",
+    "description": "4 guests · 2 bedrooms · 2 beds · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.6,
+    "price": 150,
+    "long": 139.7022,
+    "lat": 35.6938,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "TOK6",
+    "img": [
+      "/roomimages/bedroom7.jpg",
+      "/roomimages/bathroom7.jpg",
+      "/roomimages/lounge7.jpg",
+      "/roomimages/kitchen7.jpg"
+    ],
+    "location": "Tokyo",
+    "title": "Charming Loft in Akihabara",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 105,
+    "long": 139.7734,
+    "lat": 35.7023,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "TOK7",
+    "img": [
+      "/roomimages/bedroom8.jpg",
+      "/roomimages/bathroom8.jpg",
+      "/roomimages/lounge8.jpg",
+      "/roomimages/kitchen8.jpg"
+    ],
+    "location": "Tokyo",
+    "title": "Spacious Apartment in Ikebukuro",
+    "description": "3 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 115,
+    "long": 139.7107,
+    "lat": 35.7298,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "TOK8",
+    "img": [
+      "/roomimages/bedroom9.jpg",
+      "/roomimages/bathroom9.jpg",
+      "/roomimages/lounge9.jpg",
+      "/roomimages/kitchen9.jpg"
+    ],
+    "location": "Tokyo",
+    "title": "Modern Studio in Ueno",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 90,
+    "long": 139.7752,
+    "lat": 35.7113,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "TOK9",
+    "img": [
+      "/roomimages/bedroom10.jpg",
+      "/roomimages/bathroom10.jpg",
+      "/roomimages/lounge10.jpg",
+      "/roomimages/kitchen10.jpg"
+    ],
+    "location": "Tokyo",
+    "title": "Luxury Flat in Harajuku",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 140,
+    "long": 139.7021,
+    "lat": 35.6717,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "TOK10",
+    "img": [
+      "/roomimages/bedroom1.jpg",
+      "/roomimages/bathroom1.jpg",
+      "/roomimages/lounge1.jpg",
+      "/roomimages/kitchen1.jpg"
+    ],
+    "location": "Tokyo",
+    "title": "Boutique Apartment in Ebisu",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 130,
+    "long": 139.7154,
+    "lat": 35.6467,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "ROM0",
+    "img": [
+      "/roomimages/bedroom2.jpg",
+      "/roomimages/bathroom2.jpg",
+      "/roomimages/lounge2.jpg",
+      "/roomimages/kitchen2.jpg"
+    ],
+    "location": "Rome",
+    "title": "Historic Home near Colosseum",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.6,
+    "price": 110,
+    "total": 330,
+    "long": 12.492373,
+    "lat": 41.890251,
+    "petsAllowed": "no",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "RIO0",
+    "img": [
+      "/roomimages/bedroom3.jpg",
+      "/roomimages/bathroom3.jpg",
+      "/roomimages/lounge3.jpg",
+      "/roomimages/kitchen3.jpg"
+    ],
+    "location": "Rio de Janeiro",
+    "title": "Beachside Apartment with Ocean View",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 95,
+    "total": 285,
+    "long": -43.209373,
+    "lat": -22.906847,
+    "petsAllowed": "yes",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "LIM1",
+    "img": [
+      "/roomimages/bedroom4.jpg",
+      "/roomimages/bathroom4.jpg",
+      "/roomimages/lounge4.jpg",
+      "/roomimages/kitchen4.jpg"
+    ],
+    "location": "Lima",
+    "title": "Cozy Apartment in Miraflores",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 50,
+    "long": -77.042,
+    "lat": -12.123,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "LIM2",
+    "img": [
+      "/roomimages/bedroom5.jpg",
+      "/roomimages/bathroom5.jpg",
+      "/roomimages/lounge5.jpg",
+      "/roomimages/kitchen5.jpg"
+    ],
+    "location": "Lima",
+    "title": "Modern Loft in Barranco",
+    "description": "3 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 60,
+    "long": -77.023,
+    "lat": -12.132,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "LIM3",
+    "img": [
+      "/roomimages/bedroom6.jpg",
+      "/roomimages/bathroom6.jpg",
+      "/roomimages/lounge6.jpg",
+      "/roomimages/kitchen6.jpg"
+    ],
+    "location": "Lima",
+    "title": "Chic Studio in San Isidro",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 70,
+    "long": -77.057,
+    "lat": -12.101,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "LIM4",
+    "img": [
+      "/roomimages/bedroom7.jpg",
+      "/roomimages/bathroom7.jpg",
+      "/roomimages/lounge7.jpg",
+      "/roomimages/kitchen7.jpg"
+    ],
+    "location": "Lima",
+    "title": "Luxury Apartment in Miraflores",
+    "description": "4 guests · 2 bedrooms · 2 beds · 2 bathrooms · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 80,
+    "long": -77.043,
+    "lat": -12.122,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "LIM5",
+    "img": [
+      "/roomimages/bedroom8.jpg",
+      "/roomimages/bathroom8.jpg",
+      "/roomimages/lounge8.jpg",
+      "/roomimages/kitchen8.jpg"
+    ],
+    "location": "Lima",
+    "title": "Spacious Flat in San Borja",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 55,
+    "long": -77.003,
+    "lat": -12.09,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "LIM6",
+    "img": [
+      "/roomimages/bedroom9.jpg",
+      "/roomimages/bathroom9.jpg",
+      "/roomimages/lounge9.jpg",
+      "/roomimages/kitchen9.jpg"
+    ],
+    "location": "Lima",
+    "title": "Bright Room in Pueblo Libre",
+    "description": "1 guest · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi",
+    "star": 4.6,
+    "price": 45,
+    "long": -77.06,
+    "lat": -12.078,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "LIM7",
+    "img": [
+      "/roomimages/bedroom10.jpg",
+      "/roomimages/bathroom10.jpg",
+      "/roomimages/lounge10.jpg",
+      "/roomimages/kitchen10.jpg"
+    ],
+    "location": "Lima",
+    "title": "Elegant Studio in Lince",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 50,
+    "long": -77.04,
+    "lat": -12.081,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "LIM8",
+    "img": [
+      "/roomimages/bedroom1.jpg",
+      "/roomimages/bathroom1.jpg",
+      "/roomimages/lounge1.jpg",
+      "/roomimages/kitchen1.jpg"
+    ],
+    "location": "Lima",
+    "title": "Stylish Apartment in La Molina",
+    "description": "3 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 65,
+    "long": -76.95,
+    "lat": -12.068,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "LIM9",
+    "img": [
+      "/roomimages/bedroom2.jpg",
+      "/roomimages/bathroom2.jpg",
+      "/roomimages/lounge2.jpg",
+      "/roomimages/kitchen2.jpg"
+    ],
+    "location": "Lima",
+    "title": "Cozy Loft in Magdalena",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 50,
+    "long": -77.064,
+    "lat": -12.091,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "LIM10",
+    "img": [
+      "/roomimages/bedroom3.jpg",
+      "/roomimages/bathroom3.jpg",
+      "/roomimages/lounge3.jpg",
+      "/roomimages/kitchen3.jpg"
+    ],
+    "location": "Lima",
+    "title": "Bright Studio in Jesus Maria",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.6,
+    "price": 55,
+    "long": -77.05,
+    "lat": -12.071,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "DXB1",
+    "img": [
+      "/roomimages/bedroom4.jpg",
+      "/roomimages/bathroom4.jpg",
+      "/roomimages/lounge4.jpg",
+      "/roomimages/kitchen4.jpg"
+    ],
+    "location": "Dubai",
+    "title": "Luxurious Apartment in Marina",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 200,
+    "long": 55.142222,
+    "lat": 25.067444,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "DXB2",
+    "img": [
+      "/roomimages/bedroom5.jpg",
+      "/roomimages/bathroom5.jpg",
+      "/roomimages/lounge5.jpg",
+      "/roomimages/kitchen5.jpg"
+    ],
+    "location": "Dubai",
+    "title": "Modern Studio in Downtown",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 180,
+    "long": 55.273977,
+    "lat": 25.195556,
+    "petsAllowed": "no",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "DXB3",
+    "img": [
+      "/roomimages/bedroom6.jpg",
+      "/roomimages/bathroom6.jpg",
+      "/roomimages/lounge6.jpg",
+      "/roomimages/kitchen6.jpg"
+    ],
+    "location": "Dubai",
+    "title": "Elegant Flat in Jumeirah Beach",
+    "description": "3 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 220,
+    "long": 55.134186,
+    "lat": 25.078522,
+    "petsAllowed": "yes",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "DXB4",
+    "img": [
+      "/roomimages/bedroom7.jpg",
+      "/roomimages/bathroom7.jpg",
+      "/roomimages/lounge7.jpg",
+      "/roomimages/kitchen7.jpg"
+    ],
+    "location": "Dubai",
+    "title": "Spacious Condo in Business Bay",
+    "description": "4 guests · 2 bedrooms · 2 beds · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 250,
+    "long": 55.269441,
+    "lat": 25.184209,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "DXB5",
+    "img": [
+      "/roomimages/bedroom8.jpg",
+      "/roomimages/bathroom8.jpg",
+      "/roomimages/lounge8.jpg",
+      "/roomimages/kitchen8.jpg"
+    ],
+    "location": "Dubai",
+    "title": "Stylish Apartment in Palm Jumeirah",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 210,
+    "long": 55.141209,
+    "lat": 25.112352,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "DXB6",
+    "img": [
+      "/roomimages/bedroom9.jpg",
+      "/roomimages/bathroom9.jpg",
+      "/roomimages/lounge9.jpg",
+      "/roomimages/kitchen9.jpg"
+    ],
+    "location": "Dubai",
+    "title": "Luxury Loft in DIFC",
+    "description": "3 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi",
+    "star": 4.8,
+    "price": 230,
+    "long": 55.270778,
+    "lat": 25.208676,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "DXB7",
+    "img": [
+      "/roomimages/bedroom10.jpg",
+      "/roomimages/bathroom10.jpg",
+      "/roomimages/lounge10.jpg",
+      "/roomimages/kitchen10.jpg"
+    ],
+    "location": "Dubai",
+    "title": "Charming Flat in Al Barsha",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 190,
+    "long": 55.188155,
+    "lat": 25.111123,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "DXB8",
+    "img": [
+      "/roomimages/bedroom1.jpg",
+      "/roomimages/bathroom1.jpg",
+      "/roomimages/lounge1.jpg",
+      "/roomimages/kitchen1.jpg"
+    ],
+    "location": "Dubai",
+    "title": "Modern Apartment in Dubai Marina",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi",
+    "star": 4.8,
+    "price": 210,
+    "long": 55.141334,
+    "lat": 25.067249,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "DXB9",
+    "img": [
+      "/roomimages/bedroom2.jpg",
+      "/roomimages/bathroom2.jpg",
+      "/roomimages/lounge2.jpg",
+      "/roomimages/kitchen2.jpg"
+    ],
+    "location": "Dubai",
+    "title": "Elegant Studio in JLT",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 180,
+    "long": 55.15304,
+    "lat": 25.074282,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "DXB10",
+    "img": [
+      "/roomimages/bedroom3.jpg",
+      "/roomimages/bathroom3.jpg",
+      "/roomimages/lounge3.jpg",
+      "/roomimages/kitchen3.jpg"
+    ],
+    "location": "Dubai",
+    "title": "Luxury Apartment in Downtown Dubai",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 250,
+    "long": 55.27389,
+    "lat": 25.195798,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "IST1",
+    "img": [
+      "/roomimages/bedroom4.jpg",
+      "/roomimages/bathroom4.jpg",
+      "/roomimages/lounge4.jpg",
+      "/roomimages/kitchen4.jpg"
+    ],
+    "location": "Istanbul",
+    "title": "Charming Studio in Sultanahmet",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 45,
+    "long": 28.976,
+    "lat": 41.005,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "IST2",
+    "img": [
+      "/roomimages/bedroom5.jpg",
+      "/roomimages/bathroom5.jpg",
+      "/roomimages/lounge5.jpg",
+      "/roomimages/kitchen5.jpg"
+    ],
+    "location": "Istanbul",
+    "title": "Modern Apartment in Taksim",
+    "description": "3 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 50,
+    "long": 28.987,
+    "lat": 41.034,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "IST3",
+    "img": [
+      "/roomimages/bedroom6.jpg",
+      "/roomimages/bathroom6.jpg",
+      "/roomimages/lounge6.jpg",
+      "/roomimages/kitchen6.jpg"
+    ],
+    "location": "Istanbul",
+    "title": "Luxury Flat in Nisantasi",
+    "description": "4 guests · 2 bedrooms · 2 beds · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 65,
+    "long": 28.997,
+    "lat": 41.055,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "IST4",
+    "img": [
+      "/roomimages/bedroom7.jpg",
+      "/roomimages/bathroom7.jpg",
+      "/roomimages/lounge7.jpg",
+      "/roomimages/kitchen7.jpg"
+    ],
+    "location": "Istanbul",
+    "title": "Cozy Room in Kadikoy",
+    "description": "1 guest · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi",
+    "star": 4.6,
+    "price": 35,
+    "long": 29.027,
+    "lat": 40.992,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "IST5",
+    "img": [
+      "/roomimages/bedroom8.jpg",
+      "/roomimages/bathroom8.jpg",
+      "/roomimages/lounge8.jpg",
+      "/roomimages/kitchen8.jpg"
+    ],
+    "location": "Istanbul",
+    "title": "Bright Apartment in Beyoglu",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 55,
+    "long": 28.971,
+    "lat": 41.032,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "IST6",
+    "img": [
+      "/roomimages/bedroom9.jpg",
+      "/roomimages/bathroom9.jpg",
+      "/roomimages/lounge9.jpg",
+      "/roomimages/kitchen9.jpg"
+    ],
+    "location": "Istanbul",
+    "title": "Historic House in Balat",
+    "description": "4 guests · 2 bedrooms · 2 beds · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 60,
+    "long": 28.96,
+    "lat": 41.038,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "IST7",
+    "img": [
+      "/roomimages/bedroom10.jpg",
+      "/roomimages/bathroom10.jpg",
+      "/roomimages/lounge10.jpg",
+      "/roomimages/kitchen10.jpg"
+    ],
+    "location": "Istanbul",
+    "title": "Stylish Loft in Besiktas",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.9,
+    "price": 65,
+    "long": 29,
+    "lat": 41.044,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "IST8",
+    "img": [
+      "/roomimages/bedroom1.jpg",
+      "/roomimages/bathroom1.jpg",
+      "/roomimages/lounge1.jpg",
+      "/roomimages/kitchen1.jpg"
+    ],
+    "location": "Istanbul",
+    "title": "Chic Flat in Ortakoy",
+    "description": "3 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 50,
+    "long": 29.02,
+    "lat": 41.048,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "IST9",
+    "img": [
+      "/roomimages/bedroom2.jpg",
+      "/roomimages/bathroom2.jpg",
+      "/roomimages/lounge2.jpg",
+      "/roomimages/kitchen2.jpg"
+    ],
+    "location": "Istanbul",
+    "title": "Elegant Apartment in Uskudar",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.6,
+    "price": 45,
+    "long": 29.04,
+    "lat": 41.015,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "IST10",
+    "img": [
+      "/roomimages/bedroom3.jpg",
+      "/roomimages/bathroom3.jpg",
+      "/roomimages/lounge3.jpg",
+      "/roomimages/kitchen3.jpg"
+    ],
+    "location": "Istanbul",
+    "title": "Comfortable Studio in Fatih",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.7,
+    "price": 40,
+    "long": 28.95,
+    "lat": 41.02,
+    "petsAllowed": "yes",
+    "freeCancelation": "no"
+  },
+  {
+    "id": "SYD1",
+    "img": [
+      "/roomimages/bedroom4.jpg",
+      "/roomimages/bathroom4.jpg",
+      "/roomimages/lounge4.jpg",
+      "/roomimages/kitchen4.jpg"
+    ],
+    "location": "Sydney",
+    "title": "Harbour View Apartment",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 130,
+    "long": 151.2099,
+    "lat": -33.865143,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "SYD2",
+    "img": [
+      "/roomimages/bedroom5.jpg",
+      "/roomimages/bathroom5.jpg",
+      "/roomimages/lounge5.jpg",
+      "/roomimages/kitchen5.jpg"
+    ],
+    "location": "Sydney",
+    "title": "Harbour View Apartment",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 121,
+    "long": 151.204,
+    "lat": -33.867,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "SYD3",
+    "img": [
+      "/roomimages/bedroom6.jpg",
+      "/roomimages/bathroom6.jpg",
+      "/roomimages/lounge6.jpg",
+      "/roomimages/kitchen6.jpg"
+    ],
+    "location": "Sydney",
+    "title": "Harbour View Apartment",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 130,
+    "long": 151.206,
+    "lat": -33.864,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "SYD4",
+    "img": [
+      "/roomimages/bedroom7.jpg",
+      "/roomimages/bathroom7.jpg",
+      "/roomimages/lounge7.jpg",
+      "/roomimages/kitchen7.jpg"
+    ],
+    "location": "Sydney",
+    "title": "Harbour View Apartment",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 156,
+    "long": 151.208,
+    "lat": -33.852,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "SYD5",
+    "img": [
+      "/roomimages/bedroom8.jpg",
+      "/roomimages/bathroom8.jpg",
+      "/roomimages/lounge8.jpg",
+      "/roomimages/kitchen8.jpg"
+    ],
+    "location": "Sydney",
+    "title": "Harbour View Apartment",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 156,
+    "long": 151.1,
+    "lat": -33.75,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "SYD6",
+    "img": [
+      "/roomimages/bedroom9.jpg",
+      "/roomimages/bathroom9.jpg",
+      "/roomimages/lounge9.jpg",
+      "/roomimages/kitchen9.jpg"
+    ],
+    "location": "Sydney",
+    "title": "Harbour View Apartment",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 156,
+    "long": 151.15,
+    "lat": -33.73,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  },
+  {
+    "id": "SYD7",
+    "img": [
+      "/roomimages/bedroom10.jpg",
+      "/roomimages/bathroom10.jpg",
+      "/roomimages/lounge10.jpg",
+      "/roomimages/kitchen10.jpg"
+    ],
+    "location": "Sydney",
+    "title": "Harbour View Apartment",
+    "description": "2 guests · 1 bedroom · 1 bed · 1 bathroom · Wi-Fi · Kitchen",
+    "star": 4.8,
+    "price": 156,
+    "long": 150.5,
+    "lat": -33.65,
+    "petsAllowed": "no",
+    "freeCancelation": "yes"
+  }
+]
