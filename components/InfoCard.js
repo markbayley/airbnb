@@ -113,9 +113,9 @@ function InfoCard({
               </span>
             </div>
 
-            <div className="absolute top-70 left-0 text-gray-500 uppercase pl-1">
+            {/* <div className="absolute top-70 left-0 text-gray-500 uppercase pl-1">
               <span>{item.location}</span>
-            </div>
+            </div> */}
 
             <div>
               <button
@@ -134,7 +134,7 @@ function InfoCard({
 
           <h4 className="flex w-full flex-wrap justify-between text-md md:text-xl ">
             <span className="pt-1 ">{item.title}</span>
-            <span className="flex items-center text-[16px] bg-red-400  px-2 h-8 font-semibold text-white rounded active:scale-95 hover:shadow-lg">
+            <span className="flex items-center text-[16px] bg-red-400 hover:bg-red-500 px-4 h-10 font-semibold text-white rounded-full active:scale-95 hover:scale-105 transition duration-200 ease-out hover:shadow-lg">
               Book Now
             </span>
           </h4>
